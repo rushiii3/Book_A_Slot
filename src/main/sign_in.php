@@ -138,7 +138,7 @@
         $result_of_user_info = mysqli_query($con,$user_info_query);
         if(mysqli_num_rows($result_of_user_info)>0)
         { 
-            header("Location:home.html"); 
+            header("Location:home.php"); 
         }
         else
         { ?>

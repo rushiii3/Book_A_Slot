@@ -58,7 +58,7 @@
                   $('.alert-success').show();
                   setTimeout(function() {
                        window.location.href = "sign_in.php"
-                      }, 2000);
+                      }, 5000);
                 }
                 function showWarning(){
                   $('.alert-danger').show();
@@ -246,5 +246,10 @@
             mysqli_close($con);
           ?>
         <script src="../js/signup.js"></script>
+        <script>
+          function onFormSubmit() {
+    return false;
+}
+        </script>
     </body>
 </html>
