@@ -1,4 +1,5 @@
 $('.pass_open_eye').hide();
+$('.alert-danger').hide();
 $('.pass_icon').on('click',function(){
     if('password' == $('#password').attr('type')){
         $('#password').prop('type', 'text');
@@ -12,6 +13,12 @@ $('.pass_icon').on('click',function(){
    }
 })
 
+
+
+function showWarning(){
+    $('.alert-danger').show();
+  }
+  
 
 //index page javascript change image every 5s 
 function displayNextImage() {

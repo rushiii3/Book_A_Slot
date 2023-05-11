@@ -1,5 +1,8 @@
 $('.pass_open_eye').hide();
 $('.cpass_open_eye').hide();
+$('.alert-success').hide();
+$('.alert-danger').hide();
+
 $('#email').on('input',function(){
     var regex = /^([A-Za-z0-9_\-\.])+\@(vazecollege.net)$/;
     var email = $('#email').val();
@@ -76,3 +79,10 @@ $('#confirm_password').on("input",function(){
             $('#submit').prop('disabled', true);
     }
 })
+
+function showSuccess(){
+  $('.alert-success').show();
+}
+function showWarning(){
+  $('.alert-danger').show();
+}
