@@ -47,3 +47,7 @@
     <script src="../js/signin.js"></script>
 </body>
 </html>
+
+<?php
+    require "connection/connect.php"
+?>
