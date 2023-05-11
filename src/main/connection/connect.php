@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 $con = mysqli_connect("localhost","anushka","!RqkW_eW-td3y3km","Book_A_Slot");
 if(mysqli_connect_errno()){
@@ -12,6 +13,9 @@ if(mysqli_connect_errno()){
 }*/
 =======
 $con = mysqli_connect("localhost","anushka","!RqkW_eW-td3y3km","Book_A_Slot");
+=======
+$con = mysqli_connect("anushkaa","anu","-Ma4cXNm7wx3cVDB","Book_A_Slot");
+>>>>>>> 7d4a127 (navbar)
 if(mysqli_connect_errno()){
     echo("not connected");
 }
