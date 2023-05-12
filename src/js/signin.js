@@ -15,6 +15,7 @@ $('.pass_icon').on('click',function(){
 })
 
 $('#submit').on('click',function(e){
+<<<<<<< HEAD
     $email = $('#email').val();
     $password = $('#password').val();
     $.ajax({
@@ -39,3 +40,9 @@ $('#submit').on('click',function(e){
     e.preventDefault();
 })
 })
+=======
+    console.log("clicked");
+    e.preventDefault();
+})
+  
+>>>>>>> 200d194 (done)
