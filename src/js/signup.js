@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 $(document).ready(function(){
     $('.pass_open_eye').hide();
@@ -138,10 +139,26 @@ $(document).ready(function(){
     })
     })
 
+=======
+$(document).ready(function(){
+>>>>>>> fdaaa6c (donee)
 $('.pass_open_eye').hide();
 $('.cpass_open_eye').hide();
 $('.alert-success').hide();
 $('.alert-danger').hide();
+
+function showSuccess(){
+    $('#my-modal').modal({
+        show: 'false'
+    }); 
+  }
+
+function showWarning(){
+    $('.alert-danger').show();
+  }
+  $('.alert-success').hide();
+  $('.alert-danger').hide();
+
 
 $('#email').on('input',function(){
     var regex = /^([A-Za-z0-9_\-\.])+\@(vazecollege.net)$/;
@@ -225,20 +242,40 @@ function showWarning(){
 >>>>>>> 3ee254f (donee)
 =======
 $('#submit').on('click',function(e){
-    $email =  $('#emailVerify').text();
-    $password = $('#pass_verify').text();
-    $confirm_password = $('#confirm_password_verify').text();
-    if(($email=="Valid email!")&&($password=="Valid Password !")&&($confirm_password=="Password matched with Password !"))
+    $email_verify =  $('#emailVerify').text();
+    $password_verify = $('#pass_verify').text();
+    $confirm_password_verify = $('#confirm_password_verify').text();
+    if(($email_verify=="Valid email!")&&($password_verify=="Valid Password !")&&($confirm_password_verify=="Password matched with Password !"))
     {
+        $full_name = $('#full_name').val();
+        $email = $('#email').val();
+        $department_namee = $('#department_namee').val();
+        $password = $('#password').val();
+        console.log($password);
         $.ajax({
-            type: 'post',
-            url: 'myPageName.php',
-            data: $('#myFormName').serialize(),
-            success: function () {
-             alert("Email has been sent!");
-            }
-          });
+            type: 'POST',
+            url: 'ajax.php',
+            data: {fullname : $full_name, email: $email, department_namee : $department_namee, password : $password},
+            success: function(data) {
+                console.log(data);
+                if(data=="yes")
+                {
+                    $('#success').modal('show');
+                }
+                else{
+                    $('#failed').modal('show');
+                    
+                }
+            },
+            error: function() {
+                console.log(response.status);
+            },
+        })
       e.preventDefault();
     }
 })
+<<<<<<< HEAD
 >>>>>>> 7e7ac69 (commit)
+=======
+})
+>>>>>>> fdaaa6c (donee)
