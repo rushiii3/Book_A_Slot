@@ -147,12 +147,10 @@ $('.cpass_open_eye').hide();
 $('.alert-success').hide();
 $('.alert-danger').hide();
 
-$('#full_name').bind('keydown', function(event) {
-    var key = event.which;
-    if (key >=48 && key <= 57) {
-      event.preventDefault();
-    }
-  });
+$('#full_name').bind('keyup blur',function(){ 
+    var node = $(this);
+    node.val(node.val().replace(/[^A-Za-z]/g,'') ); }
+);
 
 $('#email').on('input',function(){
     var regex = /^([A-Za-z0-9_\-\.])+\@(vazecollege.net)$/;
