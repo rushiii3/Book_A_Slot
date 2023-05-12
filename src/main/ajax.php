@@ -44,4 +44,5 @@ if(
                 echo("no");
         }
 }
+mysqli_close($con);
 ?>
