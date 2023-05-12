@@ -80,6 +80,7 @@ $('.pass_icon').on('click',function(){
    }
 })
 
+<<<<<<< HEAD
 
 
 function showWarning(){
@@ -105,3 +106,10 @@ function displayNextImage() {
  images[5] = "https://img.freepik.com/free-vector/doctor-speaking-from-podium-stage-conference_74855-20541.jpg?w=1380&t=st=1683742557~exp=1683743157~hmac=8638616f0ec457f779a80480b2dfb0f89b716daa5cb8113219043655bcb4d30a"
  changeImage();
 >>>>>>> bc17322 (index_sign_in&up_done)
+=======
+$('#submit').on('click',function(e){
+    console.log("clicked");
+    e.preventDefault();
+})
+  
+>>>>>>> ad316e1 (donee)

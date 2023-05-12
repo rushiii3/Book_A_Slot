@@ -147,18 +147,12 @@ $('.cpass_open_eye').hide();
 $('.alert-success').hide();
 $('.alert-danger').hide();
 
-function showSuccess(){
-    $('#my-modal').modal({
-        show: 'false'
-    }); 
-  }
-
-function showWarning(){
-    $('.alert-danger').show();
-  }
-  $('.alert-success').hide();
-  $('.alert-danger').hide();
-
+$('#full_name').bind('keydown', function(event) {
+    var key = event.which;
+    if (key >=48 && key <= 57) {
+      event.preventDefault();
+    }
+  });
 
 $('#email').on('input',function(){
     var regex = /^([A-Za-z0-9_\-\.])+\@(vazecollege.net)$/;
@@ -245,34 +239,57 @@ $('#submit').on('click',function(e){
     $email_verify =  $('#emailVerify').text();
     $password_verify = $('#pass_verify').text();
     $confirm_password_verify = $('#confirm_password_verify').text();
-    if(($email_verify=="Valid email!")&&($password_verify=="Valid Password !")&&($confirm_password_verify=="Password matched with Password !"))
-    {
-        $full_name = $('#full_name').val();
-        $email = $('#email').val();
-        $department_namee = $('#department_namee').val();
-        $password = $('#password').val();
-        console.log($password);
-        $.ajax({
-            type: 'POST',
-            url: 'ajax.php',
-            data: {fullname : $full_name, email: $email, department_namee : $department_namee, password : $password},
-            success: function(data) {
-                console.log(data);
-                if(data=="yes")
+    $department_namee = $('#department_namee').val();
+    if( $email_verify=="Valid email!")
+        {
+            if($department_namee!="Select Department")
+            {
+                if($password_verify=="Valid Password !")
                 {
-                    $('#success').modal('show');
+                    if($confirm_password_verify=="Password matched with Password !")
+                    {
+                            $full_name = $('#full_name').val();
+                            $email = $('#email').val();
+                            $department_namee = $('#department_namee').val();
+                            $password = $('#password').val();
+                            console.log($password);
+                            $.ajax({
+                                type: 'POST',
+                                url: 'ajax.php',
+                                data: {fullname : $full_name, email: $email, department_namee : $department_namee, password : $password},
+                                success: function(data) {
+                                    console.log(data);
+                                    if(data=="yes")
+                                    {
+                                        $('#success').modal('show');
+                                    }
+                                    else{
+                                        $('#failed').modal('show');
+                                        
+                                    }
+                                },
+                                error: function() {
+                                    console.log(response.status);
+                                },
+                            })
+                    }
+                    else{
+                        alert("Your Password has not matched with the Password")
+                    }
                 }
                 else{
-                    $('#failed').modal('show');
-                    
+                    alert("Password must be more than 8 charaters and have a Upper case letter ");
                 }
-            },
-            error: function() {
-                console.log(response.status);
-            },
-        })
+            }
+            else{
+                alert("Please select your Department!");
+            }
+            
+        }
+        else{
+            alert("Please input a valid email!");
+        }
       e.preventDefault();
-    }
 })
 <<<<<<< HEAD
 >>>>>>> 7e7ac69 (commit)
