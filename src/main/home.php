@@ -14,6 +14,8 @@
         <?php
             require_once("loader.html"); 
         ?>
+        <main id="main">
     <p class="fs-1">Welcome</p>
+</main>
 </body>
 </html>
