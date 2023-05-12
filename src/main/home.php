@@ -15,7 +15,7 @@
             require_once("loader.html"); 
         ?>
         <main id="main">
-    <p class="fs-1">Welcome</p>
+    <p class="fs-1">Welcome Hruhsi</p>
 </main>
 </body>
 </html>
