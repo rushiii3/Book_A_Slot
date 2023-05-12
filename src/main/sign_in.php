@@ -21,6 +21,7 @@
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
         />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="../js/signin.js"></script>
     </head>
     <body class="bg-light">
         <?php 
@@ -29,24 +30,20 @@
     ?>
 
         <main id="main">
-            <div
-                class="alert alert-danger alert-dismissible fade show"
-                role="alert"
-            >
-                Incorrect Username or Password. Please try again!
-                <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="alert"
-                    aria-label="Close"
-                ></button>
-            </div>
-            <script>
-                function showWarning(){
-                  $('.alert-danger').show();
-                }
-                $('.alert-danger').hide();
-            </script>
+            <!-- FAILED -->
+<div class="modal fade" id="failed" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog modal-dialog-centered w-75 mx-auto">
+    <div class="modal-content">
+      <div class="modal-body">
+      <img src="https://img.freepik.com/free-vector/401-error-unauthorized-concept-illustration_114360-5531.jpg?w=1060&t=st=1683877856~exp=1683878456~hmac=dc95863d337270b3f7d86dfae1957dcbffa77e5ca417f4dbc27522cd8a3f7a04" class="img-fluid" alt="">
+        <p class="fs-6 text-center"><strong>Login Failed</strong> <br/> Incorrect Email or Password </p>
+      </div>
+      <div class="modal-footer">
+      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Try Again</button>
+      </div>
+    </div>
+  </div>
+</div>
             <div
                 class="container w-75 mt-5 mb-5 shadow p-3 mb-5 bg-body"
                 style="border-radius: 20px"
@@ -124,30 +121,9 @@
                 </div>
             </div>
         </main>
-        <script src="../js/signin.js"></script>
     </body>
 </html>
 
 <?php
-    
-    if(isset($_POST["submit"]))
-    {   
-        $email = mysqli_real_escape_string($con, $_POST["email"]);
-        $password = mysqli_real_escape_string($con, $_POST["password"]);
-        $user_info_query = "SELECT * FROM USER WHERE user_name = '$email' AND  pwd = '$password' ";
-        $result_of_user_info = mysqli_query($con,$user_info_query);
-        if(mysqli_num_rows($result_of_user_info)>0)
-        { 
-            header("Location:home.php"); 
-        }
-        else
-        { ?>
-            <script>
-                showWarning()
-            </script>
-          <?php
-        }
-
-    }
     mysqli_close($con);
 ?>
