@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 $(document).ready(function(){
     $('.pass_open_eye').hide();
     $('.alert-danger').hide();
@@ -65,6 +66,9 @@ $(document).ready(function(){
                 
     })
 =======
+=======
+$(document).ready(function(){
+>>>>>>> 6f4753b (donee)
 $('.pass_open_eye').hide();
 $('.alert-danger').hide();
 $('.pass_icon').on('click',function(){
@@ -108,8 +112,32 @@ function displayNextImage() {
 >>>>>>> bc17322 (index_sign_in&up_done)
 =======
 $('#submit').on('click',function(e){
-    console.log("clicked");
+    $email = $('#email').val();
+    $password = $('#password').val();
+    $.ajax({
+        type: 'POST',
+        url: 'ajax.php',
+        data: {email_login: $email, password_login : $password},
+        success: function(data) {
+            console.log(data);
+            if(data=="yes")
+            {
+                window.location.href = 'home.php';
+            }
+            else{
+                $('#failed').modal('show');
+                
+            }
+        },
+        error: function() {
+            console.log(response.status);
+        },
+    })
     e.preventDefault();
 })
+<<<<<<< HEAD
   
 >>>>>>> ad316e1 (donee)
+=======
+})
+>>>>>>> 6f4753b (donee)
