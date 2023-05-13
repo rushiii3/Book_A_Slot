@@ -31,12 +31,15 @@ if(
         !empty($_POST['password_login']) 
 )
 {
+
         $email = mysqli_real_escape_string($con, $_POST["email_login"]);
         $password = mysqli_real_escape_string($con, $_POST["password_login"]);
         $user_info_query = "SELECT * FROM USER WHERE user_name = '$email' AND  pwd = '$password' ";
         $result_of_user_info = mysqli_query($con,$user_info_query);
-        if(mysqli_num_rows($result_of_user_info)>0)
+        if(mysqli_num_rows($result_of_user_info)==1)
         { 
+                session_start();
+                $_SESSION["user_email"] = $email;
                 echo("yes");
         }
         else
