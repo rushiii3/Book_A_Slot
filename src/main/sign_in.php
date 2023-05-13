@@ -45,7 +45,7 @@
                         <div class="col-lg-12 mb-5">
                             <p class="h1">Sign in</p>
                         </div>
-                        <form action="<?php $_PHP_SELF?>" method="POST">
+                        <form action="<?php $_PHP_SELF ?>" method="POST">
                             <div class="mb-3 pt-5">
                                 <label for="email" class="form-label"
                                     >Email address</label
@@ -115,6 +115,7 @@
         </main>
     </body>
 </html>
+<script>
 
 <?php
     mysqli_close($con);

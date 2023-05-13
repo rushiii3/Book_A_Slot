@@ -23,14 +23,19 @@ $('#submit').on('click',function(e){
         data: {email_login: $email, password_login : $password},
         success: function(data) {
             console.log(data);
-            if(data=="yes")
+            if(data==='o')
             {
                 window.location.href = 'home.php';
+            }
+            /*
+            else if(data==='a')
+            {
+                window.location.href = 'https://www.youtube.com/';
             }
             else{
                 $('#failed').modal('show');
                 
-            }
+            }*/
         },
         error: function() {
             console.log(response.status);
