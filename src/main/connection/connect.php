@@ -24,9 +24,20 @@ if(mysqli_connect_errno()){
     echo("not connected");
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 7c74142 (connection)
 =======
 >>>>>>> 3ee254f (donee)
 ?>
+=======
+/*
+$con = mysqli_connect("localhost","id20741171_bookaslot","!RqkW_eW-td3y3km","id20741171_bookaslot");
+if(mysqli_connect_errno()){
+    echo("not connected");
+}*/
+?>
+
+
+>>>>>>> 915515f (commmit bro)
