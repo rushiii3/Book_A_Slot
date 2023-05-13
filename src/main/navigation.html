@@ -52,7 +52,7 @@
           <a class="nav-link mx-1 px-3 fw-bold" href="#">Cancel</a>
         </li>
         <li class="nav-item ">
-            <a class="nav-link mx-1 px-3 fw-bold" href="logout.php" style="background-color: rgba(0,77,255,0.5);border-radius: 20px;color: white;">Logout</a>
+            <a class="nav-link mx-1 px-3 fw-bold" id="logout" href="logout.php" style="background-color: rgba(0,77,255,0.5);border-radius: 20px;color: white;">Logout</a>
           </li>
         
       </ul>
@@ -67,7 +67,12 @@
     $('#DropDown').on('click',function(){
         $('#DropDownMenu').toggle(300);
     })
-    
+    $('#logout').on('click',function()
+    {
+      function preventBack() { window.history.forward(); }
+        setTimeout("preventBack()", 0);
+        window.onunload = function () { null };
+    })
 </script>
 </body>
 </html>
