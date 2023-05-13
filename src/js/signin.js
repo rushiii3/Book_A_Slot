@@ -27,7 +27,6 @@ $('#submit').on('click',function(e){
             {
                 window.location.href = 'home.php';
             }
-            /*
             else if(data==='a')
             {
                 window.location.href = 'https://www.youtube.com/';
@@ -35,7 +34,7 @@ $('#submit').on('click',function(e){
             else{
                 $('#failed').modal('show');
                 
-            }*/
+            }
         },
         error: function() {
             console.log(response.status);
