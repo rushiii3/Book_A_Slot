@@ -18,10 +18,12 @@ if(
 
             if(mysqli_query($con,$insert_user_info))
             {
-                    echo("yes");
-            }else{
-                echo("no");
-                
+                echo("1");
+            }
+            else
+            {
+                echo("2");
+                echo("Error description: " . mysqli_error($con));
             }
 }
 
@@ -45,9 +47,9 @@ if(
                         $user_type = $row["user_type"];
                         if($user_type=="o")
                         {
-                                echo("o");
+                                echo("1");
                         }else{
-                                echo("a");
+                                echo("2");
                         }
                         session_start();
                         $_SESSION["user_email"] = $email;

@@ -67,12 +67,6 @@
     $('#DropDown').on('click',function(){
         $('#DropDownMenu').toggle(300);
     })
-    $('#logout').on('click',function()
-    {
-      function preventBack() { window.history.forward(); }
-        setTimeout("preventBack()", 0);
-        window.onunload = function () { null };
-    })
 </script>
 </body>
 </html>

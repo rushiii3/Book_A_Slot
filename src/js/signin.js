@@ -14,6 +14,7 @@ $(document).ready(function(){
             $('.pass_open_eye').hide();
             $('.pass_close_eye').show();
        }
+<<<<<<< HEAD
     })
     
     $('#submit').on('click',function(e){
@@ -145,3 +146,48 @@ $('#submit').on('click',function(e){
 =======
 })
 >>>>>>> 6f4753b (donee)
+=======
+    })
+    
+    $('#submit').on('click',function(e){
+        $email = $('#email').val();
+        $password = $('#password').val();
+        $.ajax({
+            type: 'POST',
+            url: 'ajax.php',
+            data: {email_login: $email, password_login : $password},
+            success: function(data) {
+                console.log(data);
+                if(data==1)
+                {
+                    window.location.href = 'home.php';
+                }
+                else if(data==2)
+                {
+                    window.location.href = 'https://www.youtube.com/';
+                }
+                else{
+                    $('#failed').modal('show');
+                    
+                }
+            },
+            error: function() {
+                console.log(response.status);
+            },
+        })
+        e.preventDefault();
+    })
+    
+    
+    function disableBack() {
+                    window.history.forward()
+                }
+                window.onload = disableBack();
+                window.onpageshow = function(e) {
+                    if (e.persisted)
+                        disableBack();
+                }
+                
+                
+    })
+>>>>>>> 1b9c412 (donefor ot)
