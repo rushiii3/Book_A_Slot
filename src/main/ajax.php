@@ -38,9 +38,23 @@ if(
         $result_of_user_info = mysqli_query($con,$user_info_query);
         if(mysqli_num_rows($result_of_user_info)==1)
         { 
-                session_start();
-                $_SESSION["user_email"] = $email;
-                echo("yes");
+                while($row = mysqli_fetch_assoc($result_of_user_info))
+                {
+                        $user_email = $row["user_name"];
+                        $user_full_name = $row["user_full_name"];
+                        $user_type = $row["user_type"];
+                        if($user_type=="o")
+                        {
+                                echo("o");
+                        }else{
+                                echo("a");
+                        }
+                        session_start();
+                        $_SESSION["user_email"] = $email;
+                        $_SESSION["user_full_name"] = $user_full_name;
+                }
+                
+                
         }
         else
         { 

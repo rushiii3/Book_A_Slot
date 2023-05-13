@@ -9,15 +9,40 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="../js/logout.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
     <title>Home</title>
     <style>
-     
+     .fs-1{
+      font-family: 'Abril Fatface', cursive;
+     }
+     @media (min-width:768px){
+      .user_welcome{
+        height: 80vh;
+      }
+      .fs-1{
+        margin-top:30%;
+        overflow-wrap: break-word;
+      }
+     }
+     @media (min-width:0px){
+      .user_welcome{
+        height: 50vh;
+      }
+      .fs-1{
+        margin-top:30%;
+        overflow-wrap: break-word;
+      }
+     }
     </style>
 </head>
 <body>
         <?php
+         session_start();
+         $user_email = $_SESSION["user_email"];
             require_once("loader.html"); 
-            session_start();
         ?>
         <main id="main">
        
@@ -26,13 +51,13 @@
        ?>
 
 
-  <div class="container-fluid">
+  <div class="container-fluid " >
     <div class="row">
-      <div class="col-lg-6">
-      <p class="fs-1">Welcome <?php echo($_SESSION["user_email"]); ?></p>
+      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 mb-1 user_welcome">
+      <p class="fs-1 fw-bold p-2" >Welcome <?php echo($user_email); ?></p>
       </div>
-      <div class="col-lg-6">
-      <img src="../img/s (2).png" alt="Welcome_Img" class="img-fluid" style="margin-top:-20px;">
+      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+      <img src="../img/s (2).png" alt="Welcome_Img" style="height:100%;width:100%;" >
 
       </div>
     </div>
