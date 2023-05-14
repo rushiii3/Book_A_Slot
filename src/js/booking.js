@@ -1,4 +1,5 @@
 $('#org_institue_name').hide();
+<<<<<<< HEAD
 $('#org_institue_email').hide();
 $('#org_institue_phone').hide();
 $('#org_institue_transaction_id').hide();
@@ -29,10 +30,83 @@ $('#check_box_terms_and_condition').on('click',function(){
   }
   
 })
+=======
+$('.tab').hide();
+var currentTab = 0;
+showTab(currentTab)
+function showTab(n)
+{
+    $x = $('.tab');
+    $x.eq(n).show();
+    if (n === 0) {
+    $("#prevBtn").hide();
+  } else {
+    $("#prevBtn").show();
+  }
+  //console.log(n);
+  if (n === 2) {
+    $("#nextBtn").html("Submit");
+  } else {
+    $("#nextBtn").html("Next");
+  }
+  CurrentStep(n);
+}
+function nextPrev(n)
+{
+    
+    $x = $(".tab");
+    $x.eq(currentTab).hide();
+    Completed(n,currentTab);
+    currentTab = currentTab + n;
+    if(currentTab<=2)
+    {
+        //console.log("yes"); 
+    }
+    else{
+        currentTab=2;
+        //console.log("no");
+    }
+    showTab(currentTab);
+    
+}
+function CurrentStep(n)
+{
+    var i, x = document.getElementsByClassName("stepper-item");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace("active", "");
+  }
+  //... and adds the "active" class to the current step:
+  x[n].className += " active";
+}
+function Completed(n,currentTab)
+{
+    var i, x = document.getElementsByClassName("stepper-item");
+    console.log(currentTab);
+    if(n==1){
+        if(currentTab<2)
+    {
+        console.log("inside 1");
+        for(i=0;i<=currentTab;i++)
+        {
+            $step = $('.stepper-item');
+            $step.eq(i).addClass("completed");
+        } 
+    }
+        
+    }
+    else{
+        console.log("inside -1");
+        console.log(currentTab);
+            $step = $('.stepper-item');
+            $step.eq(currentTab-1).removeClass("completed");
+        }
+}
+>>>>>>> bc83ca0 (done)
 $('#department_namee').on('change',function(){
     $department_namee = $('#department_namee').val();
     if($department_namee==="Others")
     {
+<<<<<<< HEAD
         $('#org_institue_name').show();
         $('#org_institue_email').show();
         $('#org_institue_phone').show();
@@ -282,3 +356,13 @@ function validMail(mail)
 {
     return /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+([^<>()\.,;:\s@\"]{2,}|[\d\.]+))$/.test(mail);
 }
+=======
+        console.log("others selected");
+        $('#org_institue_name').show();
+    }
+    else{
+        $('#org_institue_name').hide();
+    }
+    
+})
+>>>>>>> bc83ca0 (done)

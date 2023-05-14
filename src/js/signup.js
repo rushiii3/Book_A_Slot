@@ -4,6 +4,7 @@ $(document).ready(function(){
     $('.pass_open_eye').hide();
     $('.cpass_open_eye').hide();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     function testInput(event) {
         var value = String.fromCharCode(event.which);
@@ -11,6 +12,15 @@ $(document).ready(function(){
         return pattern.test(value);
      }
      $('#full_name').bind('keypress', testInput);
+=======
+    $('.alert-success').hide();
+    $('.alert-danger').hide();
+    
+    $('#full_name').bind('keyup blur',function(){ 
+        var node = $(this);
+        node.val(node.val().replace(/[^A-Za-z\s]/g,'') ); }
+    );
+>>>>>>> bc83ca0 (done)
     
     $('#email').on('input',function(){
         var regex = /^([A-Za-z0-9_\-\.])+\@(vazecollege.net)$/;
