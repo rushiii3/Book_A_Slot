@@ -6,7 +6,7 @@ $(document).ready(function(){
     
     $('#full_name').bind('keyup blur',function(){ 
         var node = $(this);
-        node.val(node.val().replace(/[^A-Za-z]/g,'') ); }
+        node.val(node.val().replace(/[^A-Za-z\s]/g,'') ); }
     );
     
     $('#email').on('input',function(){
