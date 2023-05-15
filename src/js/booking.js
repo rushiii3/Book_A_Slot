@@ -364,5 +364,10 @@ function validMail(mail)
         $('#org_institue_name').hide();
     }
     
+<<<<<<< HEAD
 })
 >>>>>>> bc83ca0 (done)
+=======
+})  
+
+>>>>>>> 438b4be (commit)

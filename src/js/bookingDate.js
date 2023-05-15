@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $('#selectDate').on('focus',function(){
   $date = $('#selectDate').val();
   $Venue_name = $('#Venue_name').val();
@@ -67,3 +68,15 @@ $('#no_of_rp').on('change',function(){
 
 
 
+=======
+document.addEventListener('DOMContentLoaded', function() {
+    flatpickr("#myDatePicker", {
+      dateFormat: 'Y-m-d',
+      minDate: new Date().fp_incr(3),
+      disable: [
+        '2023-05-16',
+        '2023-05-17'
+      ]
+    });
+  });
+>>>>>>> 438b4be (commit)

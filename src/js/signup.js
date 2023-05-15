@@ -15,12 +15,22 @@ $(document).ready(function(){
 =======
     $('.alert-success').hide();
     $('.alert-danger').hide();
+<<<<<<< HEAD
     
     $('#full_name').bind('keyup blur',function(){ 
         var node = $(this);
         node.val(node.val().replace(/[^A-Za-z\s]/g,'') ); }
     );
 >>>>>>> bc83ca0 (done)
+=======
+    function testInput(event) {
+        var value = String.fromCharCode(event.which);
+        var pattern = new RegExp(/[a-zåäö ]/i);
+        return pattern.test(value);
+     }
+     
+     $('#full_name').bind('keypress', testInput);
+>>>>>>> 438b4be (commit)
     
     $('#email').on('input',function(){
         var regex = /^([A-Za-z0-9_\-\.])+\@(vazecollege.net)$/;
