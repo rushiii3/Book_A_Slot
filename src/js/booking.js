@@ -80,4 +80,5 @@ $('#department_namee').on('change',function(){
         $('#org_institue_name').hide();
     }
     
-})
+})  
+
