@@ -3,11 +3,13 @@ $(document).ready(function(){
     $('.cpass_open_eye').hide();
     $('.alert-success').hide();
     $('.alert-danger').hide();
-    
-    $('#full_name').bind('keyup blur',function(){ 
-        var node = $(this);
-        node.val(node.val().replace(/[^A-Za-z\s]/g,'') ); }
-    );
+    function testInput(event) {
+        var value = String.fromCharCode(event.which);
+        var pattern = new RegExp(/[a-zåäö ]/i);
+        return pattern.test(value);
+     }
+     
+     $('#full_name').bind('keypress', testInput);
     
     $('#email').on('input',function(){
         var regex = /^([A-Za-z0-9_\-\.])+\@(vazecollege.net)$/;

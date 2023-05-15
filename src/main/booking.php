@@ -13,12 +13,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script src="../js/booking.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="../css/booking.css">
     <title>Book</title>
 </head>
 
 <body>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <?php
          include("session.php");
          require "connection/connect.php";
@@ -36,7 +37,7 @@
                 <!-- Image for div -->
                 <div class="p-4 col-lg-6">
                     <!-- new col for image -->
-                    <img src="https://img.freepik.com/free-vector/businessman-planning-events-deadlines-agenda_74855-6274.jpg?w=1480&t=st=1684041803~exp=1684042403~hmac=ed746e43d35dd7c21d653f6b86403202e32866bbc2d08c9f470fbf4daa84f1d6" alt="" class="img-fluid">
+                    <img src="https://img.freepik.com/free-vector/appointment-booking-with-woman-calendar_23-2148559014.jpg?w=1060&t=st=1684132939~exp=1684133539~hmac=d2101dc2baf34866ceb2d3eabe252bb481424284e4e6adc90f6765677ba3ae4e" alt="" class="img-fluid">
                 </div>
                 <div class="p-4 col-lg-6">
                     <!-- new col for booking -->
@@ -65,25 +66,104 @@
                         <div class="row tab">
                             <!-- new row -->
                                         <div class="col-12 mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Event Name</label>
-                                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="e.g. ....... ">
+                                            <label for="eventName" class="form-label">Event Name</label>
+                                            <input type="text" class="form-control" id="eventName" placeholder="e.g. ....... ">
                                         </div>
                                         <div class="col-12 mb-3">
-                                                <label for="exampleFormControlTextarea1" class="form-label">Event Description</label>
-                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
-                                        </div>
-                                        <div class="col-6 mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Date</label>
-                                            <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="e.g. ....... ">
-                                        </div>
-                                        <div class="col-6 mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Time</label>
-                                            <input type="time" class="form-control" id="exampleFormControlInput1" placeholder="e.g. ....... ">
+                                                <label for="eventDescription" class="form-label">Event Description</label>
+                                                <textarea class="form-control" id="eventDescription" rows="2"></textarea>
                                         </div>
                                         <div class="col-12 mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">No of students attending event</label>
-                                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="e.g. ....... ">
+                                            <label for="no_of_stu_attending" class="form-label">No of students attending event</label>
+                                            <input type="text" class="form-control" id="no_of_stu_attending" placeholder="e.g. ....... ">
                                         </div>
+                                        <div class="col-12 mb-3 input-group">
+                                            <label for="selectDate" class="form-label w-100">Date</label><br>
+                                            <input type="text" class="form-control rounded-start border-end-0" id="myDatePicker" placeholder="e.g. ....... ">
+                                            <span class="input-group-text bg-white" id="basic-addon1"><i class="bi bi-calendar-event"></i></span>
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <label for="startTime" class="form-label">Start Time</label>
+                                            <select class="form-select" aria-label="select_start_time">
+                                                <option selected>Select the start time</option>
+                                                <option value="07:00">07.00 AM</option>
+                                                <option value="07:30">07.30 AM</option>
+                                                <option value="08:00">08.00 AM</option>
+                                                <option value="08:30">08.30 AM</option>
+                                                <option value="09:00">09.00 AM</option>
+                                                <option value="09:30">09.30 AM</option>
+                                                <option value="10:00">10.00 AM</option>
+                                                <option value="10:30">10.30 AM</option>
+                                                <option value="11:00">11.00 AM</option>
+                                                <option value="11:30">11.30 AM</option>
+                                                <option value="12:00">12.00 PM</option>
+                                                <option value="12:30">12.30 PM</option>
+                                                <option value="13:00">01.00 PM</option>
+                                                <option value="13:30">01.30 PM</option>
+                                                <option value="14:00">02.00 PM</option>
+                                                <option value="14:30">02.30 PM</option>
+                                                <option value="15:00">03.00 PM</option>
+                                                <option value="15:30">03.30 PM</option>
+                                                <option value="16:00">04.00 PM</option>
+                                                <option value="16:30">04.30 PM</option>
+                                                <option value="17:00">05.00 PM</option>
+                                                <option value="17:30">05.30 PM</option>
+                                                <option value="18:00">06.00 PM</option>
+                                                <option value="18:30">06.30 PM</option>
+                                                <option value="19:00">07.00 PM</option>
+                                                <option value="19:30">07.30 PM</option>
+                                                <option value="20:00">08.00 PM</option>
+                                                <option value="20:30">08.30 PM</option>
+                                                <option value="21:00">09.00 PM</option>
+                                                <option value="21:30">09.30 PM</option>
+                                                <option value="22:00">10.00 PM</option>
+                                                <option value="22:30">10.30 PM</option>
+                                                <option value="23:00">11.00 PM</option>
+                                                <option value="23:30">11.30 PM</option>
+                                            </select>
+                                            
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <label for="endTime" class="form-label">End Time</label>
+                                            <select class="form-select" aria-label="select_start_time">
+                                                <option selected>Select End time</option>
+                                                <option value="07:00">07.00 AM</option>
+                                                <option value="07:30">07.30 AM</option>
+                                                <option value="08:00">08.00 AM</option>
+                                                <option value="08:30">08.30 AM</option>
+                                                <option value="09:00">09.00 AM</option>
+                                                <option value="09:30">09.30 AM</option>
+                                                <option value="10:00">10.00 AM</option>
+                                                <option value="10:30">10.30 AM</option>
+                                                <option value="11:00">11.00 AM</option>
+                                                <option value="11:30">11.30 AM</option>
+                                                <option value="12:00">12.00 PM</option>
+                                                <option value="12:30">12.30 PM</option>
+                                                <option value="13:00">01.00 PM</option>
+                                                <option value="13:30">01.30 PM</option>
+                                                <option value="14:00">02.00 PM</option>
+                                                <option value="14:30">02.30 PM</option>
+                                                <option value="15:00">03.00 PM</option>
+                                                <option value="15:30">03.30 PM</option>
+                                                <option value="16:00">04.00 PM</option>
+                                                <option value="16:30">04.30 PM</option>
+                                                <option value="17:00">05.00 PM</option>
+                                                <option value="17:30">05.30 PM</option>
+                                                <option value="18:00">06.00 PM</option>
+                                                <option value="18:30">06.30 PM</option>
+                                                <option value="19:00">07.00 PM</option>
+                                                <option value="19:30">07.30 PM</option>
+                                                <option value="20:00">08.00 PM</option>
+                                                <option value="20:30">08.30 PM</option>
+                                                <option value="21:00">09.00 PM</option>
+                                                <option value="21:30">09.30 PM</option>
+                                                <option value="22:00">10.00 PM</option>
+                                                <option value="22:30">10.30 PM</option>
+                                                <option value="23:00">11.00 PM</option>
+                                                <option value="23:30">11.30 PM</option>
+                                            </select>
+                                        </div>
+                                        
                         </div>
                         <!-- new row ending -->
 
@@ -120,8 +200,8 @@
                                     </div>
 
                                     <div class="col-12 mb-3" id="org_institue_name">
-                                            <label for="exampleFormControlInput1" class="form-label">Institute/Organisation Name</label>
-                                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="e.g. ....... ">
+                                            <label for="Institute/Org_Name" class="form-label">Institute/Organisation Name</label>
+                                            <input type="text" class="form-control" id="Institute/Org_Name" placeholder="e.g. ....... ">
                                         </div>
                                     
                                     <div class="col-12 mb-3">
@@ -159,25 +239,25 @@
                         <div class="row tab">
                             <!-- new row -->
                                         <div class="col-12 mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Event Name</label>
-                                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="e.g. ....... ">
+                                            <label for="rp_name" class="form-label">Resourse Person Full Name</label>
+                                            <input type="text" class="form-control" id="rp_name" placeholder="e.g. ....... ">
                                         </div>
                                         <div class="col-12 mb-3">
-                                                <label for="exampleFormControlTextarea1" class="form-label">Event Description</label>
-                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                                                <label for="companyName" class="form-label">Company Name</label>
+                                                <input type="text" class="form-control" id="companyName" placeholder="e.g. ....... ">
                                         </div>
-                                        <div class="col-6 mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Date</label>
-                                            <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="e.g. ....... ">
+                                        <div class="col-12 mb-3">
+                                            <label for="designation" class="form-label">Designation</label>
+                                            <input type="text" class="form-control" id="designation" placeholder="e.g. ....... ">
                                         </div>
-                                        <div class="col-6 mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Time</label>
-                                            <input type="time" class="form-control" id="exampleFormControlInput1" placeholder="e.g. ....... ">
+                                        <div class="col-12 mb-3">
+                                                <label for="experience" class="form-label">Experience</label>
+                                                <input type="number" class="form-control" id="experience" placeholder="e.g. ....... ">
                                         </div>
                         </div>
 <!-- new row ending -->
                                     <div class="row">
-                                        <div class="col-12 mb-5 mt-5">
+                                        <div class="col-12 mb-1 mt-5">
                                             <button type="button " class="btn btn-secondary px-4 ms-3" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
                                             <button type="button " class="btn btn-primary px-4 ms-3" id="nextBtn" onclick="nextPrev(1)">Next</button>
                                         </div>
@@ -194,5 +274,19 @@
         <!-- container ending -->
         </div>  
     </main>
+    <script src="../js/booking.js"></script>
+    <script src="../js/bookingDate.js"></script>
 </body>
 </html>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    flatpickr("#myDatePicker", {
+      dateFormat: 'Y-m-d',
+      minDate: new Date().fp_incr(3),
+      disable: [
+        '2023-05-20',
+        '2023-05-25'
+      ]
+    });
+  });
+</script>
