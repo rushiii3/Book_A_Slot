@@ -5,6 +5,7 @@ $('#org_institue_email').hide();
 $('#org_institue_phone').hide();
 $('#org_institue_transaction_id').hide();
 
+<<<<<<< HEAD
 
 $(window).on('load', function(){
     setTimeout(addBackdrop, 2000); //wait for page load PLUS two seconds.
@@ -35,6 +36,9 @@ $('#check_box_terms_and_condition').on('click',function(){
 =======
 
 >>>>>>> 7c6c46c (senddd)
+=======
+$('#org_institue_name').hide();
+>>>>>>> d9efa5f (dd)
 $('.tab').hide();
 var currentTab = 0;
 showTab(currentTab)
@@ -50,9 +54,11 @@ function showTab(n)
   }
   //console.log(n);
   if (n === 2) {
-    $("#nextBtn").html("Submit").attr("id", "newId");
+    $("#nextBtn").html("Submit");
+    $('#nextBtn').attr('onclick', 'submitValue()');
   } else {
     $("#nextBtn").html("Next");
+    $('#nextBtn').attr('onclick', 'nextPrev(1)');
     //$("#nextBtn").removeClass("submit")
   }
   CurrentStep(n);
@@ -87,11 +93,11 @@ function CurrentStep(n)
 function Completed(n,currentTab)
 {
     var i, x = document.getElementsByClassName("stepper-item");
-    //console.log(currentTab);
+    console.log(currentTab);
     if(n==1){
         if(currentTab<2)
     {
-        //console.log("inside 1");
+        console.log("inside 1");
         for(i=0;i<=currentTab;i++)
         {
             $step = $('.stepper-item');
@@ -101,8 +107,8 @@ function Completed(n,currentTab)
         
     }
     else{
-        //console.log("inside -1");
-        //console.log(currentTab);
+        console.log("inside -1");
+        console.log(currentTab);
             $step = $('.stepper-item');
             $step.eq(currentTab-1).removeClass("completed");
         }
@@ -127,7 +133,16 @@ $('#department_namee').on('change',function(){
     }
 }) 
 
+$('#department_namee').on('change',function(){
+    $department_namee = $('#department_namee').val();
+    if($department_namee==="Others")
+    {
+        console.log("others selected");
+        $('#org_institue_name').show();
+    }
+    else{
 
+<<<<<<< HEAD
 $('.section2').hide();
 $('.section3').hide();
 $('.section4').hide();
@@ -381,3 +396,9 @@ function validMail(mail)
 >>>>>>> 7c6c46c (senddd)
 
 >>>>>>> 438b4be (commit)
+=======
+        $('#org_institue_name').hide();
+    }
+    
+})  
+>>>>>>> d9efa5f (dd)
