@@ -1,11 +1,11 @@
 <?php
 session_start();
-if(isset($_SESSION["user_email"]) && isset($_SESSION["user_full_name"]))
+if(!isset($_SESSION["user_email"]) )
 {
-    $user_email = $_SESSION["user_email"];
-    $user_name = $_SESSION["user_full_name"];
+  echo("<script>window.location='sign_in.php';</script>");
 }
 else{
-    header("Location : sign_in.php");
+  $user_email = $_SESSION["user_email"];
+  $user_name = $_SESSION["user_full_name"];
 }
 ?>
