@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 $con = mysqli_connect("localhost","anushka","!RqkW_eW-td3y3km","Book_A_Slot");
 if(mysqli_connect_errno()){
@@ -41,3 +42,13 @@ if(mysqli_connect_errno()){
 
 
 >>>>>>> 915515f (commmit bro)
+=======
+$con=mysqli_connect('localhost','root','','book_a_slot');
+if($con){
+    //echo "connection Successful";
+}
+else{
+    die(mysqli_error($con));
+}
+?>
+>>>>>>> c2b381f (admin work)
