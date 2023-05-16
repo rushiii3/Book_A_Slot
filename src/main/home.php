@@ -39,7 +39,7 @@
 </head>
 <body>
         <?php
-            require("session.php");
+          require("session.php");  
             require_once("loader.html"); 
         ?>
         <main id="main">
