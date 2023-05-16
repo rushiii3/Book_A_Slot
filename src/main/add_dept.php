@@ -25,7 +25,6 @@ if(isset($_POST['add_dept'])){
     $department_name=$_POST['department_name'];
     if( $department_name==''){
         echo "<script>alert('Please fill the field first')</script>";
-        echo("<script>window.location='admin_home.php?add_dept';</script>");
     }
     else{
     $add_dept="Insert into `DEPARTMENT`(department_name) value('$department_name')";
@@ -96,5 +95,5 @@ if(isset($_POST['add_dept'])){
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js" integrity="sha512-5SUkiwmm+0AiJEaCiS5nu/ZKPodeuInbQ7CiSrSnUHe11dJpQ8o4J1DU/rw4gxk/O+WBpGYAZbb8e17CDEoESw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</body>
+</head>
 </html>

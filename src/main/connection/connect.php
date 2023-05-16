@@ -10,6 +10,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 636b497 (admin work)
@@ -52,12 +53,15 @@ if(mysqli_connect_errno()){
 
 >>>>>>> 915515f (commmit bro)
 =======
+=======
+>>>>>>> fd66dce (admin work)
 $con=mysqli_connect('localhost','root','','book_a_slot');
 if($con){
     //echo "connection Successful";
 }
 else{
     die(mysqli_error($con));
+<<<<<<< HEAD
 }
 ?>
 >>>>>>> c2b381f (admin work)
@@ -79,6 +83,8 @@ else{
 $con = mysqli_connect("localhost","anushka","!RqkW_eW-td3y3km","Book_A_Slot");
 if(mysqli_connect_errno()){
     echo("not connected");
+=======
+>>>>>>> fd66dce (admin work)
 }
 <<<<<<< HEAD
 /*
