@@ -29,7 +29,7 @@ $(document).ready(function(){
                 }
                 else if(data==2)
                 {
-                    window.location.href = 'https://www.youtube.com/';
+                    window.location.href = 'admin_home.php';
                 }
                 else{
                     $('#failed').modal('show');
