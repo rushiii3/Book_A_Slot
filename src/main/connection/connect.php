@@ -7,6 +7,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 $con = mysqli_connect("localhost","anushka","!RqkW_eW-td3y3km","Book_A_Slot");
 if(mysqli_connect_errno()){
@@ -94,3 +95,18 @@ else{
 }
 ?>
 >>>>>>> f3b8c3e (yes)
+=======
+/*
+$con = mysqli_connect("localhost","anushka","!RqkW_eW-td3y3km","Book_A_Slot");
+if(mysqli_connect_errno()){
+    echo("not connected");
+}*/
+
+$con = mysqli_connect("localhost","id20741171_bookaslot","!RqkW_eW-td3y3km","id20741171_bookaslot");
+if(mysqli_connect_errno()){
+    echo("not connected");
+}
+?>
+
+
+>>>>>>> 76740a3 (sommit)
