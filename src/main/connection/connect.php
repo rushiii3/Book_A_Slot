@@ -9,7 +9,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 636b497 (admin work)
 $con = mysqli_connect("localhost","anushka","!RqkW_eW-td3y3km","Book_A_Slot");
 if(mysqli_connect_errno()){
     echo("not connected");
@@ -77,6 +80,7 @@ $con = mysqli_connect("localhost","anushka","!RqkW_eW-td3y3km","Book_A_Slot");
 if(mysqli_connect_errno()){
     echo("not connected");
 }
+<<<<<<< HEAD
 /*
 $con = mysqli_connect("localhost","id20741171_bookaslot","!RqkW_eW-td3y3km","id20741171_bookaslot");
 if(mysqli_connect_errno()){
@@ -114,3 +118,6 @@ if(mysqli_connect_errno()){
 
 
 >>>>>>> 76740a3 (sommit)
+=======
+?>
+>>>>>>> 636b497 (admin work)
