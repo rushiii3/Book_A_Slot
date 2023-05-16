@@ -1,4 +1,5 @@
 
+$('#org_institue_name').hide();
 $('.tab').hide();
 var currentTab = 0;
 showTab(currentTab)
@@ -14,9 +15,11 @@ function showTab(n)
   }
   //console.log(n);
   if (n === 2) {
-    $("#nextBtn").html("Submit").attr("id", "newId");
+    $("#nextBtn").html("Submit");
+    $('#nextBtn').attr('onclick', 'submitValue()');
   } else {
     $("#nextBtn").html("Next");
+    $('#nextBtn').attr('onclick', 'nextPrev(1)');
     //$("#nextBtn").removeClass("submit")
   }
   CurrentStep(n);
@@ -51,11 +54,11 @@ function CurrentStep(n)
 function Completed(n,currentTab)
 {
     var i, x = document.getElementsByClassName("stepper-item");
-    //console.log(currentTab);
+    console.log(currentTab);
     if(n==1){
         if(currentTab<2)
     {
-        //console.log("inside 1");
+        console.log("inside 1");
         for(i=0;i<=currentTab;i++)
         {
             $step = $('.stepper-item');
@@ -65,11 +68,23 @@ function Completed(n,currentTab)
         
     }
     else{
-        //console.log("inside -1");
-        //console.log(currentTab);
+        console.log("inside -1");
+        console.log(currentTab);
             $step = $('.stepper-item');
             $step.eq(currentTab-1).removeClass("completed");
         }
 }
 
+$('#department_namee').on('change',function(){
+    $department_namee = $('#department_namee').val();
+    if($department_namee==="Others")
+    {
+        console.log("others selected");
+        $('#org_institue_name').show();
+    }
+    else{
 
+        $('#org_institue_name').hide();
+    }
+    
+})  
