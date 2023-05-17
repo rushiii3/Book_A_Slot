@@ -201,7 +201,7 @@
 
                                     <div class="col-12 mb-3" id="org_institue_name">
                                             <label for="Institute/Org_Name" class="form-label">Institute/Organisation Name</label>
-                                            <input type="text" class="form-control" id="Institute/Org_Name" placeholder="e.g. ....... ">
+                                            <input type="text" class="form-control" id="Institute_OrgName" placeholder="e.g. ....... ">
                                         </div>
                                     
                                     <div class="col-12 mb-3">
@@ -317,8 +317,23 @@ function tConv24(time24) {
   return ts;
 };
 */
-
-
+$('#org_institue_name').hide();
+$('#department_namee').on('change',function(){
+    
+    $department_namee = $('#department_namee').val();
+    
+    if($department_namee==="Others")
+    {
+        console.log("others selected");
+        $('#org_institue_name').show();
+        $('#Institute_OrgName').val("");
+    }
+    else{
+        $('#org_institue_name').hide();
+        $('#Institute_OrgName').val($department_namee);
+    }
+    
+}) 
 
 function submitValue()
 {
@@ -328,9 +343,14 @@ function submitValue()
     $event_date = $('#selectDate').val();
     $event_start_time = $('#selectStartTime').val();
     $event_end_time = $('#selectEndTime').val();
-    $dept_org = $('#Institute/Org_Name').val();
-    console.log($dept_org);
+    $org_institue_name = $('#Institute_OrgName').val();
+    $resourse_person_name = $('#rp_name').val();
+    $resourse_person_company = $('#companyName').val();
+    $resourse_person_designation = $('#designation').val();
+    $resourse_person_experience = $('#experience').val();
+
 }
+
 
 
 
