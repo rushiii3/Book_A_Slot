@@ -17,6 +17,9 @@ include './connection/connect.php';
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </head>
   <body class="bg-light">
+  <?php
+          require("session.php");  
+        ?>
     <div class="container-fluid mt-2">
         <div class="row">
             <div class="col-md-10 col-11 mx-auto">
