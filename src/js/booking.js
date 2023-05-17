@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 $('#org_institue_name').hide();
 <<<<<<< HEAD
 $('#org_institue_email').hide();
@@ -39,6 +40,10 @@ $('#check_box_terms_and_condition').on('click',function(){
 =======
 $('#org_institue_name').hide();
 >>>>>>> d9efa5f (dd)
+=======
+
+//$('#org_institue_name').hide();
+>>>>>>> 0b52915 (dd)
 $('.tab').hide();
 var currentTab = 0;
 showTab(currentTab)
@@ -56,9 +61,11 @@ function showTab(n)
   if (n === 2) {
     $("#nextBtn").html("Submit");
     $('#nextBtn').attr('onclick', 'submitValue()');
+    $('#nextBtn').attr('type', 'submit');
   } else {
     $("#nextBtn").html("Next");
     $('#nextBtn').attr('onclick', 'nextPrev(1)');
+    $('#nextBtn').attr('type', 'button');
     //$("#nextBtn").removeClass("submit")
   }
   CurrentStep(n);
@@ -69,7 +76,23 @@ function nextPrev(n)
     $x = $(".tab");
     $x.eq(currentTab).hide();
     Completed(n,currentTab);
-    currentTab = currentTab + n;
+    if(currentTab==0)
+    {
+      $result = validate1page();
+      if($result==="True")
+      {
+        currentTab = currentTab + n;
+      }
+      
+    }
+    else if(currentTab==1)
+    {
+      currentTab = currentTab + n;
+    }
+    else{
+
+    }
+  
     if(currentTab<=2)
     {
         //console.log("yes"); 
@@ -133,14 +156,25 @@ $('#department_namee').on('change',function(){
     }
 }) 
 
-$('#department_namee').on('change',function(){
-    $department_namee = $('#department_namee').val();
-    if($department_namee==="Others")
+ function validate1page()
+ {
+    $event_name = $('#eventName').val();
+    $event_Descr = $('#eventDescription').val();
+    $num_of_students = $('#no_of_stu_attending').val();
+    $event_date = $('#selectDate').val();
+    $event_start_time = $('#selectStartTime').val();
+    $event_end_time = $('#selectEndTime').val();
+    if($event_name!="")
     {
-        console.log("others selected");
-        $('#org_institue_name').show();
+      if($event_Descr!=="")
+      {
+        var result = "True";
+        return result;
+      }
+      
     }
     else{
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 $('.section2').hide();
@@ -402,3 +436,8 @@ function validMail(mail)
     
 })  
 >>>>>>> d9efa5f (dd)
+=======
+      alert("please input event name");
+    }
+ }
+>>>>>>> 0b52915 (dd)
