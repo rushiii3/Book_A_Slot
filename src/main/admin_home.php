@@ -69,9 +69,7 @@ include './connection/connect.php';
                                 <li class="nav-item">
                                 <a class="nav-link  my-2 " href="#" tabindex="-1" aria-disabled="true">REPORTS</a>
                                 </li>
-                                <li class="nav-item">
-                                <a class="nav-link  my-2 " href="#" tabindex="-1" aria-disabled="true"> LOGOUT</a>
-                                </li>
+                                
                             </ul>
                             </div>
                         </div>
