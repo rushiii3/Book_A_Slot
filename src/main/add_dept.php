@@ -67,7 +67,7 @@ if(isset($_POST['add_dept'])){
         </tbody>    
     </table>
     <div class="mt-2">
-     <a href='./add.php' style='text-decoration:none'  type='button' class='text-light' data-toggle='modal' data-target='#adddept' ><input type="submit" name="add_dept" value="ADD" class="btn btn-primary px-3 mb-3"></a>
+     <a  style='text-decoration:none'  type='button' class='text-light' data-toggle='modal' data-target='#adddept' ><input type="submit" name="add_dept" value="ADD" class="btn btn-primary px-3 mb-3"></a>
      </div>          
     </div>   
 </body>
@@ -95,4 +95,5 @@ if(isset($_POST['add_dept'])){
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js" integrity="sha512-5SUkiwmm+0AiJEaCiS5nu/ZKPodeuInbQ7CiSrSnUHe11dJpQ8o4J1DU/rw4gxk/O+WBpGYAZbb8e17CDEoESw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
 </html>
