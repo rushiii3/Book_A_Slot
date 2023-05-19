@@ -23,7 +23,7 @@
     <?php
          include("session.php");
          require "connection/connect.php";
-         require_once("loader.html"); 
+         //require_once("loader.html"); 
      ?>
     <main id="main">
 
@@ -65,8 +65,9 @@
 
                     <div class="container-fluid">
                         <!-- new container -->
-                        <div class="row tab">
+                        <div class="row section1">
                             <!-- new row -->
+
                                         <div class="col-12 mb-3">
                                             <label for="eventName" class="form-label">Event Name</label>
                                             <input type="text" class="form-control" id="eventName" placeholder="e.g. ....... ">
@@ -165,12 +166,15 @@
                                                 <option class="end-time" value="23:30">11:30 PM</option>
                                             </select>
                                         </div>
+                                        <div class="col-12 mb-1 mt-5">
+                                            <button type="button" class="btn btn-primary px-4 ms-3" id="nextFirst">Next</button> 
+                                        </div>
                                         
                         </div>
                         <!-- new row ending -->
 
 
-                        <div class="row tab">
+                        <div class="row section2">
                             <!-- new row -->
                             <div class="col-12 mb-3">
                                         <label for="department_namee" class="form-label">Select Department</label>
@@ -234,11 +238,15 @@
                                                     ?>
                                         </select>
                                     </div>
+                                    <div class="col-12 mb-1 mt-5">
+                                            <button type="button" class="btn btn-secondary px-4 ms-3" id="prevBtnSecond">Previous</button>
+                                            <button type="button" class="btn btn-primary px-4 ms-3" id="nextSecond">Next</button> 
+                                        </div>
                                 
                         </div>
                         <!-- new row ending -->
 
-                        <div class="row tab">
+                        <div class="row section3">
                             <!-- new row -->
                                         <div class="col-12 mb-3">
                                             <label for="rp_name" class="form-label">Resourse Person Full Name</label>
@@ -256,14 +264,13 @@
                                                 <label for="experience" class="form-label">Experience</label>
                                                 <input type="number" class="form-control" id="experience" placeholder="e.g. ....... ">
                                         </div>
+                                        <div class="col-12 mb-1 mt-5">
+                                            <button type="button" class="btn btn-secondary px-4 ms-3" id="prevBtnThird">Previous</button>
+                                            <button type="submit" class="btn btn-primary px-4 ms-3" id="nextThird">Submit</button> 
+                                        </div>
                         </div>
 <!-- new row ending -->
-                                    <div class="row">
-                                        <div class="col-12 mb-1 mt-5">
-                                            <button type="button " class="btn btn-secondary px-4 ms-3" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-                                            <button type="button " class="btn btn-primary px-4 ms-3" id="nextBtn"> Next jaaa</button>
-                                        </div>
-                                    </div>
+                                    
                                     
                     </div>
                     <!-- new container ending -->
@@ -276,7 +283,7 @@
         <!-- container ending -->
         </div>  
     </main>
-    <script src="../js/booking.js"></script>
+    <script src="../js/booking2.js"></script>
     <script src="../js/bookingDate.js"></script>
 </body>
 </html>
