@@ -30,6 +30,8 @@
         <?php
      include("navigation.html");
     ?>
+
+
         <div class="container mt-5 mb-5 shadow p-3 mb-5 bg-body" id="main_body" style="border-radius: 20px">
             <!-- Container starting -->
             <div class="row">
@@ -259,7 +261,7 @@
                                     <div class="row">
                                         <div class="col-12 mb-1 mt-5">
                                             <button type="button " class="btn btn-secondary px-4 ms-3" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-                                            <button type="button " class="btn btn-primary px-4 ms-3" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                                            <button type="button " class="btn btn-primary px-4 ms-3" id="nextBtn"> Next jaaa</button>
                                         </div>
                                     </div>
                                     
@@ -279,6 +281,8 @@
 </body>
 </html>
 <script>
+    
+    
     /*
  $start_time.eq(1).prop('disabled', true);
  $start_time.eq(3).prop('disabled', true);
