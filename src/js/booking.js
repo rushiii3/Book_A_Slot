@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 $('#org_institue_name').hide();
 <<<<<<< HEAD
 $('#org_institue_email').hide();
@@ -44,28 +45,37 @@ $('#org_institue_name').hide();
 
 //$('#org_institue_name').hide();
 >>>>>>> 0b52915 (dd)
+=======
+>>>>>>> d9e0c02 (comit bro)
 $('.tab').hide();
 var currentTab = 0;
 showTab(currentTab)
 function showTab(n)
 {
-  //byee
     $x = $('.tab');
     $x.eq(n).show();
     if (n === 0) {
+    $('#nextBtn').addClass('first_page');
     $("#prevBtn").hide();
   } else {
+    $('#nextBtn').removeClass('first_page');
+    $('#nextBtn').removeClass('second_page');
     $("#prevBtn").show();
   }
-  //console.log(n);
+
+  if(n === 1){
+    $('#nextBtn').addClass('second_page');
+    $('#nextBtn').removeClass('first_page');
+  }
+
   if (n === 2) {
     $("#nextBtn").html("Submit");
-    $('#nextBtn').attr('onclick', 'submitValue()');
-    $('#nextBtn').attr('type', 'submit');
+    //$('#nextBtn').attr('onclick', 'submitValue()');
+    //$('#nextBtn').attr('type', 'submit');
   } else {
     $("#nextBtn").html("Next");
-    $('#nextBtn').attr('onclick', 'nextPrev(1)');
-    $('#nextBtn').attr('type', 'button');
+    //$('#nextBtn').attr('onclick', 'nextPrev(1)');
+    //$('#nextBtn').attr('type', 'button');
     //$("#nextBtn").removeClass("submit")
   }
   CurrentStep(n);
@@ -74,8 +84,6 @@ function nextPrev(n)
 {
     
     $x = $(".tab");
-    //Completed(n,currentTab);
-    //if (n == 1 && !validate1page()) return false;
     $x.eq(currentTab).hide();
     
     currentTab = currentTab + n;
@@ -146,6 +154,7 @@ $('#department_namee').on('change',function(){
 
 =======
 */
+<<<<<<< HEAD
 >>>>>>> 4254869 (done)
  function validate1page()
  {
@@ -461,12 +470,12 @@ function validMail(mail)
     }
     return valid
  }
+=======
+>>>>>>> d9e0c02 (comit bro)
  
- $('.toast').hide();
  
 $('.first_page').on('click',function()
 {
-  console.log("clicked");
     $event_name = $('#eventName').val();
     $event_Descr = $('#eventDescription').val();
     $num_of_students = $('#no_of_stu_attending').val();
@@ -485,8 +494,9 @@ $('.first_page').on('click',function()
             {
               if($event_end_time!=="Select the end time")
               {
-                $('#nextBtn').attr('onclick', null);
                 nextPrev(1);
+                $step = $('.stepper-item');
+                $step.eq(0).addClass("completed");
               }else{
                 alert("Please input the event end time");
               }
@@ -513,4 +523,13 @@ $('.first_page').on('click',function()
       alert("Please input your Event Name");
     }
 })
+<<<<<<< HEAD
 >>>>>>> 4254869 (done)
+=======
+$('.second_page').on('click',function()
+{
+
+  console.log("no forward");
+
+})
+>>>>>>> d9e0c02 (comit bro)
