@@ -1,27 +1,32 @@
-
-//$('#org_institue_name').hide();
 $('.tab').hide();
 var currentTab = 0;
 showTab(currentTab)
 function showTab(n)
 {
-  //byee
     $x = $('.tab');
     $x.eq(n).show();
     if (n === 0) {
+    $('#nextBtn').addClass('first_page');
     $("#prevBtn").hide();
   } else {
+    $('#nextBtn').removeClass('first_page');
+    $('#nextBtn').removeClass('second_page');
     $("#prevBtn").show();
   }
-  //console.log(n);
+
+  if(n === 1){
+    $('#nextBtn').addClass('second_page');
+    $('#nextBtn').removeClass('first_page');
+  }
+
   if (n === 2) {
     $("#nextBtn").html("Submit");
-    $('#nextBtn').attr('onclick', 'submitValue()');
-    $('#nextBtn').attr('type', 'submit');
+    //$('#nextBtn').attr('onclick', 'submitValue()');
+    //$('#nextBtn').attr('type', 'submit');
   } else {
     $("#nextBtn").html("Next");
-    $('#nextBtn').attr('onclick', 'nextPrev(1)');
-    $('#nextBtn').attr('type', 'button');
+    //$('#nextBtn').attr('onclick', 'nextPrev(1)');
+    //$('#nextBtn').attr('type', 'button');
     //$("#nextBtn").removeClass("submit")
   }
   CurrentStep(n);
@@ -30,8 +35,6 @@ function nextPrev(n)
 {
     
     $x = $(".tab");
-    //Completed(n,currentTab);
-    //if (n == 1 && !validate1page()) return false;
     $x.eq(currentTab).hide();
     
     currentTab = currentTab + n;
@@ -80,57 +83,10 @@ function Completed(n,currentTab)
         }
 }
 */
- function validate1page()
- {
-    var valid = true;
-    $event_name = $('#eventName').val();
-    $event_Descr = $('#eventDescription').val();
-    $num_of_students = $('#no_of_stu_attending').val();
-    $event_date = $('#selectDate').val();
-    $event_start_time = $('#selectStartTime').val();
-    $event_end_time = $('#selectEndTime').val();
-    if($event_name!="")
-    {
-      if($event_Descr!=="")
-      {
-        if($num_of_students!=="")
-        {
-          if($event_date!=="")
-          {
-            valid = true;
-          }else{
-            $('.alert').show();
-            $("#alert_inbox").text("Please eneter a date");
-            hideAlert();
-            valid = false;
-          }
-          
-        }else{
-          $('.alert').show();
-          $("#alert_inbox").text("Please eneter Number of students attending the event");
-          hideAlert();
-          valid = false;
-        }
-        
-      }
-      else{
-        showError("Please eneter Event Description");
-        valid = false;
-      }
-      
-    }
-    else{
-      showError("Please Input your event name!");
-      valid = false;
-    }
-    return valid
- }
  
- $('.toast').hide();
  
 $('.first_page').on('click',function()
 {
-  console.log("clicked");
     $event_name = $('#eventName').val();
     $event_Descr = $('#eventDescription').val();
     $num_of_students = $('#no_of_stu_attending').val();
@@ -149,8 +105,9 @@ $('.first_page').on('click',function()
             {
               if($event_end_time!=="Select the end time")
               {
-                $('#nextBtn').attr('onclick', null);
                 nextPrev(1);
+                $step = $('.stepper-item');
+                $step.eq(0).addClass("completed");
               }else{
                 alert("Please input the event end time");
               }
@@ -176,4 +133,10 @@ $('.first_page').on('click',function()
     else{
       alert("Please input your Event Name");
     }
+})
+$('.second_page').on('click',function()
+{
+
+  console.log("no forward");
+
 })
