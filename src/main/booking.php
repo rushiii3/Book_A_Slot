@@ -23,13 +23,43 @@
     <?php
          include("session.php");
          require "connection/connect.php";
-         //require_once("loader.html"); 
+         require_once("loader.html"); 
      ?>
     <main id="main">
 
         <?php
      include("navigation.html");
     ?>
+
+
+<!-- SUCCESS -->
+<div class="modal fade" id="success" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog modal-dialog-centered w-75 mx-auto">
+    <div class="modal-content">
+      <div class="modal-body">
+      <img src="https://img.freepik.com/free-vector/goal-achievement-planning-checklist-flat-composition-with-man-holding-pencil-tick-image_1284-63673.jpg?w=1060&t=st=1684568117~exp=1684568717~hmac=d2a5e07e610acc520b8359beead1c1938d3160eb998bd132bdd545f5b00883ee" class="img-fluid" alt="">
+        <p class="fs-6 text-center"><strong>Congratulations.</strong> <br/> Your venue will be confirmed in 24hr! <br> You can check you status in Check status</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" onclick="location.href='check_status.php';" class="btn btn-primary">Check Status</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FAILED -->
+<div class="modal fade" id="failed" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog modal-dialog-centered w-75 mx-auto">
+    <div class="modal-content">
+      <div class="modal-body">
+      <img src="https://img.freepik.com/free-vector/oops-404-error-with-broken-robot-concept-illustration_114360-1932.jpg?w=1060&t=st=1684568442~exp=1684569042~hmac=939ab6fee619a44b81af999bef8df55df06ea101b4289328e026f74156465ec2" class="img-fluid" alt="">
+        <p class="fs-6 text-center"><strong>Failed to Booked.</strong> <br/> Try again. </p>
+      </div>
+      <div class="modal-footer">
+      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Try Again</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
         <div class="container mt-5 mb-5 shadow p-3 mb-5 bg-body" id="main_body" style="border-radius: 20px">
@@ -62,11 +92,13 @@
                         </div>
                         </div>
                     </div>
-
+<form>
                     <div class="container-fluid">
                         <!-- new container -->
                         <div class="row section1">
                             <!-- new row -->
+                            
+                            <input type="text" id="user_email" value="<?php echo($user_email);?>" style="display:none;" readonly>
 
                                         <div class="col-12 mb-3">
                                             <label for="eventName" class="form-label">Event Name</label>
@@ -264,9 +296,16 @@
                                                 <label for="experience" class="form-label">Experience</label>
                                                 <input type="number" class="form-control" id="experience" placeholder="e.g. ....... ">
                                         </div>
+                                        <div class="col-12 mb-4 form-check">
+                                                <input class="form-check-input"  type="checkbox" value="" id="terms_condition">
+                                                <label class="form-check-label" for="terms_condition">
+                                                    I agree to these 
+                                                    <span><a href="#" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Terms and Conditions.</a></span>
+                                                </label>
+                                        </div>
                                         <div class="col-12 mb-1 mt-5">
                                             <button type="button" class="btn btn-secondary px-4 ms-3" id="prevBtnThird">Previous</button>
-                                            <button type="submit" class="btn btn-primary px-4 ms-3" id="nextThird">Submit</button> 
+                                            <button type="button" class="btn btn-primary px-4 ms-3" id="nextThird">Submit</button> 
                                         </div>
                         </div>
 <!-- new row ending -->
@@ -279,11 +318,12 @@
 
                 </div>
             <!-- row ending -->
+                                            </form>
             </div>
         <!-- container ending -->
         </div>  
     </main>
-    <script src="../js/booking2.js"></script>
+    <script src="../js/booking.js"></script>
     <script src="../js/bookingDate.js"></script>
 </body>
 </html>
@@ -328,39 +368,6 @@ function tConv24(time24) {
   return ts;
 };
 */
-$('#org_institue_name').hide();
-$('#department_namee').on('change',function(){
-    
-    $department_namee = $('#department_namee').val();
-    
-    if($department_namee==="Others")
-    {
-        console.log("others selected");
-        $('#org_institue_name').show();
-        $('#Institute_OrgName').val("");
-    }
-    else{
-        $('#org_institue_name').hide();
-        $('#Institute_OrgName').val($department_namee);
-    }
-    
-}) 
-
-function submitValue()
-{
-    $event_name = $('#eventName').val();
-    $event_Descr = $('#eventDescription').val();
-    $num_of_students = $('#no_of_stu_attending').val();
-    $event_date = $('#selectDate').val();
-    $event_start_time = $('#selectStartTime').val();
-    $event_end_time = $('#selectEndTime').val();
-    $org_institue_name = $('#Institute_OrgName').val();
-    $resourse_person_name = $('#rp_name').val();
-    $resourse_person_company = $('#companyName').val();
-    $resourse_person_designation = $('#designation').val();
-    $resourse_person_experience = $('#experience').val();
-
-}
 
 
 
