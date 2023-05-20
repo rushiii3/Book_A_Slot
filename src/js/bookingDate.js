@@ -105,11 +105,17 @@ function BlockTime(start_timee,end_timee)
         }
     }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 7c6c46c (senddd)
 =======
 //BlockTime("10:00","13:30")
+=======
+$start = "10:00";
+$end = "13:30";
+BlockTime($start,$end)
+>>>>>>> 871ba2a (donee)
 
 $('#selectDate').on('change',function(){
   $date = $('#selectDate').val();
@@ -119,7 +125,7 @@ $('#selectDate').on('change',function(){
     url: 'ajax.php',
     data: {datee:$date},
     success: function(data){
-        console.log(data);
+        console.log(data.test1);
         
     },
     error: function() {

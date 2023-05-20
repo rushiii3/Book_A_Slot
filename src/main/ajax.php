@@ -126,36 +126,19 @@ if(!empty($_POST['datee']) ){
         $get_time_info = "SELECT * FROM `EVENT` WHERE `event_date` = '$datee'";
         $result_of_time = mysqli_query($con,$get_time_info);
         if(mysqli_num_rows($result_of_time)>0){
-                ?>
-                        <script>
-                        $start_time = $('.start-time');
-                        $end_time = $('.end-time');
-                <?php
+                
                 while($row_of_result = mysqli_fetch_assoc($result_of_time))
                 {
-                        ?>
-                                var i,x = $('.start-time');
-                                for(i=0;i<x.length;i++)
-                                {
-                                
-                                        if(<?php echo(date('H:i', strtotime($row_of_result['event_start_time'])));?>==$start_time[i].attributes[1].value)
-                                        { 
-                                        do{
-                                                $start_time.eq(i).prop('disabled', true);
-                                                $end_time.eq(i).prop('disabled', true);
-                                                console.log(i);
-                                                i=i+1;
-                                                console.log(i);
-                                        }while(<?php echo(date('H:i', strtotime($row_of_result['event_end_time'])));?>>=$start_time[i].attributes[1].value);
-                                        }
-                                }
-    <?php
-                        
-                }
-                ?>
+                        //echo(date('H:i', strtotime($row_of_result['event_start_time'])));
+                        //echo(date('H:i', strtotime($row_of_result['event_end_time'])));
+                        $test = array();
+                        $test['test1'] = '1';
+                        $test['test2'] = '2';
+                        $test['test3'] = '3';
+                        echo json_encode($test);
+                        //echo('BlockTime(10:00,13:30)');
 
-                </script>
-                <?php
         }
+}
 }
 ?>
