@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 329887f (report home)
@@ -192,3 +193,5 @@ jhala
 >>>>>>> 0305517 (admin)
 =======
 >>>>>>> d2b6aad (month report)
+=======
+>>>>>>> b5e0f9b (admin)
