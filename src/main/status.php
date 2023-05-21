@@ -38,7 +38,7 @@
         <?php
 date_default_timezone_set("Asia/Calcutta");
 $today_date = date("Y-m-d");
-$get_events_pending_approved="SELECT * FROM `EVENT` WHERE user_name = '$user_email' AND event_date > '$today_date' ORDER BY event_date";
+$get_events_pending_approved="SELECT * FROM `EVENT` WHERE user_name = '$user_email' AND status_value in ('Approved','Not Approved','Pending')  AND event_date > '$today_date' ORDER BY event_date";
 $result_of_events_pending_approved = mysqli_query($con,$get_events_pending_approved);
 if(mysqli_num_rows($result_of_events_pending_approved)>0)
 {
@@ -50,14 +50,14 @@ if(mysqli_num_rows($result_of_events_pending_approved)>0)
             <div class="col-lg-4 col-md-6 mb-5">
                 <div class="card shadow p-1" style="width: auto;border-radius: 20px;">
                     <div class="card-body" style="<?php
-                    if($row_of_query['status_value']=="Canceled")
+                    if($row_of_query['status_value']=="Not Approved")
                     {
                         echo("opacity: 0.6;");
                     }
 
                 ?>">
                         <h5 class="card-title"><?php echo($row_of_query['event_name']); ?></h5>
-                        <div class="badge bg-success p-1 mb-2 
+                        <div class="badge p-1 mb-2 
                         <?php
                     if($row_of_query['status_value']=="Approved")
                     {
@@ -68,7 +68,7 @@ if(mysqli_num_rows($result_of_events_pending_approved)>0)
                         echo("bg-warning");
                     }
                     else{
-                        echo("bg-danger");
+                        echo("bg-secondary");
                     }
                     ?>
                     ">
@@ -80,10 +80,11 @@ if(mysqli_num_rows($result_of_events_pending_approved)>0)
                         <p class="card-text"> <span class="fw-bold">Time : </span> <?php echo date("g:i A", strtotime($row_of_query['event_start_time'])); ?> to <?php echo date("g:i A", strtotime($row_of_query['event_end_time'])); ?> </p>
                         <p class="card-text"> <span class="fw-bold">Venue : </span> <?php echo($row_of_query['ar_name']); ?> </p>
                         <?php
-                        if($row_of_query['status_value']=="Canceled")
+                        if($row_of_query['status_value']=="Not Approved")
                         {
                             ?>
-                         <a href="cancel.php">Why canceled the slot</a> 
+                             <p class="card-text bg-secondary text-white w-100 rounded p-2"> <span class="fw-bold">Reason: </span> <?php echo($row_of_query['status_reason']); ?> </p>
+
                             <?php
                         }
                         else{
