@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 329887f (report home)
@@ -148,3 +149,9 @@ include './connection/connect.php';
 
 =======
 >>>>>>> 329887f (report home)
+=======
+he file main folder madye banavli right?hash
+ha tula pn atta sagre file hejatch banava javascript asel tr js madye css asel tr css  theek? hash
+atta he file me commit karto
+jhala 
+>>>>>>> bfa2598 (admin)
