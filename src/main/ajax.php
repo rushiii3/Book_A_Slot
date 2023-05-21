@@ -141,4 +141,16 @@ if(!empty($_POST['datee']) ){
         }
 }
 }
+if(!empty($_POST['eventid']) && !empty($_POST['reason'])){
+        $reason =  mysqli_real_escape_string($con,$_POST['reason']);
+        $id = mysqli_real_escape_string($con,$_POST['eventid']);
+        $query_to_cancel_slot = "UPDATE `EVENT` SET status_reason = '$reason', status_value = 'Canceled' WHERE event_id ='$id' ";
+        if(mysqli_query($con,$query_to_cancel_slot)){
+                echo("1");
+        }else{
+                echo("2");
+                echo("Error description: " . mysqli_error($con));
+        }
+}
+
 ?>
