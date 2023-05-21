@@ -41,6 +41,7 @@
         <p class="fs-6 text-center"><strong>Congratulations.</strong> <br/> Your venue will be confirmed in 24hr! <br> You can check you status in Check status</p>
       </div>
       <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Book another</button>
         <button type="button" onclick="location.href='status.php';" class="btn btn-primary">Check Status</button>
       </div>
     </div>
