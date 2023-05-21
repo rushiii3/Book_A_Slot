@@ -43,7 +43,7 @@ if(isset($_POST['add_dept'])){
         <div class="row">
             <div class="col-md-8 col-lg-6 mb-4 "> -->
     <div class="con1 mt-3 ">
-    <h1 class='text-center text-success'>Add New Department</h1>
+    <h1 class='text-center text-primary'>Add New Department</h1>
     <table  class='table table-bordered my-4' style="align-items:center">
     <thread class="bg-info">
         <tr >
