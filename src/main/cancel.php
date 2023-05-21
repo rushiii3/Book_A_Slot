@@ -47,7 +47,7 @@
         <?php
 date_default_timezone_set("Asia/Calcutta");
 $today_date = date("Y-m-d");
-$get_events_pending_approved="SELECT * FROM `EVENT` WHERE user_name = '$user_email' AND event_date > '$today_date'  ORDER BY event_date";
+$get_events_pending_approved="SELECT * FROM `EVENT` WHERE user_name = '$user_email'  AND status_value in ('Approved','Canceled','Pending') AND event_date > '$today_date'  ORDER BY event_date";
 $result_of_events_pending_approved = mysqli_query($con,$get_events_pending_approved);
 if(mysqli_num_rows($result_of_events_pending_approved)>0)
 {
@@ -161,7 +161,7 @@ if(mysqli_num_rows($result_of_events_pending_approved)>0)
            <?php
 date_default_timezone_set("Asia/Calcutta");
 $today_date = date("Y-m-d");
-$get_events_pending_approved="SELECT * FROM `EVENT` WHERE user_name = '$user_email' AND event_date > '$today_date'  ORDER BY event_date";
+$get_events_pending_approved="SELECT * FROM `EVENT` WHERE user_name = '$user_email' AND status_value in ('Approved','Canceled','Pending') AND event_date > '$today_date'  ORDER BY event_date";
 $result_of_events_pending_approved = mysqli_query($con,$get_events_pending_approved);
 if(mysqli_num_rows($result_of_events_pending_approved)>0)
 {
