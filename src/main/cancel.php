@@ -64,9 +64,9 @@ if(mysqli_num_rows($result_of_events_pending_approved)>0)
                     <?php echo($row_of_query['status_value']); ?>
                     </div>
                         <!-- <h6 class="card-subtitle mb-2 text-body-secondary">29 MAY 2023</h6> -->
-                        <p class="card-text"> <span class="fw-bold">Description : </span>  <?php echo($row_of_query['event_description']); ?>  </p>
-                        <p class="card-text"> <span class="fw-bold">Date : </span> <?php echo(date('d M Y',strtotime($row_of_query['event_date']))); ?></p>
-                        <p class="card-text"> <span class="fw-bold">Time : </span> <?php echo(date('H:m A',strtotime($row_of_query['event_start_time']))); ?> to <?php echo(date('H:m A',strtotime($row_of_query['event_end_time']))); ?> </p>
+                        <p class="card-text"> <span class="fw-bold" style="text-align:justify;">Description : </span>  <?php echo($row_of_query['event_description']); ?>  </p>
+                        <p class="card-text"> <span class="fw-bold">Date : </span> <?php echo date("g:i A", strtotime($row_of_query['event_start_time'])); ?></p>
+                        <p class="card-text"> <span class="fw-bold">Time : </span> <?php echo date("g:i A", strtotime($row_of_query['event_end_time'])); ?> to <?php echo(date('H:m A',strtotime($row_of_query['event_end_time']))); ?> </p>
                         <p class="card-text"> <span class="fw-bold">Venue : </span> <?php echo($row_of_query['ar_name']); ?> </p>
                         <button type="button" class="btn btn-primary btn-danger w-100 my-1" data-bs-toggle="modal" data-bs-target="#failed">
   Cancel
