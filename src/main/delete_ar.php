@@ -1,5 +1,5 @@
 <?php
-include './connection/connect.php';
+include '../other/connection/connect.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,22 +17,31 @@ include './connection/connect.php';
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <style>
-        /* .center-table {
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-    }
-    .con {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    } */
     .con1{
         display: grid;
         place-items: center;
     }
         </style>
 </head>
+<?php
+  include './connection/connect.php';
+//to delete record
+if(isset($_POST['no'])){
+  header('location:./admin_home.php?delete_ar');
+}
+
+  if(isset($_POST['delete_id'])){
+    $ar_name=$_POST['ar_name'];
+    $delete_ar="delete from `AUDI_ROOM` where ar_name='$ar_name'";
+    $result=mysqli_query($con,$delete_ar);
+    if($result){
+        header('location:./admin_home.php?delete_ar');
+    }
+    else{
+        die(mysqli_error($con));
+    }
+  }
+  ?> 
 <body class=' text-center w-50 m-auto'>
     <div class="con1 mt-3 ">
     <h1 class='text-center text-primary'>Delete Auditorium Or Room</h1>
@@ -54,54 +63,43 @@ include './connection/connect.php';
             $floor=$row['floor'];
             $capacity=$row['capacity'];
             echo"
-            <tr class='text-center text-light'><td><a  style='text-decoration:none' href='delete_audi.php?delete_id=$ar_name' type='button'
+            <tr class='text-center text-light'>
+            <td><a  style='text-decoration:none' data_id='$ar_name' type='button' onclick='confirmdelete(this)'
             class='btn btn-primary text-light' data-toggle='modal' data-target='#exampleModalCenter'>$ar_name</td>
-            <td><a  style='text-decoration:none' href='delete_audi.php?delete_id=$ar_name' type='button'
+            <td><a  style='text-decoration:none'  type='button' data_id='$ar_name' onclick='confirmdelete(this)'
             class='btn btn-primary text-light' data-toggle='modal' data-target='#exampleModalCenter'>$floor</td>
-            <td><a  style='text-decoration:none' href='delete_audi.php?delete_id=$ar_name' type='button'
+            <td><a  style='text-decoration:none' data_id='$ar_name' type='button' onclick='confirmdelete(this)'
             class='btn btn-primary text-light' data-toggle='modal' data-target='#exampleModalCenter'>$capacity</td>
-            </tr>
-            
-            <div class='modal fade' id='exampleModalCenter' tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true'>
-  <div class='modal-dialog modal-dialog-centered' role='document'>
-    <div class='modal-content'>
-     
-      <div class='modal-body'>
-       <h4>Are you sure you want to delete this?</h4>
-      </div>
-      <div class='modal-footer'>
-        <button type='button' class='btn btn-secondary' data-dismiss='modal' ><a href='./admin_home.php?delete_ar' class='text-light text-decoration-none'>No</a></button>
-        <button type='button' class='btn btn-primary'>
-        <a  style='text-decoration:none' href='delete_audi.php?delete_id=$ar_name' class='text-light text-decoration-none' >
-        Yes<a></button>
-      </div>
-    </div>
-  </div>
-</div>";}
+            </tr>";}
             ?>
         </tbody>    
         
     </table>
     </div>
-    <!-- Button trigger modal -->
-<!-- <button type='button' class='btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-  Launch demo modal
-</button> -->
-
+   
+<script>
+function confirmdelete(self){
+  var ar_name=self.getAttribute('data_id');
+  document.getElementById('form_data').ar_name.value=ar_name;
+  $('#exampleModalCenter').modal('show');
+}
+</script>
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
-     
+     <form action="delete_ar.php" method='post' id='form_data'>
       <div class="modal-body">
        <h4>Are you sure you want to delete this?</h4>
+       <input type="text" name="ar_name">
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal" ><a href='./admin_home.php?delete_dept' class='text-light text-decoration-none'>No</a></button>
-        <button type="button" class="btn btn-primary">
-        <a  style='text-decoration:none' href='delete.php?delete_id=<?php echo $department_name?>' class='text-light text-decoration-none' >
+      <button type="submit" class="btn btn-secondary" name='no' >No</button>
+        <button type="submit" class="btn btn-primary" name='delete_id'>
+        <a  style='text-decoration:none'  class='text-light text-decoration-none' >
         Yes<a></button>
       </div>
+      </form>
     </div>
   </div>
 </div>
