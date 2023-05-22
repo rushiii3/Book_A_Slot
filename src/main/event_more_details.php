@@ -77,6 +77,7 @@ if(isset($_POST["reason"])){
     <?php
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 include './navigation.html';
 =======
                 include './navigation.php';
@@ -84,6 +85,9 @@ if(isset($_POST["reason"])){
 =======
                 include './navigation.html';
 >>>>>>> 3f0a459 (room occupacy report added)
+=======
+                include './navigation.php';
+>>>>>>> 4dd1ec8 (month report)
                 ?>
     <div class="row">
         <div class="col-md-6 col-lg-7">
@@ -122,6 +126,7 @@ if(isset($_POST["reason"])){
                 </tr>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 3f0a459 (room occupacy report added)
                 <tr>
@@ -137,6 +142,8 @@ if(isset($_POST["reason"])){
 >>>>>>> 4dd1ec8 (month report)
 =======
 >>>>>>> 3f0a459 (room occupacy report added)
+=======
+>>>>>>> 4dd1ec8 (month report)
               </tbody>
             </table>
             </div>

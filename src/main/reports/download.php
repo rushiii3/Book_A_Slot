@@ -41,11 +41,16 @@ include '../connection/connect.php';
                 $month=$_GET['month'];
                 $year=$_GET['year'];
             }
+<<<<<<< HEAD
             $get_event="select * from `EVENT` where MONTH(event_date)='$month' and YEAR(event_date)='$year' and status_value='approved' ";
             $result=mysqli_query($con,$get_event);
             if($result===false){
                 die(mysqli_error($con));
             }
+=======
+            $get_event="Select * from `EVENT` where MONTH(event_date)=$month and YEAR(event_date)=$year and status_value='approved'";
+            $result=mysqli_query($con,$get_event);
+>>>>>>> 4dd1ec8 (month report)
             while($row=mysqli_fetch_assoc($result)){
                 $event_name=$row['event_name'];
                 $event_date=$row['event_date'];
@@ -64,8 +69,11 @@ include '../connection/connect.php';
                 </tr>
                 ";
             }
+<<<<<<< HEAD
        
             
+=======
+>>>>>>> 4dd1ec8 (month report)
             ?>
             </tbody>
             
