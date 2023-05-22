@@ -94,6 +94,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <a href="./reports/room_occupacy.php" class="text-decoration:none" ><button class="btn btn-primary mt-3 m-auto d-flex justify-content-center" >Room Occupacy Report</button>
 
 =======
@@ -118,6 +119,12 @@
                         <a href="./reports/room_occupacy.php" class="text-decoration:none" ><button class="btn btn-primary mt-3 m-auto d-flex justify-content-center" >Room Occupacy Report</button>
 
 >>>>>>> c42b176 (events detail)
+=======
+                        <a href="./reports/room_occupacy.php" class="text-decoration:none" ><button class="btn btn-primary mt-3 m-auto d-flex justify-content-center" >Room Occupacy Report</button>
+
+=======
+>>>>>>> 4dd1ec8 (month report)
+>>>>>>> 9123d1a (month report)
                     
                     </div>
                 </div>
@@ -174,6 +181,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <button type="submit" class="btn btn-secondary"  name="close">Close</button>
 =======
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -196,6 +204,12 @@
 =======
         <button type="submit" class="btn btn-secondary"  name="close">Close</button>
 >>>>>>> c42b176 (events detail)
+=======
+        <button type="submit" class="btn btn-secondary"  name="close">Close</button>
+=======
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+>>>>>>> 4dd1ec8 (month report)
+>>>>>>> 9123d1a (month report)
         <button type="submit" class="btn btn-primary" name="month_report">OK</button>
       </div>
       </div>
