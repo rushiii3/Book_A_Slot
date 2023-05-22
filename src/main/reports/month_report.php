@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 include '../connection/connect.php';
 <<<<<<< HEAD
@@ -237,3 +238,5 @@ if(isset($_POST['month_report'])){
 </div>    
 </body>
 </html>
+=======
+>>>>>>> 7602cd1 (month report)

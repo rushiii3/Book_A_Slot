@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 329887f (report home)
+=======
+>>>>>>> 7602cd1 (month report)
 <?php
 include './connection/connect.php';
 ?>
@@ -54,9 +57,12 @@ include './connection/connect.php';
                                 <a class="nav-link  my-2 " href="#" tabindex="-1" aria-disabled="true">CANCEL</a>
                                 </li> -->
                                 <li class="nav-item">
+<<<<<<< HEAD
                                 <a class="nav-link  my-2 " href="admin_home.php" tabindex="-1" aria-disabled="true">VIEW REQUESTS</a>
                                 </li> 
                                 <li class="nav-item">
+=======
+>>>>>>> 7602cd1 (month report)
                                 <a class="nav-link  my-2 " href="admin_home.php?add_ar" tabindex="-1" aria-disabled="true">ADD ROOM/AUDI</a>
                                 </li>
                                 <li class="nav-item">
@@ -76,10 +82,14 @@ include './connection/connect.php';
                                 </li>
                                 <li class="nav-item">
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 <a class="nav-link  my-2 " href="report_home.php" tabindex="-1" aria-disabled="true">REPORTS</a>
 =======
                                 <a class="nav-link  my-2 " href="#" tabindex="-1" aria-disabled="true">REPORTS</a>
 >>>>>>> 329887f (report home)
+=======
+                                <a class="nav-link  my-2 " href="#" tabindex="-1" aria-disabled="true">REPORTS</a>
+>>>>>>> 7602cd1 (month report)
                                 </li>
                                 
                             </ul>
@@ -146,6 +156,7 @@ include './connection/connect.php';
 </html>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 329887f (report home)
@@ -155,3 +166,5 @@ ha tula pn atta sagre file hejatch banava javascript asel tr js madye css asel t
 atta he file me commit karto
 jhala 
 >>>>>>> bfa2598 (admin)
+=======
+>>>>>>> 7602cd1 (month report)

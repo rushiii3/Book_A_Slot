@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 include '../connection/connect.php';
 ?>
@@ -134,3 +135,5 @@ include '../connection/connect.php';
 </div>    
 </body>
 </html>
+=======
+>>>>>>> 7602cd1 (month report)
