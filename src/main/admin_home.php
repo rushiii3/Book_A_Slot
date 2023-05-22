@@ -52,6 +52,7 @@ include './connection/connect.php';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 <a class="nav-link  my-2 " href="admin_home.php" tabindex="-1" aria-disabled="true">VIEW REQUESTS</a>
                                 </li> 
                                 <li class="nav-item">
@@ -64,6 +65,11 @@ include './connection/connect.php';
 >>>>>>> 4dd1ec8 (month report)
 =======
 >>>>>>> 7f010e3 (admin)
+=======
+                                <a class="nav-link  my-2 " href="admin_home.php" tabindex="-1" aria-disabled="true">VIEW REQUESTS</a>
+                                </li> 
+                                <li class="nav-item">
+>>>>>>> 4dd1ec8 (month report)
                                 <a class="nav-link  my-2 " href="admin_home.php?add_ar" tabindex="-1" aria-disabled="true">ADD ROOM/AUDI</a>
                                 </li>
                                 <li class="nav-item">
