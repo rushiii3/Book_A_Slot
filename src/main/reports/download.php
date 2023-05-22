@@ -34,9 +34,12 @@ include '../connection/connect.php';
                 <th class="text-center">Organization Institute</th>
                 <th class="text-center">Number of participants</th>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <th class="text-center">Event Place</th>
 =======
 >>>>>>> 4dd1ec8 (month report)
+=======
+>>>>>>> 58a66d1 (month report)
             </tr>
             </thead>
             <tbody class="bg-primary">
@@ -45,6 +48,7 @@ include '../connection/connect.php';
                 $month=$_GET['month'];
                 $year=$_GET['year'];
             }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             $get_event="select * from `EVENT` where MONTH(event_date)='$month' and YEAR(event_date)='$year' and status_value='approved' ";
@@ -63,6 +67,10 @@ include '../connection/connect.php';
                 die(mysqli_error($con));
             }
 >>>>>>> a8eddd9 (month report done)
+=======
+            $get_event="Select * from `EVENT` where MONTH(event_date)=$month and YEAR(event_date)=$year and status_value='approved'";
+            $result=mysqli_query($con,$get_event);
+>>>>>>> 58a66d1 (month report)
             while($row=mysqli_fetch_assoc($result)){
                 $event_name=$row['event_name'];
                 $event_date=$row['event_date'];
@@ -72,9 +80,12 @@ include '../connection/connect.php';
                 $organization_institute=$row['organization_institute'];
                 $students_total_number=$row['students_total_number'];
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $ar_name=$row['ar_name'];
 =======
 >>>>>>> 4dd1ec8 (month report)
+=======
+>>>>>>> 58a66d1 (month report)
                 echo"<tr class='text-center text-light'><td> $event_name</td>
                 <td> $event_date</td>
                 <td> $event_description</td>
@@ -82,6 +93,7 @@ include '../connection/connect.php';
                 <td> $event_end_time</td>
                 <td>$organization_institute</td>
                 <td>$students_total_number</td>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <td>$ar_name</td>
                 </tr>
@@ -97,6 +109,11 @@ include '../connection/connect.php';
 >>>>>>> 4dd1ec8 (month report)
 =======
 >>>>>>> a8eddd9 (month report done)
+=======
+                </tr>
+                ";
+            }
+>>>>>>> 58a66d1 (month report)
             ?>
             </tbody>
             

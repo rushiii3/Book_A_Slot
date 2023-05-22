@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 let image=document.getElementById('image');
 let images=['../img/m1.jpg','../img/m2.jpg','../img/m3.jpg'];
 setInterval(function(){
@@ -15,6 +16,8 @@ setInterval(function(){
 },800);
 
 =======
+=======
+>>>>>>> 58a66d1 (month report)
        let image=document.getElementById('image');
         let images=['../img/m1.jpg','../img/m2.jpg','../img/m3.jpg'];
         setInterval(function(){
@@ -34,5 +37,9 @@ setInterval(function(){
         setInterval(function(){
             let random=Math.floor(Math.random()*3);
             event.src=events[random];
+<<<<<<< HEAD
         },800);
 >>>>>>> 4dd1ec8 (month report)
+=======
+        },800);
+>>>>>>> 58a66d1 (month report)

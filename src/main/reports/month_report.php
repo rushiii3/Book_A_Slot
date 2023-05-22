@@ -2,6 +2,7 @@
 include '../connection/connect.php';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 if(isset($_POST['close'])){
     header('location:../admin/report_home.php');
@@ -16,6 +17,8 @@ if(isset($_POST['close'])){
 }
 
 >>>>>>> 9d56e23 (report home)
+=======
+>>>>>>> 58a66d1 (month report)
 if(isset($_POST['month_report'])){
     $month=$_POST['month'];
     $year=$_POST['year'];
@@ -59,6 +62,7 @@ if(isset($_POST['month_report'])){
             <div class="col-md-10 col-lg-10 m-auto">
             <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
                 include '../user/navigation.html';
                 ?>
            <?php
@@ -73,6 +77,12 @@ if(isset($_POST['month_report'])){
 =======
            $get_event="Select * from `EVENT` where MONTH(event_date)='$month' and YEAR(event_date)='$year' and status_value='approved'";
 >>>>>>> 9d56e23 (report home)
+=======
+                include '../navigation.html';
+                ?>
+           <?php
+           $get_event="Select * from `EVENT` where MONTH(event_date)=$month and YEAR(event_date)=$year and status_value='approved'";
+>>>>>>> 58a66d1 (month report)
            $result=mysqli_query($con,$get_event);
            $count=0;
            while($row=mysqli_fetch_assoc($result)){
@@ -94,12 +104,15 @@ if(isset($_POST['month_report'])){
                 <th class='text-center'>Number of participants</th>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <th class='text-center'>Event Place</th>
 =======
 >>>>>>> 4dd1ec8 (month report)
 =======
                 <th class='text-center'>Event Place</th>
 >>>>>>> 9d56e23 (report home)
+=======
+>>>>>>> 58a66d1 (month report)
             </tr>
             </thead>
             <tbody class='bg-primary'>";
@@ -117,6 +130,7 @@ if(isset($_POST['month_report'])){
                 $students_total_number=$row['students_total_number'];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $ar_name=$row['ar_name'];
 =======
                
@@ -124,6 +138,9 @@ if(isset($_POST['month_report'])){
 =======
                 $ar_name=$row['ar_name'];
 >>>>>>> 9d56e23 (report home)
+=======
+               
+>>>>>>> 58a66d1 (month report)
                 echo"<tr class='text-center text-light'><td> $event_name</td>
                 <td> $event_date</td>
                 <td> $event_description</td>
@@ -133,12 +150,15 @@ if(isset($_POST['month_report'])){
                 <td>$students_total_number</td>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <td>$ar_name</td>
 =======
 >>>>>>> 4dd1ec8 (month report)
 =======
                 <td>$ar_name</td>
 >>>>>>> 9d56e23 (report home)
+=======
+>>>>>>> 58a66d1 (month report)
                 </tr>
                 ";
             }
@@ -154,17 +174,21 @@ if(isset($_POST['month_report'])){
             <?php
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             if($count>=1){
             echo"
             <form action='download.php' method='get'>
             <input type='hidden' name='month' value='$month'>
             <input type='hidden' name='year' value='$year'>
 =======
+=======
+>>>>>>> 58a66d1 (month report)
             if($count>1){
             echo"
             <form action='download.php' method='get'>
             <input type='hidden' name='month' value='<?php echo $month;?>'>
             <input type='hidden' name='year' value='<?php echo $year;?>'>
+<<<<<<< HEAD
 >>>>>>> 4dd1ec8 (month report)
 =======
             if($count>=1){
@@ -173,6 +197,8 @@ if(isset($_POST['month_report'])){
             <input type='hidden' name='month' value='$month'>
             <input type='hidden' name='year' value='$year'>
 >>>>>>> a8eddd9 (month report done)
+=======
+>>>>>>> 58a66d1 (month report)
             <a href='download.php'><button type='submit' class='btn btn-success' name='month_report'>click here to download excel</button>
             </form>";}
             ?>

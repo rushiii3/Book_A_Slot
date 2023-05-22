@@ -26,7 +26,10 @@
 </style>
     <title>Reports</title>
 </head>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 58a66d1 (month report)
 <body>
     <div class="container-fluid mt-3">
         <div class="row">
@@ -37,6 +40,10 @@
                 <button class="btn btn-primary w-50 m-auto d-flex justify-content-center fw-bolder" style="align-items: center;">REPORTS PANEL</button>
                 <div class="row mt-5">
                     <div class="col-md-5 col-lg-5 m-auto">
+<<<<<<< HEAD
+=======
+                            <!-- <h2>Room Occupacy Reports</h2> -->
+>>>>>>> 58a66d1 (month report)
                         <img src="" alt="" id="image" >
                         
                         <button class="btn btn-primary mt-3 m-auto d-flex justify-content-center" data-bs-toggle="modal" data-bs-target="#exampleModal" >Get Month Wise Report</button>
@@ -44,8 +51,11 @@
                     </div>
                     <div class="col-md-5 col-lg-5 m-auto">
                         <img src="" alt="" id="room">
+<<<<<<< HEAD
                         <a href="./reports/room_occupacy.php" class="text-decoration:none" ><button class="btn btn-primary mt-3 m-auto d-flex justify-content-center" >Room Occupacy Report</button>
 
+=======
+>>>>>>> 58a66d1 (month report)
                     
                     </div>
                 </div>
@@ -95,7 +105,11 @@
                 </div>
       
       <div class="modal-footer">
+<<<<<<< HEAD
         <button type="submit" class="btn btn-secondary"  name="close">Close</button>
+=======
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+>>>>>>> 58a66d1 (month report)
         <button type="submit" class="btn btn-primary" name="month_report">OK</button>
       </div>
       </div>
