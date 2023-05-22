@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 include '../connection/connect.php';
 <<<<<<< HEAD
@@ -50,6 +51,10 @@ include '../connection/connect.php';
 >>>>>>> a7b1e3c (month report done)
 =======
 >>>>>>> 479dc08 (report home)
+=======
+<?php
+include '../connection/connect.php';
+>>>>>>> a735689 (month report done)
 if(isset($_POST['month_report'])){
     $month=$_POST['month'];
     $year=$_POST['year'];
@@ -92,6 +97,7 @@ if(isset($_POST['month_report'])){
         <div class="row">
             <div class="col-md-10 col-lg-10 m-auto">
             <?php
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -140,6 +146,12 @@ if(isset($_POST['month_report'])){
 =======
            $get_event="Select * from `EVENT` where MONTH(event_date)='$month' and YEAR(event_date)='$year' and status_value='approved'";
 >>>>>>> 479dc08 (report home)
+=======
+                include '../navigation.html';
+                ?>
+           <?php
+           $get_event="Select * from `EVENT` where MONTH(event_date)=$month and YEAR(event_date)=$year and status_value='approved'";
+>>>>>>> a735689 (month report done)
            $result=mysqli_query($con,$get_event);
            $count=0;
            while($row=mysqli_fetch_assoc($result)){
@@ -167,6 +179,7 @@ if(isset($_POST['month_report'])){
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <th class='text-center'>Event Place</th>
 =======
 >>>>>>> 4dd1ec8 (month report)
@@ -188,6 +201,8 @@ if(isset($_POST['month_report'])){
 =======
                 <th class='text-center'>Event Place</th>
 >>>>>>> 479dc08 (report home)
+=======
+>>>>>>> a735689 (month report done)
             </tr>
             </thead>
             <tbody class='bg-primary'>";
@@ -211,6 +226,7 @@ if(isset($_POST['month_report'])){
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $ar_name=$row['ar_name'];
 =======
                
@@ -236,6 +252,9 @@ if(isset($_POST['month_report'])){
 =======
                 $ar_name=$row['ar_name'];
 >>>>>>> 479dc08 (report home)
+=======
+               
+>>>>>>> a735689 (month report done)
                 echo"<tr class='text-center text-light'><td> $event_name</td>
                 <td> $event_date</td>
                 <td> $event_description</td>
@@ -251,6 +270,7 @@ if(isset($_POST['month_report'])){
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <td>$ar_name</td>
 =======
 >>>>>>> 4dd1ec8 (month report)
@@ -272,6 +292,8 @@ if(isset($_POST['month_report'])){
 =======
                 <td>$ar_name</td>
 >>>>>>> 479dc08 (report home)
+=======
+>>>>>>> a735689 (month report done)
                 </tr>
                 ";
             }
@@ -291,6 +313,7 @@ if(isset($_POST['month_report'])){
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             if($count>=1){
             echo"
             <form action='download.php' method='get'>
@@ -303,11 +326,14 @@ if(isset($_POST['month_report'])){
 >>>>>>> d4f288e (month report done)
 =======
 >>>>>>> a7b1e3c (month report done)
+=======
+>>>>>>> a735689 (month report done)
             if($count>1){
             echo"
             <form action='download.php' method='get'>
             <input type='hidden' name='month' value='<?php echo $month;?>'>
             <input type='hidden' name='year' value='<?php echo $year;?>'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -332,6 +358,8 @@ if(isset($_POST['month_report'])){
 >>>>>>> d4f288e (month report done)
 =======
 >>>>>>> a7b1e3c (month report done)
+=======
+>>>>>>> a735689 (month report done)
             <a href='download.php'><button type='submit' class='btn btn-success' name='month_report'>click here to download excel</button>
             </form>";}
             ?>
@@ -340,6 +368,7 @@ if(isset($_POST['month_report'])){
 </div>    
 </body>
 </html>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -352,3 +381,5 @@ if(isset($_POST['month_report'])){
 >>>>>>> a7b1e3c (month report done)
 =======
 >>>>>>> 9278f26 (month report)
+=======
+>>>>>>> a735689 (month report done)

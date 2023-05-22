@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d4f288e (month report done)
+=======
+>>>>>>> a735689 (month report done)
 <?php
 include '../connection/connect.php';
 ?>
@@ -41,6 +44,7 @@ include '../connection/connect.php';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <th class="text-center">Event Place</th>
 =======
 >>>>>>> 4dd1ec8 (month report)
@@ -48,6 +52,8 @@ include '../connection/connect.php';
 >>>>>>> 58a66d1 (month report)
 =======
 >>>>>>> d4f288e (month report done)
+=======
+>>>>>>> a735689 (month report done)
             </tr>
             </thead>
             <tbody class="bg-primary">
@@ -56,6 +62,7 @@ include '../connection/connect.php';
                 $month=$_GET['month'];
                 $year=$_GET['year'];
             }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -100,6 +107,10 @@ include '../connection/connect.php';
                 die(mysqli_error($con));
             }
 >>>>>>> a7b1e3c (month report done)
+=======
+            $get_event="Select * from `EVENT` where MONTH(event_date)=$month and YEAR(event_date)=$year and status_value='approved'";
+            $result=mysqli_query($con,$get_event);
+>>>>>>> a735689 (month report done)
             while($row=mysqli_fetch_assoc($result)){
                 $event_name=$row['event_name'];
                 $event_date=$row['event_date'];
@@ -111,6 +122,7 @@ include '../connection/connect.php';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $ar_name=$row['ar_name'];
 =======
 >>>>>>> 4dd1ec8 (month report)
@@ -118,6 +130,8 @@ include '../connection/connect.php';
 >>>>>>> 58a66d1 (month report)
 =======
 >>>>>>> d4f288e (month report done)
+=======
+>>>>>>> a735689 (month report done)
                 echo"<tr class='text-center text-light'><td> $event_name</td>
                 <td> $event_date</td>
                 <td> $event_description</td>
@@ -125,6 +139,7 @@ include '../connection/connect.php';
                 <td> $event_end_time</td>
                 <td>$organization_institute</td>
                 <td>$students_total_number</td>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -158,6 +173,11 @@ include '../connection/connect.php';
 >>>>>>> d4f288e (month report done)
 =======
 >>>>>>> a7b1e3c (month report done)
+=======
+                </tr>
+                ";
+            }
+>>>>>>> a735689 (month report done)
             ?>
             </tbody>
             
@@ -168,9 +188,12 @@ include '../connection/connect.php';
 </body>
 </html>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 7602cd1 (month report)
 =======
 >>>>>>> d4f288e (month report done)
 =======
 >>>>>>> 9278f26 (month report)
+=======
+>>>>>>> a735689 (month report done)
