@@ -12,7 +12,14 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
+<style>
+  .con1{
+        display: grid;
+        place-items: center;
+    }
+</style>
 <body>
+
   <!-- to fetch data -->
     <?php
     include './connection/connect.php';
@@ -49,55 +56,69 @@ if(isset($_POST['approve_event_id'])){
 <!-- event not approved -->
 <?php
 include './connection/connect.php';
-if( isset($_GET['event_not_approved_id'])){
-  // $event_id=$_POST['event_id'];
-  $event_id=$_GET['event_not_approved_id'];
-  // if(isset($_POST['reason'])){
+if(isset($_POST["reason"])){
   $status_reason=$_POST['status_reason'];
-//   echo $status_reason;
+  // if( isset($_GET['event_not_approved_id'])){
+  $event_id=$_POST['event_id'];
   $update_event_reason="update `EVENT` set status_reason='$status_reason',status_value='not approved' where event_id=$event_id ";
-    $result=mysqli_query($con,$update_event_reason);
-    if($result){
-       header("location:./admin_home.php");
-    }
-    else{
-        die(mysqli_error($con));
-    }
+  $result=mysqli_query($con,$update_event_reason);
+      if($result){
+         header("location:./admin_home.php");
+      }
+      else{
+          die(mysqli_error($con));
+      }
 }
-//}
+
 ?>
 <div class='container-fluid mt-5'>
+  <div class="row">
+    <div class="col-md-10 col-lg-10 m-auto">
+    <?php
+                include './navigation.php';
+                ?>
     <div class="row">
         <div class="col-md-6 col-lg-7">
+          <div class="con1 my-5">
+            <table class='table table-bordered ' >
+              <thread class="bg-info">
+                <tr>
+                  <th class="text-center">Title</th>
+                  <th class="text-center">Description</th>
+                </tr>
+              </thread>
+              <tbody class="bg-primary text-light text-center">
+                <tr>
+                  <td>Event id </td>
+                  <td><?php echo $event_id?></td>
+                </tr>
+                <tr>
+                  <td>Event Name</td>
+                  <td><?php echo $event_name?></td>
+                </tr>
+                <tr>
+                  <td>Event Description</td>
+                  <td><?php echo $event_description?></td>
+                </tr>
+                <tr>
+                  <td>Event Start Time</td>
+                  <td><?php echo $event_start_time?></td>
+                </tr>
+                <tr>
+                  <td>Event End Time</td>
+                  <td><?php echo $event_end_time?></td>
+                </tr>
+                <tr>
+                  <td>Number Of Students Paricipating Event</td>
+                  <td class="mt-2"><?php echo $students_total_number?></td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
             <form name="approvalForm" action='event_more_details.php' method='POST' >
-            <div class='form-outline w-50 m-auto my-2'>
-                    <label for='event_id ' class='form-label fw-bold'>Event Id</label>
-                    <input type='text' name='event_id' readonly class='form-control bg-primary text-light ' value='<?php echo $event_id?>'>
-            </div>
-            <div class='form-outline w-50 m-auto my-2'>
-                    <label for='event_name' class='form-label fw-bold'>Event Name</label>
-                    <input type='text'  name='event_name' readonly class='form-control bg-primary text-light ' value='<?php echo $event_name?>'>
-            </div>
-            <div class='form-outline w-50 m-auto my-2'>
-                    <label for='event_description' class='form-label fw-bold'>Event Description</label>
-                    <input type='text'  name='event_description' readonly class='form-control bg-primary text-light ' value='<?php echo $event_description?>'>
-            </div>
-            <div class='form-outline w-50 m-auto my-2'>
-                    <label for='event_start_time' class='form-label fw-bold'>Event Start Time</label>
-                    <input type='text'  name='event_start_time' readonly class='form-control bg-primary text-light ' value='<?php echo $event_start_time?>'>
-            </div>
-            <div class='form-outline w-50 m-auto my-2'>
-                    <label for='event_end_time' class='form-label fw-bold'>Event end Time</label>
-                    <input type='text'  name='event_end_time' readonly class='form-control bg-primary text-light ' value='<?php echo $event_end_time?>'>
-            </div>
-            <div class='form-outline w-50 m-auto my-2'>
-                    <label for='$organization_institute' class='form-label fw-bold'>Event Organization Or Institute</label>
-                    <input type='text'  name='$organization_institute' readonly class='form-control bg-primary text-light ' value='<?php echo $organization_institute?>'>
-            </div>
-            <div class='form-outline w-50 m-auto my-2'>
-                    <label for='$students_total_number' class='form-label fw-bold'>Number Of Students Paricipating Event </label>
-                    <input type='text'  name='$students_total_number' readonly class='form-control bg-primary text-light ' value='<?php echo $students_total_number?>'>
-            </div>
+                <div class='form-outline w-50 m-auto my-2'>
+                    <input type='hidden' name='event_id' readonly class='form-control bg-primary text-light ' value='<?php echo $event_id?>'>
+                </div>
                 <div class='text-center mt-3'>
                     <input type='submit' id='approve_event_id' name='approve_event_id' value='Approve' class='btn btn-success px-3 mb-3'>
                     <a  style='text-decoration:none'  type='button' class='text-light' data-toggle='modal' data-target='#exampleModalCenter'> 
@@ -110,25 +131,28 @@ if( isset($_GET['event_not_approved_id'])){
              alt="image" style="height:100%;width:90%">
         </div>
     </div> 
+    </div>
+  </div>
 </div>
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
-     
+    <form method='POST' action='event_more_details.php'>
       <div class="modal-body">
-       <h4>Reason For Not Approving Event Request</h4>
-       <form method='POST' action='reject.php'>
-        <!-- <textarea cols='60' rows='3' name='status_reason'></textarea>-->
-      <input type="text" class="w-100" name='status_reason' autocomplete="off">
+      <input type='hidden' name='event_id' readonly class='form-control bg-primary text-light ' value='<?php echo $event_id?>'>
+      <label for="ar_name " class="form-label fw-bold">Reason For Not Approving Event Request</label>
+      <input type="text" class="w-100" name='status_reason' autocomplete="off" placeholder='eg......' required>
       <div class="modal-footer">
-        <button type="submit" class="btn btn-primary" name='reason'>
-        <a  style='text-decoration:none' href='event_more_details.php?event_not_approved_id=<?php echo $event_id?>' class='text-light text-decoration-none' >
-        OK<a></button>
+        <button type="submit" class="btn btn-primary" name="reason">
+        OK</button>
+        <!-- <a  style='text-decoration:none' href='event_more_details.php?event_not_approved_id=<?php echo $event_id?>' class='text-light text-decoration-none' > <a>-->
+       
       </div>
-      </form>
+      
       </div>
     </div>
+    </form>
   </div>
 </div> 
 </body>

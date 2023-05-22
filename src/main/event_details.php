@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Event Detailsa</title>
     <style>
         .con1{
         display: grid;
@@ -15,12 +15,13 @@
 <body >
 <h1 class="text-center mt-3">List of pending requests</h1>
 <div class='text-center  con1'>
-    <table class='table table-bordered m-auto'>
+    <div class="table-responsive-sm col-lg-10 col-sm-12">
+    <table class='table table-bordered  m-auto '>
     <thread>
         <th class='text-center'>Event Id</th>
         <th class='text-center'>Event Name</th>
         <th class='text-center'>Event Organizer</th>
-        <th class='text-center'>Event Venue</th>
+        <!-- <th class='text-center'>Event Venue</th> -->
         <th class='text-center'>Event Request Time</th>
     </thread>
    <tbody class="bg-primary">
@@ -43,15 +44,15 @@
         <td>$event_id</td>
         <td>$event_name</td>
         <td>$organization_institute</td>
-        <td>$ar_name</td>
         <td>$request_date_time</td>
-        <td class='bg-light'><a href='event_more_details.php?event_id=$event_id' ><input type='button'class='bg-primary text-light' style='border-radius:20px' value='see details'><a></td></tr>
+        <td class='bg-light'><a href='event_more_details.php?event_id=$event_id' ><input type='button'class='bg-primary text-light' style='border-radius:20px' value='Details'><a></td></tr>
 
         ";
     }
     ?>
     </tbody>
     </table>
+    </div>
     </div>
 </body>
 </html>
