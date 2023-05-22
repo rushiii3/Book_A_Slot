@@ -152,6 +152,16 @@ if(mysqli_num_rows($result_of_events_pending_approved)>0)
                         ?>
 <?php
     }
+}else{
+    ?>
+ <div class="col-lg-12 col-md-12 mb-5">
+<p class="fs-2 text-center" style="margin-top:11rem;">
+    You have not booked any events<br>
+    <a type="button" class="btn btn-primary px-5 mt-3" href="booking.php">Book Now</a> 
+</p>
+</div>
+
+    <?php
 }
 ?>
         </div>
