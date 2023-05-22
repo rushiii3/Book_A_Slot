@@ -44,8 +44,11 @@
                     </div>
                     <div class="col-md-5 col-lg-5 m-auto">
                         <img src="" alt="" id="room">
+<<<<<<< HEAD
                         <a href="./reports/room_occupacy.php" class="text-decoration:none" ><button class="btn btn-primary mt-3 m-auto d-flex justify-content-center" >Room Occupacy Report</button>
 
+=======
+>>>>>>> 4dd1ec8 (month report)
                     
                     </div>
                 </div>
@@ -95,7 +98,11 @@
                 </div>
       
       <div class="modal-footer">
+<<<<<<< HEAD
         <button type="submit" class="btn btn-secondary"  name="close">Close</button>
+=======
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+>>>>>>> 4dd1ec8 (month report)
         <button type="submit" class="btn btn-primary" name="month_report">OK</button>
       </div>
       </div>
