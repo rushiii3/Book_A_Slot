@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d4f288e (month report done)
 <?php
@@ -171,3 +172,5 @@ include '../connection/connect.php';
 >>>>>>> 7602cd1 (month report)
 =======
 >>>>>>> d4f288e (month report done)
+=======
+>>>>>>> 9278f26 (month report)

@@ -74,6 +74,7 @@ if(isset($_POST["reason"])){
 <div class='container-fluid mt-5'>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   <div class="row">
     <div class="col-md-10 col-lg-10 m-auto">
     <?php
@@ -178,6 +179,10 @@ if(isset($_POST["reason"])){
             </table>
             </div>
 >>>>>>> dba010a (room occupacy report added)
+=======
+    <div class="row">
+        <div class="col-md-6 col-lg-7">
+>>>>>>> 9278f26 (month report)
             <form name="approvalForm" action='event_more_details.php' method='POST' >
                 <div class='form-outline w-50 m-auto my-2'>
                     <input type='hidden' name='event_id' readonly class='form-control bg-primary text-light ' value='<?php echo $event_id?>'>
