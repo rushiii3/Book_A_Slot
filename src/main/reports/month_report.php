@@ -129,6 +129,7 @@ if(isset($_POST['month_report'])){
             <!-- to download excel file -->
             <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
             if($count>=1){
             echo"
             <form action='download.php' method='get'>
@@ -141,6 +142,13 @@ if(isset($_POST['month_report'])){
             <input type='hidden' name='month' value='<?php echo $month;?>'>
             <input type='hidden' name='year' value='<?php echo $year;?>'>
 >>>>>>> 4dd1ec8 (month report)
+=======
+            if($count>=1){
+            echo"
+            <form action='download.php' method='get'>
+            <input type='hidden' name='month' value='$month'>
+            <input type='hidden' name='year' value='$year'>
+>>>>>>> a8eddd9 (month report done)
             <a href='download.php'><button type='submit' class='btn btn-success' name='month_report'>click here to download excel</button>
             </form>";}
             ?>
