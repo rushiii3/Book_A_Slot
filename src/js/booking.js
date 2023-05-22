@@ -85,6 +85,15 @@ function nextPrev(n)
 {
 =======
 $('#org_institue_name').hide();
+
+
+  $(window).on('load', function() {
+    $('#terms_and_condition').modal('show');
+    $('.modal-backdrop').remove();
+
+  });
+
+
 $('#department_namee').on('change',function(){
 >>>>>>> 3cf029e (commit)
     

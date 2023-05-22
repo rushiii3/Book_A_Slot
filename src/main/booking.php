@@ -63,6 +63,9 @@
 </div>
 
 
+<!-- terms and condition modal -->
+
+
         <div class="container mt-5 mb-5 shadow p-3 mb-5 bg-body" id="main_body" style="border-radius: 20px">
             <!-- Container starting -->
             <div class="row">
@@ -334,3 +337,4 @@
 <?php
             mysqli_close($con);
           ?>
+         

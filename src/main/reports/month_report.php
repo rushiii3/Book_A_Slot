@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 include '../connection/connect.php';
 <<<<<<< HEAD
@@ -293,3 +294,5 @@ if(isset($_POST['month_report'])){
 >>>>>>> 7602cd1 (month report)
 =======
 >>>>>>> d4f288e (month report done)
+=======
+>>>>>>> d2b6aad (month report)
