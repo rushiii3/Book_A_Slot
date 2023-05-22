@@ -84,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
 =======
 
  
+<<<<<<< HEAD
 $start_time = $('.start-time');
 $end_time = $('.end-time');
 function BlockTime(start_timee,end_timee)
@@ -116,6 +117,10 @@ $start = "10:00";
 $end = "13:30";
 BlockTime($start,$end)
 >>>>>>> 871ba2a (donee)
+=======
+
+
+>>>>>>> 3c186e5 (timelocked)
 
 $('#selectDate').on('change',function(){
   $date = $('#selectDate').val();
@@ -125,7 +130,8 @@ $('#selectDate').on('change',function(){
     url: 'ajax.php',
     data: {datee:$date},
     success: function(data){
-        console.log(data.test1);
+      $('#timeBlock').html(" ");
+      $('#timeBlock').append(data);
         
     },
     error: function() {
@@ -133,4 +139,11 @@ $('#selectDate').on('change',function(){
     },
 })
 })
+<<<<<<< HEAD
 >>>>>>> 3cf029e (commit)
+=======
+
+
+
+
+>>>>>>> 3c186e5 (timelocked)
