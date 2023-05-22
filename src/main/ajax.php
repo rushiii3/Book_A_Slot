@@ -123,22 +123,41 @@ if(
 
 if(!empty($_POST['datee']) ){
         $datee = date('Y-m-d',strtotime($_POST["datee"]));
-        $get_time_info = "SELECT * FROM `EVENT` WHERE `event_date` = '$datee'";
+        $get_time_info = "SELECT * FROM `EVENT` WHERE `event_date` = '$datee' AND status_value in ('Approved','Pending')";
         $result_of_time = mysqli_query($con,$get_time_info);
         if(mysqli_num_rows($result_of_time)>0){
-                
+                        ?>
+                        <script>
+                                $start_time = $('.start-time');
+                                $end_time = $('.end-time');
+                                var i,x = $('.start-time');
+                                for(i=0;i<x.length;i++)
+                                {
+                                        $start_time.eq(i).prop('disabled', false);
+                                        $end_time.eq(i).prop('disabled', false);
+                                }
+                                for(i=0;i<x.length;i++)
+                                {
+                        <?php
                 while($row_of_result = mysqli_fetch_assoc($result_of_time))
                 {
-                        //echo(date('H:i', strtotime($row_of_result['event_start_time'])));
-                        //echo(date('H:i', strtotime($row_of_result['event_end_time'])));
-                        $test = array();
-                        $test['test1'] = '1';
-                        $test['test2'] = '2';
-                        $test['test3'] = '3';
-                        echo json_encode($test);
-                        //echo('BlockTime(10:00,13:30)');
+                        ?>
+                                        if("<?php echo(date('H:i', strtotime($row_of_result['event_start_time']))); ?>"==$start_time[i].attributes[1].value)
+                                        { 
+                                                do{
+                                                        $start_time.eq(i).prop('disabled', true);
+                                                        $end_time.eq(i).prop('disabled', true);
+                                                        
+                                                        i=i+1;
+                                                }while("<?php echo( date('H:i', strtotime($row_of_result['event_end_time'])) ); ?>">=$start_time[i].attributes[1].value);
+                                        }
+                        <?php
 
         }
+        ?>
+                                }
+                                </script>
+                                <?php
 }
 }
 if(!empty($_POST['eventid']) && !empty($_POST['reason'])){

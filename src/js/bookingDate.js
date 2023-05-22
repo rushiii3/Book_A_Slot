@@ -10,30 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
  
-$start_time = $('.start-time');
-$end_time = $('.end-time');
-function BlockTime(start_timee,end_timee)
-{
-    var i,x = $('.start-time');
-    //console.log(x.length);
-    console.log($start_time[13].attributes[1].value);
-    for(i=0;i<x.length;i++)
-    {
-  
-        if(start_timee==$start_time[i].attributes[1].value)
-        { 
-            do{
-                $start_time.eq(i).prop('disabled', true);
-                $end_time.eq(i).prop('disabled', true);
-                console.log(i);
-                i=i+1;
-            }while(end_timee>=$start_time[i].attributes[1].value);
-        }
-    }
-}
-$start = "10:00";
-$end = "13:30";
-BlockTime($start,$end)
+
+
 
 $('#selectDate').on('change',function(){
   $date = $('#selectDate').val();
@@ -43,7 +21,8 @@ $('#selectDate').on('change',function(){
     url: 'ajax.php',
     data: {datee:$date},
     success: function(data){
-        console.log(data.test1);
+      $('#timeBlock').html(" ");
+      $('#timeBlock').append(data);
         
     },
     error: function() {
@@ -51,3 +30,7 @@ $('#selectDate').on('change',function(){
     },
 })
 })
+
+
+
+
