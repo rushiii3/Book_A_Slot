@@ -75,6 +75,7 @@ if(isset($_POST["reason"])){
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   <div class="row">
     <div class="col-md-10 col-lg-10 m-auto">
     <?php
@@ -101,6 +102,12 @@ if(isset($_POST["reason"])){
 =======
                 include './navigation.html';
 >>>>>>> ec9b477 (room occupacy report added)
+=======
+  <div class="row">
+    <div class="col-md-10 col-lg-10 m-auto">
+    <?php
+                include './navigation.php';
+>>>>>>> b5dc987 (room occupacy report added)
                 ?>
     <div class="row">
         <div class="col-md-6 col-lg-7">
@@ -137,6 +144,7 @@ if(isset($_POST["reason"])){
                   <td>Number Of Students Paricipating Event</td>
                   <td class="mt-2"><?php echo $students_total_number?></td>
                 </tr>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -183,6 +191,11 @@ if(isset($_POST["reason"])){
     <div class="row">
         <div class="col-md-6 col-lg-7">
 >>>>>>> 9278f26 (month report)
+=======
+              </tbody>
+            </table>
+            </div>
+>>>>>>> b5dc987 (room occupacy report added)
             <form name="approvalForm" action='event_more_details.php' method='POST' >
                 <div class='form-outline w-50 m-auto my-2'>
                     <input type='hidden' name='event_id' readonly class='form-control bg-primary text-light ' value='<?php echo $event_id?>'>
