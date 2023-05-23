@@ -92,6 +92,7 @@ include './connection/connect.php';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 <a class="nav-link  my-2 " href="report_home.php" tabindex="-1" aria-disabled="true">REPORTS</a>
 =======
                                 <a class="nav-link  my-2 " href="#" tabindex="-1" aria-disabled="true">REPORTS</a>
@@ -105,6 +106,9 @@ include './connection/connect.php';
 =======
                                 <a class="nav-link  my-2 " href="#" tabindex="-1" aria-disabled="true">REPORTS</a>
 >>>>>>> 7f010e3 (admin)
+=======
+                                <a class="nav-link  my-2 " href="report_home.php" tabindex="-1" aria-disabled="true">REPORTS</a>
+>>>>>>> 728e3da (report home)
                                 </li>
                                 
                             </ul>
