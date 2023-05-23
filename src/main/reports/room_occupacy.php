@@ -25,14 +25,22 @@ include '../connection/connect.php';
         <div class="row">
             <div class="col-md-10 col-lg-10 m-auto">
             <?php
+<<<<<<< HEAD
                 include '../admin/admin_navbar.html';
+=======
+                include '../navigation.html';
+>>>>>>> 3f0a459 (room occupacy report added)
                 ?>
             </div>
         </div>
 </div>
 <?php
 // code to count in which audi how many events occur
+<<<<<<< HEAD
 $get_ar="select ar_name,count(ar_name) as occurance  from `EVENT` where status_value='approved' group by ar_name order by occurance desc";
+=======
+$get_ar="select ar_name,count(ar_name) as occurance  from `EVENT` where status_value='approved' group by ar_name";
+>>>>>>> 3f0a459 (room occupacy report added)
 $result=mysqli_query($con,$get_ar);
 $ar_name=array();
 $count_occurance=array();
@@ -117,7 +125,11 @@ $yLabel='No. of event';//y-axis label
 </script>
 <?php
 //code showing most dense audi's organizer
+<<<<<<< HEAD
 $max_events_occured="select ar_name as first_ar,count(ar_name) as occurance from `EVENT` where status_value='approved' group by ar_name order by occurance desc LIMIT 1";
+=======
+$max_events_occured="SELECT max(ar_name)  as first_ar from `EVENT`";
+>>>>>>> 3f0a459 (room occupacy report added)
 $result=mysqli_query($con,$max_events_occured);
 $row=mysqli_fetch_assoc($result);
 $first_ar=$row['first_ar'];
@@ -125,6 +137,7 @@ $get_organizers="SELECT organization_institute,COUNT(organization_institute) as 
 $result1=mysqli_query($con,$get_organizers);
 while($row=mysqli_fetch_assoc($result1)){
     //echo $row['organization_institute'],$row['total'];
+<<<<<<< HEAD
 //     $organizer=$row['organization_institute'];
 //     $total=$row['total'];
 //     echo "<tr class='test-center'>
@@ -136,6 +149,12 @@ while($row=mysqli_fetch_assoc($result1)){
 ?>
 <?php
 $second_max_events_occured="SELECT COUNT(ar_name),ar_name as second_ar from `event` where ar_name<>'$first_ar' and status_value='approved' GROUP BY ar_name ORDER by count(ar_name) desc LIMIT 1";
+=======
+}
+?>
+<?php
+$second_max_events_occured="SELECT max(ar_name) as second_ar from `EVENT` where ar_name not in (SELECT max(ar_name) from `EVENT`) and status_value='approved'";
+>>>>>>> 3f0a459 (room occupacy report added)
 $result=mysqli_query($con,$second_max_events_occured);
 $row=mysqli_fetch_assoc($result);
 $second_ar=$row['second_ar'];
@@ -147,13 +166,21 @@ $result1=mysqli_query($con,$get_organizers);
             <div class="col-md-10 col-lg-10 m-auto">
                 <div class="row mt-5">
                     <div class="col-md-5 col-lg-5 m-auto">
+<<<<<<< HEAD
                         <h3 class="text-center">Chart showing events organized in <strong>most</strong> occupied audi/room</h3>
+=======
+                        <h3 class="text-center">Chart showing events organized in <strong>most</strong> oaccupied audi/room</h3>
+>>>>>>> 3f0a459 (room occupacy report added)
                         <div id="piechart" style="width: 500px; height: 400px;"></div>
                         <!-- one piechart -->
                     </div>
                     <div class="col-md-5 col-lg-5 m-auto">
 
+<<<<<<< HEAD
                      <h3 class="text-center">Chart showing events organized in <strong>second</strong> most occupied audi/room</h3>
+=======
+                     <h3 class="text-center">Chart showing events organized in <strong>second</strong> most oaccupied audi/room</h3>
+>>>>>>> 3f0a459 (room occupacy report added)
                         <div id="pie" style="width: 500px; height: 400px;"></div>
 
                     <!-- one piechart -->
