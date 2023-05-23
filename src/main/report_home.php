@@ -27,9 +27,13 @@
     <title>Reports</title>
 </head>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 58a66d1 (month report)
+=======
+
+>>>>>>> e79608f (report home)
 <body>
     <div class="container-fluid mt-3">
         <div class="row">
@@ -41,9 +45,12 @@
                 <div class="row mt-5">
                     <div class="col-md-5 col-lg-5 m-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                             <!-- <h2>Room Occupacy Reports</h2> -->
 >>>>>>> 58a66d1 (month report)
+=======
+>>>>>>> e79608f (report home)
                         <img src="" alt="" id="image" >
                         
                         <button class="btn btn-primary mt-3 m-auto d-flex justify-content-center" data-bs-toggle="modal" data-bs-target="#exampleModal" >Get Month Wise Report</button>
@@ -52,10 +59,15 @@
                     <div class="col-md-5 col-lg-5 m-auto">
                         <img src="" alt="" id="room">
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <a href="./reports/room_occupacy.php" class="text-decoration:none" ><button class="btn btn-primary mt-3 m-auto d-flex justify-content-center" >Room Occupacy Report</button>
 
 =======
 >>>>>>> 58a66d1 (month report)
+=======
+                        <a href="./reports/room_occupacy.php" class="text-decoration:none" ><button class="btn btn-primary mt-3 m-auto d-flex justify-content-center" >Room Occupacy Report</button>
+
+>>>>>>> e79608f (report home)
                     
                     </div>
                 </div>
@@ -106,10 +118,14 @@
       
       <div class="modal-footer">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <button type="submit" class="btn btn-secondary"  name="close">Close</button>
 =======
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
 >>>>>>> 58a66d1 (month report)
+=======
+        <button type="submit" class="btn btn-secondary"  name="close">Close</button>
+>>>>>>> e79608f (report home)
         <button type="submit" class="btn btn-primary" name="month_report">OK</button>
       </div>
       </div>
