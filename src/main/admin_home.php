@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 329887f (report home)
 <?php
 include './connection/connect.php';
 ?>
@@ -71,7 +74,11 @@ include './connection/connect.php';
                                 <a class="nav-link  my-2 " href="admin_home.php?delete_dept" tabindex="-1" aria-disabled="true"> DELETE DEPARTMENT</a>
                                 </li>
                                 <li class="nav-item">
+<<<<<<< HEAD
                                 <a class="nav-link  my-2 " href="report_home.php" tabindex="-1" aria-disabled="true">REPORTS</a>
+=======
+                                <a class="nav-link  my-2 " href="#" tabindex="-1" aria-disabled="true">REPORTS</a>
+>>>>>>> 329887f (report home)
                                 </li>
                                 
                             </ul>
@@ -137,4 +144,7 @@ include './connection/connect.php';
   </body>
 </html>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 329887f (report home)
