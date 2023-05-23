@@ -12,7 +12,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <title>Book</title>
+    <title>List</title>
+    <style>
+        #card:hover{
+            transform: translateY(-30px);
+        }
+    </style>
 </head>
 <body>
 <?php
@@ -27,40 +32,43 @@
     ?>
     <div class="container">
         <div class="row p-4">
-            <div class="col-lg-4 mb-4">
-                <div class="card mx-auto shadow w-75" style="border-radius:20px;">
-                    <div class="card-body">
-                        <img src="https://cdn-icons-png.flaticon.com/512/860/860342.png?w=1060&t=st=1684745950~exp=1684746550~hmac=ee33f0473051f8bf9e30e67501baa76691bfd98538c8e3d29432ac456f40afc7" alt="" style="height:5rem;width:5rem;">
-                        <h5 class="card-title">Card title</h5>
-                        <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
-                    </div>
-                </div>
+            <div class="col-lg-12 mb-5">
+                <p class="h3 text-center">Click to see the booked slot</p>
             </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card mx-auto w-75">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
+
+
+    <?php
+    $audi_room_info_query = "SELECT * FROM AUDI_ROOM";
+    $result_of_audi_room_query = mysqli_query($con,$audi_room_info_query);
+    if(mysqli_num_rows($result_of_audi_room_query)>0)
+    {
+        while($row_audi_room_info=mysqli_fetch_assoc($result_of_audi_room_query))
+        {
+            ?>
+            <div class="col-lg-4 mb-5">
+            
+                <div class="card mx-auto shadow w-75" id="card" style="border-radius:20px;">
+                <a href="list_view.php?id=<?php echo($row_audi_room_info['ar_name']); ?>"  style="text-decoration:none;">
+                    <div class="card-body text-center text-black">
+                        <?php
+                        $img_array = Array("https://github.com/rushiii3/Book_A_Slot/blob/main/src/img/14.png?raw=true","https://github.com/rushiii3/Book_A_Slot/blob/main/src/img/15.png?raw=true","https://github.com/rushiii3/Book_A_Slot/blob/main/src/img/16.png?raw=true","https://github.com/rushiii3/Book_A_Slot/blob/main/src/img/17.png?raw=true","https://github.com/rushiii3/Book_A_Slot/blob/main/src/img/18.png?raw=true","https://github.com/rushiii3/Book_A_Slot/blob/main/src/img/19.png?raw=true","https://github.com/rushiii3/Book_A_Slot/blob/main/src/img/20.png?raw=true");
+                        ?>
+                        <img src="<?php echo($img_array[array_rand($img_array)]) ?>" class="my-3" alt="Location_image" style="height:5rem;width:5rem;">
+                        <h5 class="card-title my-4"><?php echo($row_audi_room_info['ar_name']); ?></h5>
                     </div>
+                    </a>
                 </div>
+           
             </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card mx-auto w-75">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
-                    </div>
-                </div>
-            </div>
+            <?php
+        }
+    }
+    ?>
+
+            
+
+
+
 
 
 
