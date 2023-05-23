@@ -73,6 +73,7 @@ if(isset($_POST["reason"])){
 ?>
 <div class='container-fluid mt-5'>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <div class="row">
     <div class="col-md-10 col-lg-10 m-auto">
     <?php
@@ -85,6 +86,12 @@ if(isset($_POST["reason"])){
 =======
                 include './navigation.html';
 >>>>>>> c75f32a (room occupacy report added)
+=======
+  <div class="row">
+    <div class="col-md-10 col-lg-10 m-auto">
+    <?php
+                include './navigation.php';
+>>>>>>> dba010a (room occupacy report added)
                 ?>
     <div class="row">
         <div class="col-md-6 col-lg-7">
@@ -123,6 +130,7 @@ if(isset($_POST["reason"])){
                 </tr>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c75f32a (room occupacy report added)
                 <tr>
@@ -145,6 +153,11 @@ if(isset($_POST["reason"])){
     <div class="row">
         <div class="col-md-6 col-lg-7">
 >>>>>>> 7602cd1 (month report)
+=======
+              </tbody>
+            </table>
+            </div>
+>>>>>>> dba010a (room occupacy report added)
             <form name="approvalForm" action='event_more_details.php' method='POST' >
                 <div class='form-outline w-50 m-auto my-2'>
                     <input type='hidden' name='event_id' readonly class='form-control bg-primary text-light ' value='<?php echo $event_id?>'>
