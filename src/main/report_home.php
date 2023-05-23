@@ -29,6 +29,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 4dd1ec8 (month report)
@@ -37,6 +38,9 @@
 >>>>>>> 9d56e23 (report home)
 =======
 >>>>>>> 4dd1ec8 (month report)
+=======
+
+>>>>>>> 9d56e23 (report home)
 <body>
     <div class="container-fluid mt-3">
         <div class="row">
@@ -50,6 +54,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                             <!-- <h2>Room Occupacy Reports</h2> -->
 >>>>>>> 4dd1ec8 (month report)
@@ -58,6 +63,8 @@
 =======
                             <!-- <h2>Room Occupacy Reports</h2> -->
 >>>>>>> 4dd1ec8 (month report)
+=======
+>>>>>>> 9d56e23 (report home)
                         <img src="" alt="" id="image" >
                         
                         <button class="btn btn-primary mt-3 m-auto d-flex justify-content-center" data-bs-toggle="modal" data-bs-target="#exampleModal" >Get Month Wise Report</button>
@@ -65,6 +72,7 @@
                     </div>
                     <div class="col-md-5 col-lg-5 m-auto">
                         <img src="" alt="" id="room">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -91,6 +99,10 @@
 >>>>>>> c8b61ed (events detail)
 =======
 >>>>>>> 4dd1ec8 (month report)
+=======
+                        <a href="./reports/room_occupacy.php" class="text-decoration:none" ><button class="btn btn-primary mt-3 m-auto d-flex justify-content-center" >Room Occupacy Report</button>
+
+>>>>>>> 9d56e23 (report home)
                     
                     </div>
                 </div>
@@ -146,6 +158,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <button type="submit" class="btn btn-secondary"  name="close">Close</button>
 =======
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -165,6 +178,9 @@
 =======
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
 >>>>>>> 4dd1ec8 (month report)
+=======
+        <button type="submit" class="btn btn-secondary"  name="close">Close</button>
+>>>>>>> 9d56e23 (report home)
         <button type="submit" class="btn btn-primary" name="month_report">OK</button>
       </div>
       </div>
