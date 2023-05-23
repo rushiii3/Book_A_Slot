@@ -72,8 +72,49 @@ if(isset($_POST["reason"])){
 
 ?>
 <div class='container-fluid mt-5'>
+  <div class="row">
+    <div class="col-md-10 col-lg-10 m-auto">
+    <?php
+                include './navigation.php';
+                ?>
     <div class="row">
         <div class="col-md-6 col-lg-7">
+          <div class="con1 my-5">
+            <table class='table table-bordered ' >
+              <thread class="bg-info">
+                <tr>
+                  <th class="text-center">Title</th>
+                  <th class="text-center">Description</th>
+                </tr>
+              </thread>
+              <tbody class="bg-primary text-light text-center">
+                <tr>
+                  <td>Event id </td>
+                  <td><?php echo $event_id?></td>
+                </tr>
+                <tr>
+                  <td>Event Name</td>
+                  <td><?php echo $event_name?></td>
+                </tr>
+                <tr>
+                  <td>Event Description</td>
+                  <td><?php echo $event_description?></td>
+                </tr>
+                <tr>
+                  <td>Event Start Time</td>
+                  <td><?php echo $event_start_time?></td>
+                </tr>
+                <tr>
+                  <td>Event End Time</td>
+                  <td><?php echo $event_end_time?></td>
+                </tr>
+                <tr>
+                  <td>Number Of Students Paricipating Event</td>
+                  <td class="mt-2"><?php echo $students_total_number?></td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
             <form name="approvalForm" action='event_more_details.php' method='POST' >
                 <div class='form-outline w-50 m-auto my-2'>
                     <input type='hidden' name='event_id' readonly class='form-control bg-primary text-light ' value='<?php echo $event_id?>'>
