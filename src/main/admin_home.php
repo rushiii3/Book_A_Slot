@@ -83,6 +83,7 @@ include './connection/connect.php';
                                 <li class="nav-item">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 <a class="nav-link  my-2 " href="report_home.php" tabindex="-1" aria-disabled="true">REPORTS</a>
 =======
                                 <a class="nav-link  my-2 " href="#" tabindex="-1" aria-disabled="true">REPORTS</a>
@@ -90,6 +91,9 @@ include './connection/connect.php';
 =======
                                 <a class="nav-link  my-2 " href="#" tabindex="-1" aria-disabled="true">REPORTS</a>
 >>>>>>> 7602cd1 (month report)
+=======
+                                <a class="nav-link  my-2 " href="report_home.php" tabindex="-1" aria-disabled="true">REPORTS</a>
+>>>>>>> fd21e08 (report home)
                                 </li>
                                 
                             </ul>
