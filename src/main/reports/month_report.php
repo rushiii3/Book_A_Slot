@@ -3,6 +3,9 @@ include '../connection/connect.php';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9d56e23 (report home)
 =======
 >>>>>>> 9d56e23 (report home)
 
@@ -11,12 +14,15 @@ if(isset($_POST['close'])){
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 4dd1ec8 (month report)
 =======
 >>>>>>> 9d56e23 (report home)
 =======
 >>>>>>> 4dd1ec8 (month report)
+=======
+>>>>>>> 9d56e23 (report home)
 if(isset($_POST['month_report'])){
     $month=$_POST['month'];
     $year=$_POST['year'];
@@ -65,6 +71,7 @@ if(isset($_POST['month_report'])){
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
            $get_event="Select * from `EVENT` where MONTH(event_date)='$month' and YEAR(event_date)='$year' and status_value='approved'";
 =======
            $get_event="Select * from `EVENT` where MONTH(event_date)=$month and YEAR(event_date)=$year and status_value='approved'";
@@ -75,6 +82,9 @@ if(isset($_POST['month_report'])){
 =======
            $get_event="Select * from `EVENT` where MONTH(event_date)=$month and YEAR(event_date)=$year and status_value='approved'";
 >>>>>>> 4dd1ec8 (month report)
+=======
+           $get_event="Select * from `EVENT` where MONTH(event_date)='$month' and YEAR(event_date)='$year' and status_value='approved'";
+>>>>>>> 9d56e23 (report home)
            $result=mysqli_query($con,$get_event);
            $count=0;
            while($row=mysqli_fetch_assoc($result)){
@@ -97,6 +107,7 @@ if(isset($_POST['month_report'])){
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <th class='text-center'>Event Place</th>
 =======
 >>>>>>> 4dd1ec8 (month report)
@@ -105,6 +116,9 @@ if(isset($_POST['month_report'])){
 >>>>>>> 9d56e23 (report home)
 =======
 >>>>>>> 4dd1ec8 (month report)
+=======
+                <th class='text-center'>Event Place</th>
+>>>>>>> 9d56e23 (report home)
             </tr>
             </thead>
             <tbody class='bg-primary'>";
@@ -123,6 +137,7 @@ if(isset($_POST['month_report'])){
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $ar_name=$row['ar_name'];
 =======
                
@@ -133,6 +148,9 @@ if(isset($_POST['month_report'])){
 =======
                
 >>>>>>> 4dd1ec8 (month report)
+=======
+                $ar_name=$row['ar_name'];
+>>>>>>> 9d56e23 (report home)
                 echo"<tr class='text-center text-light'><td> $event_name</td>
                 <td> $event_date</td>
                 <td> $event_description</td>
@@ -143,6 +161,7 @@ if(isset($_POST['month_report'])){
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <td>$ar_name</td>
 =======
 >>>>>>> 4dd1ec8 (month report)
@@ -151,6 +170,9 @@ if(isset($_POST['month_report'])){
 >>>>>>> 9d56e23 (report home)
 =======
 >>>>>>> 4dd1ec8 (month report)
+=======
+                <td>$ar_name</td>
+>>>>>>> 9d56e23 (report home)
                 </tr>
                 ";
             }
