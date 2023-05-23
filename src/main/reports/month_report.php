@@ -1,5 +1,10 @@
 <?php
 include '../connection/connect.php';
+
+if(isset($_POST['close'])){
+    header('location:../report_home.php');
+}
+
 if(isset($_POST['month_report'])){
     $month=$_POST['month'];
     $year=$_POST['year'];
@@ -45,7 +50,7 @@ if(isset($_POST['month_report'])){
                 include '../navigation.html';
                 ?>
            <?php
-           $get_event="Select * from `EVENT` where MONTH(event_date)=$month and YEAR(event_date)=$year and status_value='approved'";
+           $get_event="Select * from `EVENT` where MONTH(event_date)='$month' and YEAR(event_date)='$year' and status_value='approved'";
            $result=mysqli_query($con,$get_event);
            $count=0;
            while($row=mysqli_fetch_assoc($result)){
@@ -65,6 +70,7 @@ if(isset($_POST['month_report'])){
                 <th class='text-center'>Event End Time</th>
                 <th class='text-center'>Organization Institute</th>
                 <th class='text-center'>Number of participants</th>
+                <th class='text-center'>Event Place</th>
             </tr>
             </thead>
             <tbody class='bg-primary'>";
@@ -80,7 +86,7 @@ if(isset($_POST['month_report'])){
                 $event_end_time=$row['event_end_time'];
                 $organization_institute=$row['organization_institute'];
                 $students_total_number=$row['students_total_number'];
-               
+                $ar_name=$row['ar_name'];
                 echo"<tr class='text-center text-light'><td> $event_name</td>
                 <td> $event_date</td>
                 <td> $event_description</td>
@@ -88,6 +94,7 @@ if(isset($_POST['month_report'])){
                 <td> $event_end_time</td>
                 <td>$organization_institute</td>
                 <td>$students_total_number</td>
+                <td>$ar_name</td>
                 </tr>
                 ";
             }
