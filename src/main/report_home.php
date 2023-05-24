@@ -62,6 +62,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <a href="./reports/room_occupacy.php" class="text-decoration:none" ><button class="btn btn-primary mt-3 m-auto d-flex justify-content-center" >Room Occupacy Report</button>
 
 =======
@@ -76,6 +77,10 @@
                         <a href="./reports/room_occupacy.php" class="text-decoration:none" ><button class="btn btn-primary mt-3 m-auto d-flex justify-content-center" >Room Occupacy Report</button>
 
 >>>>>>> 9d56e23 (report home)
+=======
+                        <a href="./reports/room_occupacy.php" class="text-decoration:none" ><button class="btn btn-primary mt-3 m-auto d-flex justify-content-center" >Room Occupacy Report</button>
+
+>>>>>>> c8b61ed (events detail)
                     
                     </div>
                 </div>
@@ -129,6 +134,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <button type="submit" class="btn btn-secondary"  name="close">Close</button>
 =======
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -142,6 +148,9 @@
 =======
         <button type="submit" class="btn btn-secondary"  name="close">Close</button>
 >>>>>>> 9d56e23 (report home)
+=======
+        <button type="submit" class="btn btn-secondary"  name="close">Close</button>
+>>>>>>> c8b61ed (events detail)
         <button type="submit" class="btn btn-primary" name="month_report">OK</button>
       </div>
       </div>
