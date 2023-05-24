@@ -15,6 +15,17 @@ $(document).ready(function(){
         
         $date = $('#selectDate').val();
         $Venue_name = $('#Venue_name').val();
+        // format date into day 29-05-2023 to Tuesday
+        const selectDated =  new Date($date);
+        const day = selectDated.getDay();
+        const dayNames = ["Sunday", "Monday", "Tuesday" /* , … */];
+        // format date into day 29-05-2023 to 29 MAY 2023
+        let d = new Date($date);
+        let ye = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(d);
+        let mo = new Intl.DateTimeFormat('en', { month: 'long' }).format(d);
+        let da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(d);
+
+        console.log();
         if($date!==""){
             if($Venue_name!=="Select Venue")
             {
@@ -24,8 +35,8 @@ $(document).ready(function(){
                     data: { selectdatee:$date,venue_name:$Venue_name },
                     success: function(data){
                         console.log(data);
-                        $('#showDate').html($date);
-                        $('#showDay').html($date);
+                        $('#showDate').html(`${da} ${mo} ${ye}`);
+                        $('#showDay').html(dayNames[day]);
                         $('#dayList').html(" ");
                         $('#dayList').append(data);
                         
