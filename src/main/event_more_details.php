@@ -106,8 +106,12 @@ if(isset($_POST["reason"])){
   <div class="row">
     <div class="col-md-10 col-lg-10 m-auto">
     <?php
+<<<<<<< HEAD
                 include './navigation.php';
 >>>>>>> b5dc987 (room occupacy report added)
+=======
+                include './navigation.html';
+>>>>>>> c42b176 (events detail)
                 ?>
     <div class="row">
         <div class="col-md-6 col-lg-7">
@@ -150,12 +154,15 @@ if(isset($_POST["reason"])){
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c75f32a (room occupacy report added)
 =======
 >>>>>>> c8b61ed (events detail)
 =======
 >>>>>>> ec9b477 (room occupacy report added)
+=======
+>>>>>>> c42b176 (events detail)
                 <tr>
                   <td>Event Place</td>
                   <td class="mt-2"><?php echo $ar_name?></td>
@@ -167,6 +174,7 @@ if(isset($_POST["reason"])){
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 58a66d1 (month report)
 =======
@@ -175,6 +183,8 @@ if(isset($_POST["reason"])){
 >>>>>>> c8b61ed (events detail)
 =======
 >>>>>>> ec9b477 (room occupacy report added)
+=======
+>>>>>>> c42b176 (events detail)
               </tbody>
             </table>
             </div>
