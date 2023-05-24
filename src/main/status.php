@@ -113,3 +113,6 @@ if(mysqli_num_rows($result_of_events_pending_approved)>0)
 
 </body>
 </html>
+<?php
+            mysqli_close($con);
+          ?>
