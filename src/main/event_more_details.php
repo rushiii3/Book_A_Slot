@@ -75,7 +75,7 @@ if(isset($_POST["reason"])){
   <div class="row">
     <div class="col-md-10 col-lg-10 m-auto">
     <?php
-                include './navigation.html';
+                include './navigation.php';
                 ?>
     <div class="row">
         <div class="col-md-6 col-lg-7">
@@ -111,14 +111,6 @@ if(isset($_POST["reason"])){
                 <tr>
                   <td>Number Of Students Paricipating Event</td>
                   <td class="mt-2"><?php echo $students_total_number?></td>
-                </tr>
-                <tr>
-                  <td>Event Place</td>
-                  <td class="mt-2"><?php echo $ar_name?></td>
-                </tr>
-                <tr>
-                  <td>Event Organizer</td>
-                  <td class="mt-2"><?php echo $organization_institute?></td>
                 </tr>
               </tbody>
             </table>
