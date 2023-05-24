@@ -172,4 +172,56 @@ if(!empty($_POST['eventid']) && !empty($_POST['reason'])){
         }
 }
 
+if(!empty($_POST['selectdatee']) && !empty($_POST['venue_name'])){
+        $dateee = date('Y-m-d',strtotime($_POST["selectdatee"]));
+        $venue_name = mysqli_real_escape_string($con, $_POST["venue_name"]);
+        $get_event_info_by_date = "SELECT * FROM `EVENT` WHERE event_date = '$dateee' AND ar_name = '$venue_name' AND status_value in ('Approved','Pending')";
+        $result_of_get_event_info_by_date = mysqli_query($con,$get_event_info_by_date);
+        if(mysqli_num_rows($result_of_get_event_info_by_date)>0)
+        {
+                while($row_of_get_event_info_by_date = mysqli_fetch_assoc($result_of_get_event_info_by_date))
+                {
+                        $color_array = Array(
+                                '#FF0000', // Red
+                                '#0000FF', // Blue
+                                '#00FF00', // Green
+                                '#FFFF00', // Yellow
+                                '#FFA500', // Orange
+                                '#800080', // Purple
+                                '#00FFFF', // Cyan
+                                '#FF00FF', // Magenta
+                                '#008080', // Teal
+                                '#FFC0CB', // Pink
+                                '#00FF00', // Lime
+                                '#A52A2A', // Brown
+                                '#808080', // Gray
+                                '#000000'  // Black   
+                        );
+                        ?>
+                                <div class="col-12 mt-4"> 
+                                                <p style="border-left:3px solid  <?php echo($color_array[array_rand($color_array)]) ?> ; padding-left:2rem;">
+                                                    <?php echo($row_of_get_event_info_by_date['event_name']); ?>
+                                                    <br>
+                                                    <?php echo( date('H:i A', strtotime($row_of_get_event_info_by_date['event_start_time'])) ); ?> to <?php echo( date('H:i A', strtotime($row_of_get_event_info_by_date['event_end_time'])) ); ?>
+                                                    <br>
+                                                    <small> <?php echo($row_of_get_event_info_by_date['organization_institute']); ?> </small>
+
+                                                </p>
+                                        </div>
+                                        <hr>
+                        <?php
+                        
+                }
+        }else{
+                echo'<div class="col-12 mt-4 text-center"> No Events  </div>';
+        }
+
+
+
+}
+
 ?>
+
+<?php
+            mysqli_close($con);
+          ?>

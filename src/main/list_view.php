@@ -72,9 +72,9 @@
 
                     ?>
                         { // this object will be "parsed" into an Event Object
-                            title: ' <?php echo($row_of_event_info['event_name']);?> ', // a property!
-                            start: '<?php echo($row_of_event_info['event_date']);?> <?php echo($row_of_event_info['event_start_time']);?>', // a property!
-                            end: '<?php echo($row_of_event_info['event_date']);?> <?php echo($row_of_event_info['event_end_time']);?>', // a property! ** see important note below about 'end' **
+                            title: " <?php echo($row_of_event_info['event_name']);?> ", // a property!
+                            start: "<?php echo($row_of_event_info['event_date']);?> <?php echo($row_of_event_info['event_start_time']);?>", // a property!
+                            end: "<?php echo($row_of_event_info['event_date']);?> <?php echo($row_of_event_info['event_end_time']);?>", // a property! ** see important note below about 'end' **
                             <?php
                         $color_array = Array(
                             '#FF0000', // Red
@@ -113,11 +113,9 @@
        
 
 });
-
+$('.ec-timeGridWeek').click();
    </script>
 
-   <script>
-$('.ec-timeGridWeek').click();
-
-</script>
-
+<?php
+            mysqli_close($con);
+          ?>
