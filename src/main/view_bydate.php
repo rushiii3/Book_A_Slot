@@ -85,8 +85,8 @@
                     </div>
                     <div class=" col-lg-6" >
                         <div class="container-fluid mb-2">
-                            <div class="row" style="border:1px solid grey;">
-                                <div class="col-12 p-2" style="border-bottom:1px solid grey;">
+                            <div class="row border border-dark-subtle" >
+                                <div class="col-12 p-2 border-bottom border-dark-subtle" >
                                     <span class="fw-bold" id="showDay">Day</span>
                                     <span class="fw-bold" style="float:right;" id="showDate">Date</span>
                                 </div>
