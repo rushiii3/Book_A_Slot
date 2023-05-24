@@ -30,97 +30,16 @@ if(isset($_POST['update_ar'])){
     $ar_name=$_POST['ar_name_original'];
     $floor=$_POST['floor_original'];
     $capacity=$_POST['capacity_original'];
-    $new_ar_name=$_POST['ar_name_new'];
-    $new_floor=$_POST['floor_new'];
-    $new_capacity=$_POST['capacity_new'];
-    if($new_ar_name=='' and $new_floor=='' and $new_capacity=='' ){
-        $sql="UPDATE `AUDI_ROOM` set ar_name='$ar_name',floor='$floor',capacity='$capacity' where ar_name='$ar_name' ";
-        $result=mysqli_query($con,$sql);
-        if($result){
-          header("location:./admin_home.php?update_ar");
-        }
-        else{
-          echo "<p class='text-aign'>Data Is Not updated Successfully ";
-        } 
-    }
-    else if($new_ar_name=='' and $new_floor==''){
-        $sql="UPDATE `AUDI_ROOM` set ar_name='$ar_name',floor='$floor',capacity='$new_capacity' where ar_name='$ar_name' ";
-        $result=mysqli_query($con,$sql);
-        if($result){
-          header("location:./admin_home.php?update_ar");
-        }
-        else{
-          echo "<p class='text-aign'>Data Is Not updated Successfully ";
-        
-        } 
-    }
-    else if($new_capacity=='' and $new_floor==''){
-        $sql="UPDATE `AUDI_ROOM` set ar_name='$new_ar_name',floor='$floor',capacity='$capacity' where ar_name='$ar_name' ";
-        $result=mysqli_query($con,$sql);
-        if($result){
-          header("location:./admin_home.php?update_ar");
-        }
-        else{
-          echo "<p class='text-aign'>Data Is Not updated Successfully ";
-        
-        } 
-    }
-    else if($new_capacity=='' and $new_ar_name==''){
-        $sql="UPDATE `AUDI_ROOM` set ar_name='$ar_name',floor='$new_floor',capacity='$capacity' where ar_name='$ar_name' ";
-        $result=mysqli_query($con,$sql);
-        if($result){
-          header("location:./admin_home.php?update_ar");
-        }
-        else{
-          echo "<p class='text-aign'>Data Is Not updated Successfully ";
-        
-        } 
-    }
-    else if($new_ar_name==''){
-        $sql="UPDATE `AUDI_ROOM` set ar_name='$ar_name',floor='$new_floor',capacity='$new_capacity' where ar_name='$ar_name' ";
-        $result=mysqli_query($con,$sql);
-        if($result){
-          header("location:./admin_home.php?update_ar");
-        }
-        else{
-          echo "<p class='text-aign'>Data Is Not updated Successfully ";
-        
-        } 
-    }
-    else if($new_floor==''){
-        $sql="UPDATE `AUDI_ROOM` set ar_name='$new_ar_name',floor='$floor',capacity='$new_capacity' where ar_name='$ar_name' ";
-        $result=mysqli_query($con,$sql);
-        if($result){
-          header("location:./admin_home.php?update_ar");
-        }
-        else{
-          echo "<p class='text-aign'>Data Is Not updated Successfully ";
-        
-        } 
-    }
-    else if($new_capacity==''){
-        $sql="UPDATE `AUDI_ROOM` set ar_name='$new_ar_name',floor='$new_floor',capacity='$capacity' where ar_name='$ar_name' ";
-        $result=mysqli_query($con,$sql);
-        if($result){
-          header("location:./admin_home.php?update_ar");
-        }
-        else{
-          echo "<p class='text-aign'>Data Is Not updated Successfully ";
-        
-        } 
-    }
-    else{
-    $sql="UPDATE `AUDI_ROOM` set ar_name='$new_ar_name',floor='$new_floor',capacity='$new_capacity' where ar_name='$ar_name' ";
-      $result=mysqli_query($con,$sql);
-      if($result){
-        header("location:./admin_home.php?update_ar");
-      }
-      else{
-        echo "<p class='text-aign'>Data Is Not updated Successfully ";
-      
-      }
-    }
+    $sql="UPDATE `AUDI_ROOM` set floor='$floor',capacity='$capacity' where ar_name='$ar_name' ";
+    $result=mysqli_query($con,$sql);
+              if($result){
+                header("location:./admin_home.php?update_ar");
+              }
+              else{
+                echo "<p class='text-aign'>Data Is Not updated Successfully ";
+              } 
 }
+
 ?>
 <body class=' text-center w-50 m-auto'>
     <div class="con1 mt-3 ">
@@ -173,34 +92,22 @@ if(isset($_POST['update_ar'])){
     <div class="modal fade" id="update_ar" tabindex="-1" role="dialog" aria-labelledby="update_ar" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
-    <h3 class="text-center my-3 text-primary">Old Auditorium or Room Details</h3>
+    <h3 class="text-center my-3 text-primary">Update Auditorium or Room Details</h3>
     <form action="update_ar.php" method="POST" id="form_data">
       <div class="modal-body">
       <div class="form-outline w-100 m-auto">
-                    <label for="ar_name" id="ar_name" class="form-label fw-bold"> Audi/Room Name</label>
+                    <label for="ar_name" id="ar_name" class="form-label fw-bold">Do Updates for Audi/Room Name</label>
                     <input type="text" id="ar_name_original" name="ar_name_original" readonly class="form-control">
                 </div>
                 <div class="form-outline w-100 m-auto">
                     <label for="floor" id="floor" class="form-label fw-bold">Floor</label>
-                    <input type="text" id="floor_original" name="floor_original" readonly class="form-control">
+                    <input type="text" id="floor_original" name="floor_original"  class="form-control">
                 </div>  
                 <div class="form-outline w-100 m-auto">
                     <label for="capacity_original" id="capacity_original" class="form-label fw-bold">Capacity</label>
-                    <input type="text" id="capacity_original" name="capacity_original" class="form-control" readonly>
+                    <input type="text" id="capacity_original" name="capacity_original" class="form-control" >
                 </div> 
-                <h3 class="text-center my-3 text-primary">Enter New Auditorium or Room Details</h3>
-                <div class='form-outline w-100 m-auto'>
-                    <label for='ar_name' class='form-label fw-bold'> Ar Name</label>
-                    <input type='text' id='ar_name_new' name='ar_name_new'  class='form-control' placeholder="Enter AR name">
-                </div>
-                <div class='form-outline w-100 m-auto'>
-                    <label for='floor' class='form-label fw-bold'> Floor</label>
-                    <input type='text' id='floor_new' name='floor_new'  class='form-control' placeholder="Enter floor ">
-                </div>
-                <div class='form-outline w-100 m-auto'>
-                    <label for='capacity' class='form-label fw-bold'> Capacity</label>
-                    <input type='text' id='capacity_new' name='capacity_new'  class='form-control' placeholder="Enter capacity" >
-                </div>            
+                          
       </div>
     <div class="modal-footer">
         <button type="submit" class="btn btn-secondary" name='no'>close</button>
