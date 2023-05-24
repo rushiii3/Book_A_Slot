@@ -673,5 +673,8 @@ $('#nextThird').on('click',function(e){
     e.preventDefault();
 })
 
+$('#bookAgain').on('click',function(){
+  window.location='booking.php';
+})
 
 >>>>>>> 3cf029e (commit)
