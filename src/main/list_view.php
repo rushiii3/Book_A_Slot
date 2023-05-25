@@ -72,7 +72,8 @@
 
                     ?>
                         { // this object will be "parsed" into an Event Object
-                            title: " <?php echo($row_of_event_info['event_name']);?> ", // a property!
+                            
+                            title: " <?php echo($row_of_event_info['event_name']);?> \n <?php echo($row_of_event_info['organization_institute']);?>", // a property!
                             start: "<?php echo($row_of_event_info['event_date']);?> <?php echo($row_of_event_info['event_start_time']);?>", // a property!
                             end: "<?php echo($row_of_event_info['event_date']);?> <?php echo($row_of_event_info['event_end_time']);?>", // a property! ** see important note below about 'end' **
                             <?php
@@ -95,6 +96,7 @@
                         ?>
                             color: " <?php echo($color_array[array_rand($color_array)]) ?> ",
                             draggable:false,
+                            
                         },
 
                     <?php
@@ -113,7 +115,9 @@
        
 
 });
+
 $('.ec-timeGridWeek').click();
+
    </script>
 
 <?php

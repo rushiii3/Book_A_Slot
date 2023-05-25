@@ -175,7 +175,7 @@ if(!empty($_POST['eventid']) && !empty($_POST['reason'])){
 if(!empty($_POST['selectdatee']) && !empty($_POST['venue_name'])){
         $dateee = date('Y-m-d',strtotime($_POST["selectdatee"]));
         $venue_name = mysqli_real_escape_string($con, $_POST["venue_name"]);
-        $get_event_info_by_date = "SELECT * FROM `EVENT` WHERE event_date = '$dateee' AND ar_name = '$venue_name' AND status_value in ('Approved','Pending')";
+        $get_event_info_by_date = "SELECT * FROM `EVENT` WHERE event_date = '$dateee' AND ar_name = '$venue_name' AND status_value in ('Approved','Pending') ORDER BY event_start_time";
         $result_of_get_event_info_by_date = mysqli_query($con,$get_event_info_by_date);
         if(mysqli_num_rows($result_of_get_event_info_by_date)>0)
         {

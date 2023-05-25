@@ -1,12 +1,17 @@
 $('#org_institue_name').hide();
+   $(window).on('load', function(){
+     setTimeout(addBackdrop, 2000); //wait for page load PLUS two seconds.
+ });
 
-
-  $(window).on('load', function() {
-    $('#terms_and_condition').modal('show');
-    $('.modal-backdrop').remove();
-
-  });
-
+ function addBackdrop(){
+   $('#terms_and_condition').modal('show');
+ }
+$('#tandcondlink').on('click',function(){
+  $('#terms_and_condition').modal('show');
+})
+$('#check_box_terms_and_condition').on('click',function(){
+  $('#terms_and_condition').modal('show');
+})
 
 $('#department_namee').on('change',function(){
     
@@ -60,11 +65,18 @@ $('#nextFirst').on('click',function()
             {
               if($event_end_time!=="Select the end time")
               {
-                $step.eq(0).removeClass("active");
-                $step.eq(0).addClass("completed");
-                $('.section1').hide();
-                $('.section2').show();
-                $step.eq(1).addClass("active");
+                if($event_start_time===$event_end_time)
+                {
+                  alert("Start and Ending time of event cannot be same");
+                }else{
+                    $step.eq(0).removeClass("active");
+                  $step.eq(0).addClass("completed");
+                  $('.section1').hide();
+                  $('.section2').show();
+                  $step.eq(1).addClass("active");
+                  }
+                
+                
                 
               }else{
                 alert("Please input the event end time");
@@ -217,4 +229,8 @@ $('#nextThird').on('click',function(e){
 $('#bookAgain').on('click',function(){
   window.location='booking.php';
 })
+
+
+
+
 
