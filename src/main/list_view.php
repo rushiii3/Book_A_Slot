@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
-    </script>
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
@@ -17,66 +17,61 @@
 
     <title>List View</title>
 </head>
+
 <body>
     <?php
-         include("session.php");
-         require "connection/connect.php";
-         require_once("loader.html"); 
-     ?>
-    <main id="main">
-
-        <?php
-     include("navigation.html");
+    include("session.php");
+    require "connection/connect.php";
+    require_once("loader.html");
     ?>
-    <?php
-        if($_GET['id']=="")
-        {
-            echo("<script>window.location='list.php';</script>");
-        }else{
+    <main id="main">
+        <?php
+        include("navigation.html");
+        ?>
+        <?php
+        if ($_GET['id'] == "") {
+            echo ("<script>window.location='list.php';</script>");
+        } else {
             $venue_name = $_GET['id'];
         }
-    ?>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="ec">
-            
+        ?>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="ec">
 
+
+                </div>
             </div>
         </div>
-    </div>
     </main>
 </body>
+
 </html>
 <script>
     let ec = new EventCalendar(document.getElementById('ec'), {
         initialDate: new Date(2018, 8, 1),
-    headerToolbar: {
+        headerToolbar: {
             start: 'prev,next today',
             center: 'title',
             end: 'timeGridWeek,timeGridDay,listWeek,'
         },
-        slotDuration: '00:15', 
+        slotDuration: '00:15',
         eventStartEditable: false,
         allDaySlot: false,
         slotMinTime: "06:30",
         //initialView: 'listWeek',
         events: [
-        
             <?php
             $event_info_query = "SELECT * FROM `EVENT` WHERE ar_name = '$venue_name' AND status_value in ('Approved','Pending') ";
-            $result_of_event_info_query = mysqli_query($con,$event_info_query);
-            if(mysqli_num_rows($result_of_event_info_query))
-            {
-                while($row_of_event_info=mysqli_fetch_assoc($result_of_event_info_query))
-                {
-
-                    ?>
-                        { // this object will be "parsed" into an Event Object
-                            
-                            title: " <?php echo($row_of_event_info['event_name']);?> \n <?php echo($row_of_event_info['organization_institute']);?>", // a property!
-                            start: "<?php echo($row_of_event_info['event_date']);?> <?php echo($row_of_event_info['event_start_time']);?>", // a property!
-                            end: "<?php echo($row_of_event_info['event_date']);?> <?php echo($row_of_event_info['event_end_time']);?>", // a property! ** see important note below about 'end' **
-                            <?php
+            $result_of_event_info_query = mysqli_query($con, $event_info_query);
+            if (mysqli_num_rows($result_of_event_info_query)) {
+                while ($row_of_event_info = mysqli_fetch_assoc($result_of_event_info_query)) {
+            ?>
+                    { // this object will be "parsed" into an Event Object
+                        title: " <?php echo ($row_of_event_info['event_name']); ?> \n <?php echo ($row_of_event_info['organization_institute']); ?>", // a property!
+                        start: "<?php echo ($row_of_event_info['event_date']); ?> <?php echo ($row_of_event_info['event_start_time']); ?>", // a property!
+                        end: "<?php echo ($row_of_event_info['event_date']); ?> <?php echo ($row_of_event_info['event_end_time']); ?>", // a property! ** see important note below about 'end' **
+                        <?php
                         $color_array = Array(
                             '#FF0000', // Red
                             '#0000FF', // Blue
@@ -91,35 +86,22 @@
                             '#00FF00', // Lime
                             '#A52A2A', // Brown
                             '#808080', // Gray
-                            '#000000'  // Black   
-                    );
+                            '#000000' // Black
+                        );
                         ?>
-                            color: " <?php echo($color_array[array_rand($color_array)]) ?> ",
-                            draggable:false,
-                            
-                        },
-
-                    <?php
-                    
+                        color: " <?php echo ($color_array[array_rand($color_array)]) ?> ",
+                        draggable: false,
+                    },
+            <?php
                 }
             }
-
-
             ?>
+        ],
+    });
 
-
-
-    
-    
-  ],
-       
-
-});
-
-$('.ec-timeGridWeek').click();
-
-   </script>
+    $('.ec-timeGridWeek').click();
+</script>
 
 <?php
-            mysqli_close($con);
-          ?>
+mysqli_close($con);
+?>
