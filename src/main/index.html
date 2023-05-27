@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book A Slot</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <link rel="stylesheet" href="../css/main.css">
 </head>
+
 <body>
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-4 col-md-4 p-3 mx-auto" id="text">
-                
                 <p class="display-1 fw-bold" style="margin-top: 8rem;">Book your Venue !</p>
                 <button onclick="location.href='sign_up.php';">
                     Sign Up
@@ -25,31 +28,33 @@
                     Sign In
                 </button>
             </div>
-            <div class="col-lg-8 col-md-8  shapedividers_com-5015 shapedividers_com-1952"  style="height: 100vh;">
+            <div class="col-lg-8 col-md-8 shapedividers_com-5015 shapedividers_com-1952" style="height: 100vh;">
                 <img id="img" src="https://img.freepik.com/free-vector/two-politicians-taking-part-political-debates-front-audience-isolated-flat-illustration_74855-14188.jpg?w=1480&t=st=1683736354~exp=1683736954~hmac=faed926dc29596b21c89fb080fd834c7ca5d2890d98fe7ab145ccefcdf294b08" alt="" style="width: 100%;height: 100vh;">
             </div>
         </div>
-        
     </div>
-    
-       <script>
-        //index page javascript change image every 5s 
-function displayNextImage() {
-     x = (x === images.length - 1) ? 0 : x + 1;
-     document.getElementById("img").src = images[x];
- }
- function changeImage() {
-     setInterval(displayNextImage, 5000);
- }
 
- var images = [], x = -1;
- images[0] = "https://img.freepik.com/free-vector/theatre-background-with-musical-performance-symbols-isometric-vector-illustration_1284-76317.jpg?w=1060&t=st=1683733040~exp=1683733640~hmac=0ebfe49597177dea04ae526998c19039bc25059829612e79dc581515edc97a4c";
- images[1] = "https://img.freepik.com/free-vector/lecture-isometric-illustration_1284-21183.jpg?w=1060&t=st=1683742670~exp=1683743270~hmac=aa948430f7445635f4c03b82837ed47ae31382cf6c8b50e54745afb6b288d814";
- images[2] = "https://img.freepik.com/free-vector/business-conference-seminar-auditorium-hall-speaker-podium-giving-presentation-audience-seats-event-forum-convention-modern-center_575670-2280.jpg?w=1800&t=st=1683742334~exp=1683742934~hmac=c5e131c4b9b58ac2e3b76a3d7686b73d917d2e4147fb7d864dd028eb456d9628";
- images[3] = "https://img.freepik.com/free-vector/business-conference-illustration-with-speaker-stage-audience-cartoon-characters-scientific-presentation-academic-symposium-professional-briefing_575670-644.jpg?w=1800&t=st=1683742373~exp=1683742973~hmac=0a716b2e0f446ed82cfd44a63aae6bc4c811d90ab816b1b47b05a7a4de0a5349";
- images[4] = "https://img.freepik.com/free-vector/medical-conference-illustration_23-2148904006.jpg?w=1480&t=st=1683742441~exp=1683743041~hmac=0f20c42e3f28c013ad01da0d491699ed84e4517146f18d94a48bfe6dff92cae6" 
- images[5] = "https://img.freepik.com/free-vector/doctor-speaking-from-podium-stage-conference_74855-20541.jpg?w=1380&t=st=1683742557~exp=1683743157~hmac=8638616f0ec457f779a80480b2dfb0f89b716daa5cb8113219043655bcb4d30a"
- changeImage();
-       </script>
+    <script>
+        //index page javascript change image every 5s 
+        function displayNextImage() {
+            x = (x === images.length - 1) ? 0 : x + 1;
+            document.getElementById("img").src = images[x];
+        }
+
+        function changeImage() {
+            setInterval(displayNextImage, 5000);
+        }
+
+        var images = [],
+            x = -1;
+        images[0] = "https://img.freepik.com/free-vector/theatre-background-with-musical-performance-symbols-isometric-vector-illustration_1284-76317.jpg?w=1060&t=st=1683733040~exp=1683733640~hmac=0ebfe49597177dea04ae526998c19039bc25059829612e79dc581515edc97a4c";
+        images[1] = "https://img.freepik.com/free-vector/lecture-isometric-illustration_1284-21183.jpg?w=1060&t=st=1683742670~exp=1683743270~hmac=aa948430f7445635f4c03b82837ed47ae31382cf6c8b50e54745afb6b288d814";
+        images[2] = "https://img.freepik.com/free-vector/business-conference-seminar-auditorium-hall-speaker-podium-giving-presentation-audience-seats-event-forum-convention-modern-center_575670-2280.jpg?w=1800&t=st=1683742334~exp=1683742934~hmac=c5e131c4b9b58ac2e3b76a3d7686b73d917d2e4147fb7d864dd028eb456d9628";
+        images[3] = "https://img.freepik.com/free-vector/business-conference-illustration-with-speaker-stage-audience-cartoon-characters-scientific-presentation-academic-symposium-professional-briefing_575670-644.jpg?w=1800&t=st=1683742373~exp=1683742973~hmac=0a716b2e0f446ed82cfd44a63aae6bc4c811d90ab816b1b47b05a7a4de0a5349";
+        images[4] = "https://img.freepik.com/free-vector/medical-conference-illustration_23-2148904006.jpg?w=1480&t=st=1683742441~exp=1683743041~hmac=0f20c42e3f28c013ad01da0d491699ed84e4517146f18d94a48bfe6dff92cae6"
+        images[5] = "https://img.freepik.com/free-vector/doctor-speaking-from-podium-stage-conference_74855-20541.jpg?w=1380&t=st=1683742557~exp=1683743157~hmac=8638616f0ec457f779a80480b2dfb0f89b716daa5cb8113219043655bcb4d30a"
+        changeImage();
+    </script>
 </body>
+
 </html>

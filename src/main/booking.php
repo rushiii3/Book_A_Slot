@@ -63,6 +63,28 @@
 </div>
 
 
+<!-- terms and condition modal -->
+<div class="modal fade" id="terms_and_condition" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog modal-dialog-centered w-75 mx-auto">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Terms And Condition</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      <div class="modal-body">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+
+It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+      </div>
+      <div class="modal-footer">
+      <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Okay I Agree</button>
+      </div>
+    </div>
+  </div>
+</div>
+
         <div class="container mt-5 mb-5 shadow p-3 mb-5 bg-body" id="main_body" style="border-radius: 20px">
             <!-- Container starting -->
             <div class="row">
@@ -298,10 +320,10 @@
                                                 <input type="number" class="form-control" id="experience" placeholder="e.g. ....... ">
                                         </div>
                                         <div class="col-12 mb-4 form-check">
-                                                <input class="form-check-input"  type="checkbox" value="" id="terms_condition">
+                                                <input class="form-check-input" id="check_box_terms_and_condition"  type="checkbox" value="" id="terms_condition">
                                                 <label class="form-check-label" for="terms_condition">
                                                     I agree to these 
-                                                    <span><a href="#" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Terms and Conditions.</a></span>
+                                                    <span><a href="#" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" id="tandcondlink">Terms and Conditions.</a></span>
                                                 </label>
                                         </div>
                                         <div class="col-12 mb-1 mt-5">
@@ -334,3 +356,4 @@
 <?php
             mysqli_close($con);
           ?>
+         
