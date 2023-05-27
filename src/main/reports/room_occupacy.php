@@ -168,6 +168,7 @@ $second_max_events_occured="SELECT COUNT(ar_name),ar_name as second_ar from `eve
 }
 ?>
 <?php
+//code showing second most dense audi's organizer
 $second_max_events_occured="SELECT max(ar_name) as second_ar from `EVENT` where ar_name not in (SELECT max(ar_name) from `EVENT`) and status_value='approved'";
 <<<<<<< HEAD
 >>>>>>> 3f0a459 (room occupacy report added)
@@ -181,6 +182,7 @@ $result1=mysqli_query($con,$get_organizers);
 ?>
 <div class="container-fluid mt-3">
         <div class="row">
+<<<<<<< HEAD
             <div class="col-md-10 col-lg-10 m-auto">
                 <div class="row mt-5">
                     <div class="col-md-5 col-lg-5 m-auto">
@@ -194,10 +196,17 @@ $result1=mysqli_query($con,$get_organizers);
                         <h3 class="text-center">Chart showing events organized in <strong>most</strong> oaccupied audi/room</h3>
 >>>>>>> c75f32a (room occupacy report added)
                         <div id="piechart" style="width: 500px; height: 400px;"></div>
+=======
+            <div class="col-md-10 col-lg-10 m-auto mt-3  justify-content-center">
+                        <h3 class="text-center">Chart showing events organized in <strong>most</strong> oaccupied audi/room</h3>
+                        <div id="piechart" ></div>
+>>>>>>> 677e8c8 (all reports)
                         <!-- one piechart -->
-                    </div>
-                    <div class="col-md-5 col-lg-5 m-auto">
+            </div>
+        </div>
+</div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                      <h3 class="text-center">Chart showing events organized in <strong>second</strong> most occupied audi/room</h3>
@@ -207,10 +216,13 @@ $result1=mysqli_query($con,$get_organizers);
 =======
                      <h3 class="text-center">Chart showing events organized in <strong>second</strong> most oaccupied audi/room</h3>
 >>>>>>> c75f32a (room occupacy report added)
+=======
+                     <!-- <h3 class="text-center">Chart showing events organized in <strong>second</strong> most oaccupied audi/room</h3>
+>>>>>>> 677e8c8 (all reports)
                         <div id="pie" style="width: 500px; height: 400px;"></div>
 
-                    <!-- one piechart -->
-                    </div>
+                     one piechart 
+                    </div> -->
 </body>
 <!-- piechart  for maximum audi occurance-->
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -233,8 +245,8 @@ $result1=mysqli_query($con,$get_organizers);
 
         var options = {
           title: 'Events organized in <?php echo $first_ar;?>',
-          width:700,
-          height:600,
+          width:1450,
+          height:1000,
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));

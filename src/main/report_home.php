@@ -2,10 +2,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 4c9bf39 (report home)
 =======
 >>>>>>> a34d6f1 (report home)
+=======
+<?php
+include './connection/connect.php';
+?>
+>>>>>>> 677e8c8 (all reports)
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,6 +70,7 @@
                 include './navigation.html';
                 ?>
                 <button class="btn btn-primary w-50 m-auto d-flex justify-content-center fw-bolder" style="align-items: center;">REPORTS PANEL</button>
+                <a href="./reports/overall_report.php"><strong class="text-center d-flex justify-content-center" >click here to get short summary</strong></a>
                 <div class="row mt-5">
                     <div class="col-md-5 col-lg-5 m-auto">
 <<<<<<< HEAD
@@ -88,12 +95,13 @@
 =======
 >>>>>>> a6b23e4 (report home)
                         <img src="" alt="" id="image" >
-                        
+                        <!-- montwise reports -->
                         <button class="btn btn-primary mt-3 m-auto d-flex justify-content-center" data-bs-toggle="modal" data-bs-target="#exampleModal" >Get Month Wise Report</button>
                         
                     </div>
                     <div class="col-md-5 col-lg-5 m-auto">
                         <img src="" alt="" id="room">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -143,25 +151,43 @@
 >>>>>>> 9d56e23 (report home)
 >>>>>>> a6b23e4 (report home)
                     
+=======
+                        <!-- room occupacy report -->
+                        <a href="./reports/room_occupacy.php" class="text-decoration:none" ><button class="btn btn-primary mt-3 m-auto d-flex justify-content-center" >Room Occupacy Report</button></a>
+>>>>>>> 677e8c8 (all reports)
                     </div>
                 </div>
                 <div class="row mt-5">
                     <div class="col-md-5 col-lg-5 m-auto">
-                            <!-- <h2>Room Occupacy Reports</h2> -->
-                        <img src="" alt="" id="event" >
-                        
-                    </div>
+                    <img src="" alt="" id="cancel" >
+                        <a class="col-md-5 col-lg-5 m-auto text-decoration:none" href="./reports/cancel_report.php"><button class=" m-auto btn btn-primary mt-3 m-auto d-flex justify-content-center">Cancelled Event Report</button></a>
+                </div>
                     <div class="col-md-5 col-lg-5 m-auto">
-                        <img src="" alt="" id="room">
-                    
+                    <img src="" alt="" id="guest" >
+                    <!-- <div class="col-md-5 col-lg-5 m-auto"> -->
+                        <button class=" btn btn-primary mt-3 m-auto d-flex justify-content-center" data-bs-toggle="modal" data-bs-target="#resource">Resource Person Report</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <script src="../js/report_img.js"></script>   
+    <script>
+        let cancel=document.getElementById('cancel');
+       let cancels=['../img/c1.jpg','../img/c2.jpg','../img/c3.jpg'];
+       setInterval(function(){
+        let random=Math.floor(Math.random()*3);
+        cancel.src=cancels[random];
+       },800);
+       let guest=document.getElementById('guest');
+       let guests=['../img/rp2.jpg','../img/rp3.jpg','../img/rp4.jpg'];
+       setInterval(function(){
+        let random=Math.floor(Math.random()*3);
+        guest.src=guests[random];
+       },800);
+    </script>
 </body>
-<!-- Modal -->
+<!-- Modal for month report-->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -200,6 +226,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <button type="submit" class="btn btn-secondary"  name="close">Close</button>
 =======
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -236,6 +263,9 @@
         <button type="submit" class="btn btn-secondary"  name="close">Close</button>
 >>>>>>> 9d56e23 (report home)
 >>>>>>> a6b23e4 (report home)
+=======
+        <button type="submit" class="btn btn-secondary"  name="close">Close</button>
+>>>>>>> 677e8c8 (all reports)
         <button type="submit" class="btn btn-primary" name="month_report">OK</button>
       </div>
       </div>
@@ -243,7 +273,42 @@
     </div>
   </div>
 </div>
+
+<!-- Modal for resource person report-->
+<div class="modal fade" id="resource" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    <form action="./reports/resource_person.php" method="post">
+      <div class="modal-body">
+      <h1 class="modal-title fs-5" id="exampleModalLabel">Resource Person Information</h1>
+      <div class="form-outline w-100 m-auto  mt-3">
+                    <label for="year" class="form-label fw-bold">select organization/institute who invited resource persons:</label>
+                    <select name="organizer" class='w-50 m-auto' id="organizer">
+                        <?php
+                        $get_organizations="SELECT distinct event.organization_institute FROM `EVENT` JOIN (SELECT event_id,full_name from `RESOURCE_PERSON` GROUP BY event_id)`resource_person` on event.event_id=resource_person.event_id where status_value='approved'";
+                        $result=mysqli_query($con,$get_organizations);
+                        while($row=mysqli_fetch_assoc($result)){
+                            $organizer=$row['organization_institute'];
+                            echo "<option  value='$organizer'>$organizer</option>   ";
+                        }
+                        ?>
+                        
+                    </select>
+        </div>
+        <div class="form-outline w-100 m-auto  mt-3">
+                    <label for="year" class="form-label fw-bold">Enter a Academic year </label>
+                    <input type="text" id="year" name="year" class="form-control" placeholder="eg.2023-2024">
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary" name='resource_person'>OK</button>
+      </div>
+    </div>
+    </form>
+  </div>
+</div>
 </html>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -254,3 +319,8 @@
 >>>>>>> 9278f26 (month report)
 =======
 >>>>>>> a34d6f1 (report home)
+=======
+
+
+        
+>>>>>>> 677e8c8 (all reports)

@@ -26,7 +26,11 @@ include '../connection/connect.php';
         <div class="row">
             <div class="col-md-10 col-lg-10 m-auto">
             <?php
+<<<<<<< HEAD
                 include '../admin/admin_navbar.html';
+=======
+                include '../navigation.html';
+>>>>>>> 677e8c8 (all reports)
                 ?>
                 <button class="btn btn-primary w-50 m-auto d-flex justify-content-center fw-bolder" style="align-items: center;">OVERALL SUMMARY</button>
 
@@ -62,11 +66,18 @@ include '../connection/connect.php';
                             </div>
                             <div class="col-md-6 col-lg-6 my-5">
                                 <?php
+<<<<<<< HEAD
                                 $organizer="SELECT count(organization_institute) as max_organizer,organization_institute from `event` where status_value='approved' GROUP by organization_institute order by max_organizer desc limit 1";
                                 $result=mysqli_query($con,$organizer);
                                 $row=mysqli_fetch_assoc($result);
                                 $organization_institute= $row['organization_institute'];
                                 $count=$row['max_organizer'];
+=======
+                                $organizer="select max(organization_institute) from `EVENT` where status_value='approved' ";
+                                $result=mysqli_query($con,$organizer);
+                                $row=mysqli_fetch_assoc($result);
+                                $organization_institute= $row['max(organization_institute)'];
+>>>>>>> 677e8c8 (all reports)
                                 echo "<h2>Most of the events organized by <strong class='fw-bolder'> $organization_institute </strong> </h2>"
                                 ?>
                             </div>
