@@ -85,18 +85,32 @@ function nextPrev(n)
 {
 =======
 $('#org_institue_name').hide();
-   $(window).on('load', function(){
-     setTimeout(addBackdrop, 2000); //wait for page load PLUS two seconds.
- });
 
+$(window).on('load', function(){
+    setTimeout(addBackdrop, 2000); //wait for page load PLUS two seconds.
+ });
  function addBackdrop(){
    $('#terms_and_condition').modal('show');
+   $('#tnc_footer').hide();
  }
 $('#tandcondlink').on('click',function(){
   $('#terms_and_condition').modal('show');
+  $('#tnc_footer').show();
 })
+$('#iagree').on('click',function(){
+  $('#check_box_terms_and_condition').prop('checked', true);
+})
+
 $('#check_box_terms_and_condition').on('click',function(){
-  $('#terms_and_condition').modal('show');
+  if($('#check_box_terms_and_condition').is(':checked')){
+    
+    $('#terms_and_condition').modal('show');
+    $('#tnc_footer').show();
+  }else{
+    $('#terms_and_condition').modal('hide');
+    $('#tnc_footer').show();
+  }
+  
 })
 
 $('#department_namee').on('change',function(){
@@ -611,9 +625,8 @@ $('#nextThird').on('click',function(e){
         if($companyName!==""){
             if($designation!==""){
                 if($experience!==""){
-                  if($('#terms_condition').is(':checked'))
+                  if($('#check_box_terms_and_condition').is(':checked'))
                   {
-                      
                     $event_name = $('#eventName').val();
                   $event_Descr = $('#eventDescription').val();
                   $num_of_students = $('#no_of_stu_attending').val();

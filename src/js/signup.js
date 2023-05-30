@@ -6,6 +6,7 @@ $(document).ready(function(){
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     function testInput(event) {
         var value = String.fromCharCode(event.which);
@@ -26,12 +27,14 @@ $(document).ready(function(){
 =======
 =======
 >>>>>>> b243f3a (yess)
+=======
+
+>>>>>>> 959f749 (commit)
     function testInput(event) {
         var value = String.fromCharCode(event.which);
         var pattern = new RegExp(/[a-zåäö ]/i);
         return pattern.test(value);
      }
-     
      $('#full_name').bind('keypress', testInput);
 >>>>>>> 438b4be (commit)
     
