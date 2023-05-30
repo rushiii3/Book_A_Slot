@@ -1,12 +1,12 @@
 $(document).ready(function(){
     $('.pass_open_eye').hide();
     $('.cpass_open_eye').hide();
+
     function testInput(event) {
         var value = String.fromCharCode(event.which);
         var pattern = new RegExp(/[a-zåäö ]/i);
         return pattern.test(value);
      }
-     
      $('#full_name').bind('keypress', testInput);
     
     $('#email').on('input',function(){
