@@ -79,7 +79,6 @@
                                         }
                                     }
                                 ?>
-                                <option value="others">Others</option>
                             </select>
                         </div>
                         <div class="mb-3">
@@ -110,7 +109,7 @@
                 <div class="p-4 col-lg-6">
                     <img src="https://img.freepik.com/premium-vector/online-registration-sign-up-with-man-sitting-near-smartphone_268404-95.jpg?w=1480" alt="" class="img-fluid" />
                     <p class="text-center mt-5">
-                        <a href="sign_in.php" class="link-dark">Already have an account? Sign in</a>
+                        <a href="sign_in.php"  class="link-dark">Already have an account? Sign in</a>
                     </p>
                 </div>
             </div>

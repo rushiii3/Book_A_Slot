@@ -5,6 +5,7 @@ $(document).ready(function(){
     $('.cpass_open_eye').hide();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     function testInput(event) {
         var value = String.fromCharCode(event.which);
@@ -23,6 +24,8 @@ $(document).ready(function(){
     );
 >>>>>>> bc83ca0 (done)
 =======
+=======
+>>>>>>> b243f3a (yess)
     function testInput(event) {
         var value = String.fromCharCode(event.which);
         var pattern = new RegExp(/[a-zåäö ]/i);
@@ -102,6 +105,7 @@ $(document).ready(function(){
         }
     })
     
+<<<<<<< HEAD
     $('#submit').on('click',function(e){
         $email_verify =  $('#emailVerify').text();
         $password_verify = $('#pass_verify').text();
@@ -357,6 +361,8 @@ $('#submit').on('click',function(e){
     function showWarning(){
       $('.alert-danger').show();
     }
+=======
+>>>>>>> b243f3a (yess)
     $('#submit').on('click',function(e){
         $email_verify =  $('#emailVerify').text();
         $password_verify = $('#pass_verify').text();
