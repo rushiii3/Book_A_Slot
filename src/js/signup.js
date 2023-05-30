@@ -1,8 +1,6 @@
 $(document).ready(function(){
     $('.pass_open_eye').hide();
     $('.cpass_open_eye').hide();
-    $('.alert-success').hide();
-    $('.alert-danger').hide();
     function testInput(event) {
         var value = String.fromCharCode(event.which);
         var pattern = new RegExp(/[a-zåäö ]/i);
@@ -81,12 +79,6 @@ $(document).ready(function(){
         }
     })
     
-    function showSuccess(){
-      $('.alert-success').show();
-    }
-    function showWarning(){
-      $('.alert-danger').show();
-    }
     $('#submit').on('click',function(e){
         $email_verify =  $('#emailVerify').text();
         $password_verify = $('#pass_verify').text();
