@@ -14,15 +14,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@event-calendar/build@0.19.0/event-calendar.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@event-calendar/build@0.19.0/event-calendar.min.js"></script>
-
+    <link type="image/png" sizes="16x16" rel="icon" href="../../img/logo11.jpeg" />
     <title>List View</title>
 </head>
 
 <body>
     <?php
-    include("session.php");
-    require "connection/connect.php";
-    require_once("loader.html");
+    include("../config/session.php");
+    require "../connection/connect.php";
+    require_once("../loader.html");
     ?>
     <main id="main">
         <?php
@@ -43,6 +43,7 @@
                 </div>
             </div>
         </div>
+        
     </main>
 </body>
 

@@ -14,16 +14,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <link rel="stylesheet" href="../css/booking.css">
+    <link rel="stylesheet" href="../../css/booking.css">
     <title>Book</title>
+    <link type="image/png" sizes="16x16" rel="icon" href="../../img/logo11.jpeg" />
+
 </head>
 
 <body>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <?php
-         include("session.php");
-         require "connection/connect.php";
-         require_once("loader.html"); 
+         include("../config/session.php");
+         require "../connection/connect.php";
+         require_once("../loader.html"); 
      ?>
     <main id="main">
 
@@ -78,8 +80,8 @@ It was popularised in the 1960s with the release of Letraset sheets containing L
 
 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
       </div>
-      <div class="modal-footer">
-      <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Okay I Agree</button>
+      <div class="modal-footer" id="tnc_footer">
+      <button type="button" class="btn btn-primary" id="iagree" data-bs-dismiss="modal">I Agree</button>
       </div>
     </div>
   </div>
@@ -320,7 +322,7 @@ It is a long established fact that a reader will be distracted by the readable c
                                                 <input type="number" class="form-control" id="experience" placeholder="e.g. ....... ">
                                         </div>
                                         <div class="col-12 mb-4 form-check">
-                                                <input class="form-check-input" id="check_box_terms_and_condition"  type="checkbox" value="" id="terms_condition">
+                                                <input class="form-check-input" id="check_box_terms_and_condition"  type="checkbox" value="">
                                                 <label class="form-check-label" for="terms_condition">
                                                     I agree to these 
                                                     <span><a href="#" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" id="tandcondlink">Terms and Conditions.</a></span>
@@ -348,9 +350,10 @@ It is a long established fact that a reader will be distracted by the readable c
             </div>
         <!-- container ending -->
         </div>  
+        
     </main>
-    <script src="../js/booking.js"></script>
-    <script src="../js/bookingDate.js"></script>
+    <script src="../../js/booking.js"></script>
+    <script src="../../js/bookingDate.js"></script>
 </body>
 </html>
 <?php

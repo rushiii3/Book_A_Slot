@@ -8,13 +8,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/signup.js"></script>
+    <script src="../../js/signup.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link type="image/png" sizes="16x16" rel="icon" href="../../img/logo11.jpeg" />
 </head>
 <body class="bg-light">
     <?php
-        require "connection/connect.php";
-        require_once("loader.html"); 
+        require "../connection/connect.php";
+        require_once("../loader.html"); 
     ?>
     <main id="main">
         <!-- SUCCESS -->
@@ -79,7 +80,6 @@
                                         }
                                     }
                                 ?>
-                                <option value="others">Others</option>
                             </select>
                         </div>
                         <div class="mb-3">
@@ -110,7 +110,7 @@
                 <div class="p-4 col-lg-6">
                     <img src="https://img.freepik.com/premium-vector/online-registration-sign-up-with-man-sitting-near-smartphone_268404-95.jpg?w=1480" alt="" class="img-fluid" />
                     <p class="text-center mt-5">
-                        <a href="sign_in.php" class="link-dark">Already have an account? Sign in</a>
+                        <a href="sign_in.php"  class="link-dark">Already have an account? Sign in</a>
                     </p>
                 </div>
             </div>

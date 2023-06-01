@@ -1,5 +1,5 @@
 <?php
-require "connection/connect.php";
+require "../connection/connect.php";
 if (!empty($_POST['fullname']) &&
     !empty($_POST['email']) &&
     !empty($_POST['department_namee']) &&
