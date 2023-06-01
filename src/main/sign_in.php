@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <script src="../js/signin.js"></script>
     <script src="../js/logout.js"></script>
+    <link type="image/png" sizes="16x16" rel="icon" href="../img/logo11.jpeg" />
 </head>
 <body class="bg-light">
     <?php

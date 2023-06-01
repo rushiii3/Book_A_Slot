@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <title>List</title>
+    <link type="image/png" sizes="16x16" rel="icon" href="../img/logo11.jpeg" />
     <style>
         #card:hover {
             transform: translateY(-30px);
@@ -68,7 +69,14 @@
                 }
                 ?>
             </div>
+
+
+
+
+
+            
         </div>
+        
     </main>
 </body>
 

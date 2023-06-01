@@ -12,6 +12,7 @@
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <title>Cancel Slot</title>
+    <link type="image/png" sizes="16x16" rel="icon" href="../img/logo11.jpeg" />
 </head>
 <body>
 
@@ -41,7 +42,7 @@
   </div>
 </div>
 
-<div class="container mt-2">
+<div class="container mt-2" style="height:100vh;">
         <div class="row p-3">
 
         <?php
@@ -166,6 +167,7 @@ if(mysqli_num_rows($result_of_events_pending_approved)>0)
 ?>
         </div>
     </div>
+    
     </main>
     <script>
            <?php
