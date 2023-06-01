@@ -3,9 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
+<<<<<<< HEAD
     <meta http-equiv='cache-control' content='no-cache'>
     <meta http-equiv='expires' content='0'>
     <meta http-equiv='pragma' content='no-cache'>
+=======
+>>>>>>> db0b766 (done)
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -18,10 +21,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="../../css/booking.css">
+<<<<<<< HEAD
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <title>Book</title>
     <link type="image/png" sizes="16x16" rel="icon" href="../../img/logo11.jpeg" />
     
+=======
+    <title>Book</title>
+    <link type="image/png" sizes="16x16" rel="icon" href="../../img/logo11.jpeg" />
+>>>>>>> db0b766 (done)
 
 </head>
 
@@ -31,7 +39,10 @@
          include("../config/session.php");
          require "../connection/connect.php";
          require_once("../loader.html"); 
+<<<<<<< HEAD
          
+=======
+>>>>>>> db0b766 (done)
      ?>
     <main id="main">
 
@@ -119,20 +130,28 @@ It is a long established fact that a reader will be distracted by the readable c
                         </div>
                         <div class="stepper-item ">
                             <div class="step-counter">3</div>
+<<<<<<< HEAD
                             <div class="step-name text-center">Requriement<br> </div>
                         </div>
                         <div class="stepper-item ">
                             <div class="step-counter">4</div>
+=======
+>>>>>>> db0b766 (done)
                             <div class="step-name text-center">Resourse <br> Person info</div>
                         </div>
                         </div>
                     </div>
+<<<<<<< HEAD
 <form action="<?php $_PHP_SELF ?>" method="post">
+=======
+<form>
+>>>>>>> db0b766 (done)
                     <div class="container-fluid">
                         <!-- new container -->
                         <div class="row section1">
                             <!-- new row -->
                             
+<<<<<<< HEAD
                             
                             <input type="text" name="user_email" class="form-control" id="user_email" value="<?php echo($user_email); ?>" readonly style="display:none;">
 
@@ -241,11 +260,34 @@ It is a long established fact that a reader will be distracted by the readable c
                                     <div class="col-12 mb-3 input-group">
                                             <label for="selectDate" class="form-label w-100">Date</label><br>
                                             <input type="text" name="selectDate" class="form-control rounded-start border-end-0" id="selectDate" placeholder="e.g. ....... ">
+=======
+                            <input type="text" id="user_email" value="<?php echo($user_email);?>" style="display:none;" readonly>
+
+                                        <div class="col-12 mb-3">
+                                            <label for="eventName" class="form-label">Event Name</label>
+                                            <input type="text" class="form-control" id="eventName" placeholder="e.g. ....... ">
+                                        </div>
+                                        <div class="col-12 mb-3">
+                                                <label for="eventDescription" class="form-label">Event Description</label>
+                                                <textarea class="form-control" id="eventDescription" rows="2"></textarea>
+                                        </div>
+                                        <div class="col-12 mb-3">
+                                            <label for="no_of_stu_attending" class="form-label">No of students attending event</label>
+                                            <input type="number" class="form-control" id="no_of_stu_attending" placeholder="e.g. ....... ">
+                                        </div>
+                                        <div class="col-12 mb-3 input-group">
+                                            <label for="selectDate" class="form-label w-100">Date</label><br>
+                                            <input type="text" class="form-control rounded-start border-end-0" id="selectDate" placeholder="e.g. ....... ">
+>>>>>>> db0b766 (done)
                                             <span class="input-group-text bg-white" id="basic-addon1"><i class="bi bi-calendar-event"></i></span>
                                         </div>
                                         <div class="col-6 mb-3">
                                             <label for="startTime" class="form-label">Start Time</label>
+<<<<<<< HEAD
                                             <select class="form-select" name="selectStartTime" id="selectStartTime" aria-label="select_start_time">
+=======
+                                            <select class="form-select" id="selectStartTime" aria-label="select_start_time">
+>>>>>>> db0b766 (done)
                                                 <option selected>Select the start time</option>
                                                 <option class="start-time" value="07:00">07:00 AM</option>
                                                 <option class="start-time" value="07:30">07:30 AM</option>
@@ -286,7 +328,11 @@ It is a long established fact that a reader will be distracted by the readable c
                                         </div>
                                         <div class="col-6 mb-3">
                                             <label for="endTime" class="form-label">End Time</label>
+<<<<<<< HEAD
                                             <select class="form-select" name="selectEndTime" id="selectEndTime" aria-label="select_start_time">
+=======
+                                            <select class="form-select" id="selectEndTime" aria-label="select_start_time">
+>>>>>>> db0b766 (done)
                                                 <option selected>Select End time</option>
                                                 <option class="end-time" value="07:00">07:00 AM</option>
                                                 <option class="end-time" value="07:30">07:30 AM</option>
@@ -324,12 +370,88 @@ It is a long established fact that a reader will be distracted by the readable c
                                                 <option class="end-time" value="23:30">11:30 PM</option>
                                             </select>
                                         </div>
+<<<<<<< HEAD
+=======
+                                        <div class="col-12 mb-1 mt-5">
+                                            <button type="button" class="btn btn-primary px-4 ms-3" id="nextFirst">Next</button> 
+                                        </div>
+                                        
+                        </div>
+                        <!-- new row ending -->
+
+
+                        <div class="row section2">
+                            <!-- new row -->
+                            <div class="col-12 mb-3">
+                                        <label for="department_namee" class="form-label">Select Department</label>
+                                        <select
+                                            name="department_namee"
+                                            class="form-select"
+                                            id="department_namee"
+                                            required
+                                        >
+                                            <option selected>Select Department</option>
+                                            <?php
+                                                $get_department_name_query = "SELECT * FROM DEPARTMENT";
+                                                $result_of_department_query = mysqli_query($con,$get_department_name_query);
+                                                if(mysqli_num_rows($result_of_department_query)>0) 
+                                                {
+                                                    while($row_of_department_name =
+                                                    mysqli_fetch_assoc($result_of_department_query))
+                                                    { ?>
+                                                    <option
+                                                        value="<?php echo($row_of_department_name['department_name']); ?>"
+                                                    >
+                                                        <?php echo($row_of_department_name['department_name']); ?>
+                                                    </option>
+                                                    <?php
+                                                }
+                                                }
+                                                    ?>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-12 mb-3" id="org_institue_name">
+                                            <label for="Institute/Org_Name" class="form-label">Institute/Organisation Name</label>
+                                            <input type="text" class="form-control" id="Institute_OrgName" placeholder="e.g. ....... ">
+                                        </div>
+                                    
+                                    <div class="col-12 mb-3">
+                                        <label for="Venue_name" class="form-label">Select Venue</label>
+                                        <select
+                                            name="Venue_name"
+                                            class="form-select"
+                                            id="Venue_name"
+                                            required
+                                        >
+                                            <option selected>Select Venue</option>
+                                            <?php
+                                                $get_audi_room_query = "SELECT * FROM AUDI_ROOM";
+                                                $result_of_audi_room_query = mysqli_query($con,$get_audi_room_query);
+                                                if(mysqli_num_rows($result_of_audi_room_query)>0) 
+                                                {
+                                                    while($row_of_audi_room_query =
+                                                    mysqli_fetch_assoc($result_of_audi_room_query))
+                                                    { ?>
+                                                    <option
+                                                        value="<?php echo($row_of_audi_room_query['ar_name']); ?>"
+                                                    >
+                                                        <?php echo($row_of_audi_room_query['ar_name']); ?>
+                                                    </option>
+                                                    <?php
+                                                }
+                                                }
+                                                    ?>
+                                        </select>
+                                    </div>
+>>>>>>> db0b766 (done)
                                     <div class="col-12 mb-1 mt-5">
                                             <button type="button" class="btn btn-secondary px-4 ms-3" id="prevBtnSecond">Previous</button>
                                             <button type="button" class="btn btn-primary px-4 ms-3" id="nextSecond">Next</button> 
                                         </div>
                                 
                         </div>
+<<<<<<< HEAD
                         <div class="row section3">
                             <!-- new row -->
                                         <div class="col-12 mb-3">
@@ -390,6 +512,29 @@ It is a long established fact that a reader will be distracted by the readable c
                                     </div>
                                 </div>    
                                     <div class="col-12 mb-4 form-check">
+=======
+                        <!-- new row ending -->
+
+                        <div class="row section3">
+                            <!-- new row -->
+                                        <div class="col-12 mb-3">
+                                            <label for="rp_name" class="form-label">Resourse Person Full Name</label>
+                                            <input type="text" class="form-control" id="rp_name" placeholder="e.g. ....... ">
+                                        </div>
+                                        <div class="col-12 mb-3">
+                                                <label for="companyName" class="form-label">Company Name</label>
+                                                <input type="text" class="form-control" id="companyName" placeholder="e.g. ....... ">
+                                        </div>
+                                        <div class="col-12 mb-3">
+                                            <label for="designation" class="form-label">Designation</label>
+                                            <input type="text" class="form-control" id="designation" placeholder="e.g. ....... ">
+                                        </div>
+                                        <div class="col-12 mb-3">
+                                                <label for="experience" class="form-label">Experience</label>
+                                                <input type="number" class="form-control" id="experience" placeholder="e.g. ....... ">
+                                        </div>
+                                        <div class="col-12 mb-4 form-check">
+>>>>>>> db0b766 (done)
                                                 <input class="form-check-input" id="check_box_terms_and_condition"  type="checkbox" value="">
                                                 <label class="form-check-label" for="terms_condition">
                                                     I agree to these 
@@ -397,6 +542,7 @@ It is a long established fact that a reader will be distracted by the readable c
                                                 </label>
                                         </div>
                                         <div class="col-12 mb-1 mt-5">
+<<<<<<< HEAD
                                             <button type="button" class="btn btn-secondary px-4 ms-3" id="prevBtnFourth">Previous</button>
                                             <button type="button" class="btn btn-primary px-4 ms-3" id="nextForth">Submit</button> 
                                             <input type="submit" name="FinalSubmit" id="FinalSubmit" value="none">
@@ -405,6 +551,13 @@ It is a long established fact that a reader will be distracted by the readable c
                         <div id="timeBlock">
                         </div>
                         <div id="emailtemp">
+=======
+                                            <button type="button" class="btn btn-secondary px-4 ms-3" id="prevBtnThird">Previous</button>
+                                            <button type="button" class="btn btn-primary px-4 ms-3" id="nextThird">Submit</button> 
+                                        </div>
+                        </div>
+                        <div id="timeBlock">
+>>>>>>> db0b766 (done)
 
                         </div>
 <!-- new row ending -->
@@ -417,6 +570,7 @@ It is a long established fact that a reader will be distracted by the readable c
 
                 </div>
             <!-- row ending -->
+<<<<<<< HEAD
             </div>
         <!-- container ending -->
         </div>  
@@ -445,6 +599,16 @@ It is a long established fact that a reader will be distracted by the readable c
       ]
     });
     </script>
+=======
+                                            </form>
+            </div>
+        <!-- container ending -->
+        </div>  
+        
+    </main>
+    <script src="../../js/booking.js"></script>
+    <script src="../../js/bookingDate.js"></script>
+>>>>>>> db0b766 (done)
 </body>
 </html>
 <?php

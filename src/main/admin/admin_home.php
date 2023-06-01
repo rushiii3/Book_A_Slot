@@ -1,5 +1,26 @@
+<<<<<<< HEAD
 <?php
 include '../connection/connect.php';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 329887f (report home)
+=======
+>>>>>>> 7602cd1 (month report)
+=======
+>>>>>>> d2b6aad (month report)
+=======
+>>>>>>> 9278f26 (month report)
+<?php
+include './connection/connect.php';
+>>>>>>> db0b766 (done)
 ?>
 <!doctype html>
 <html lang="en">
@@ -18,13 +39,21 @@ include '../connection/connect.php';
   </head>
   <body class="bg-light">
   <?php
+<<<<<<< HEAD
         require("../config/session.php");  
+=======
+          require("session.php");  
+>>>>>>> db0b766 (done)
         ?>
     <div class="container-fluid mt-2">
         <div class="row">
             <div class="col-md-10 col-11 mx-auto">
                 <?php
+<<<<<<< HEAD
                 include './admin_navbar.html';
+=======
+                include './navigation.html';
+>>>>>>> db0b766 (done)
                 ?>
                 <div class='bg-primary'>
                     <p></p>
@@ -32,8 +61,13 @@ include '../connection/connect.php';
                 </div>
                 <div class="row mt-3" >
                     <!-- left side navbar -->
+<<<<<<< HEAD
                     <div class="col-lg-3 col-md-4 d-md-block bg-primary me-auto text-center my-5 h-75" >
                         <div class='card bg-common card-left' >
+=======
+                    <div class="col-lg-3 col-md-4 d-md-block bg-primary me-auto text-center my-5" >
+                        <div class='card bg-common card-left'>
+>>>>>>> db0b766 (done)
                             <div class="class-body mt-2 bg-light">
                             <ul class="nav flex-column">
                                 <!-- <li class="nav-item">
@@ -44,11 +78,37 @@ include '../connection/connect.php';
                                 </li>
                                 <li class="nav-item">
                                 <a class="nav-link  my-2" href="#">VIEW </a>
+<<<<<<< HEAD
                                 </li>-->
                                 <li class="nav-item">
                                 <a class="nav-link  my-2 " href="admin_home.php" tabindex="-1" aria-disabled="true">VIEW REQUESTS</a>
                                 </li> 
                                 <li class="nav-item">
+=======
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link  my-2 " href="#" tabindex="-1" aria-disabled="true">CANCEL</a>
+                                </li> -->
+                                <li class="nav-item">
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                                <a class="nav-link  my-2 " href="admin_home.php" tabindex="-1" aria-disabled="true">VIEW REQUESTS</a>
+                                </li> 
+                                <li class="nav-item">
+=======
+>>>>>>> 7602cd1 (month report)
+=======
+>>>>>>> d2b6aad (month report)
+=======
+>>>>>>> 9278f26 (month report)
+=======
+                                <a class="nav-link  my-2 " href="admin_home.php" tabindex="-1" aria-disabled="true">VIEW REQUESTS</a>
+                                </li> 
+                                <li class="nav-item">
+>>>>>>> 9123d1a (month report)
+>>>>>>> db0b766 (done)
                                 <a class="nav-link  my-2 " href="admin_home.php?add_ar" tabindex="-1" aria-disabled="true">ADD ROOM/AUDI</a>
                                 </li>
                                 <li class="nav-item">
@@ -67,11 +127,56 @@ include '../connection/connect.php';
                                 <a class="nav-link  my-2 " href="admin_home.php?delete_dept" tabindex="-1" aria-disabled="true"> DELETE DEPARTMENT</a>
                                 </li>
                                 <li class="nav-item">
+<<<<<<< HEAD
                                 <a class="nav-link  my-2 " href="./report_home.php" tabindex="-1" aria-disabled="true">REPORTS</a>
                                 </li>
                                 <!-- <li class="nav-item">
                                 <a class="nav-link  my-2 " href="#" tabindex="-1" aria-disabled="true"> LOGOUT</a>
                                 </li> -->
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                                <a class="nav-link  my-2 " href="report_home.php" tabindex="-1" aria-disabled="true">REPORTS</a>
+=======
+                                <a class="nav-link  my-2 " href="#" tabindex="-1" aria-disabled="true">REPORTS</a>
+>>>>>>> 329887f (report home)
+=======
+                                <a class="nav-link  my-2 " href="#" tabindex="-1" aria-disabled="true">REPORTS</a>
+>>>>>>> 7602cd1 (month report)
+=======
+                                <a class="nav-link  my-2 " href="report_home.php" tabindex="-1" aria-disabled="true">REPORTS</a>
+>>>>>>> fd21e08 (report home)
+=======
+                                <a class="nav-link  my-2 " href="#" tabindex="-1" aria-disabled="true">REPORTS</a>
+>>>>>>> d2b6aad (month report)
+=======
+                                <a class="nav-link  my-2 " href="report_home.php" tabindex="-1" aria-disabled="true">REPORTS</a>
+>>>>>>> 93c1324 (report home)
+=======
+                                <a class="nav-link  my-2 " href="#" tabindex="-1" aria-disabled="true">REPORTS</a>
+>>>>>>> 9278f26 (month report)
+=======
+                                <a class="nav-link  my-2 " href="report_home.php" tabindex="-1" aria-disabled="true">REPORTS</a>
+>>>>>>> 38e8eee (report home)
+=======
+                                <a class="nav-link  my-2 " href="report_home.php" tabindex="-1" aria-disabled="true">REPORTS</a>
+=======
+                                <a class="nav-link  my-2 " href="#" tabindex="-1" aria-disabled="true">REPORTS</a>
+>>>>>>> 7f010e3 (admin)
+>>>>>>> f511b14 (admin)
+=======
+                                <a class="nav-link  my-2 " href="report_home.php" tabindex="-1" aria-disabled="true">REPORTS</a>
+>>>>>>> 677e8c8 (all reports)
+                                </li>
+                                
+>>>>>>> db0b766 (done)
                             </ul>
                             </div>
                         </div>
@@ -100,10 +205,15 @@ include '../connection/connect.php';
                                     include('./update_ar.php');
                                 }
                                 else{
+<<<<<<< HEAD
                             include '../connection/connect.php';
                             $currentDate = date("Y-m-d");
                             $previousDate = date("Y-m-d", strtotime("-1 day"));
                             $get_event="select * from `EVENT` where status_value='pending' and request_date_time>='$previousDate'";
+=======
+                            include './connection/connect.php';
+                            $get_event="select * from `EVENT` where status_value='pending'";
+>>>>>>> db0b766 (done)
                             $result=mysqli_query($con,$get_event);
                             $count=0;
                             while($row=mysqli_fetch_assoc($result)){
@@ -137,3 +247,29 @@ include '../connection/connect.php';
   </body>
 </html>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 329887f (report home)
+=======
+he file main folder madye banavli right?hash
+ha tula pn atta sagre file hejatch banava javascript asel tr js madye css asel tr css  theek? hash
+atta he file me commit karto
+jhala 
+>>>>>>> bfa2598 (admin)
+=======
+>>>>>>> 7602cd1 (month report)
+=======
+>>>>>>> 0305517 (admin)
+=======
+>>>>>>> d2b6aad (month report)
+=======
+>>>>>>> b5e0f9b (admin)
+=======
+>>>>>>> 9278f26 (month report)
+>>>>>>> db0b766 (done)

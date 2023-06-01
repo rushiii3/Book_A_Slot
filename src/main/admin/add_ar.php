@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 include '../connection/connect.php';
+=======
+include '../other/connection/connect.php';
+>>>>>>> db0b766 (done)
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +25,11 @@ include '../connection/connect.php';
         </style>
 </head>
 <?php
+<<<<<<< HEAD
    
+=======
+    include('./connection/connect.php');
+>>>>>>> db0b766 (done)
 if(isset($_POST['add_ar'])){
     $ar_name=$_POST['ar_name'];
     $floor=$_POST['floor'];

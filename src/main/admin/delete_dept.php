@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 include '../connection/connect.php';
+=======
+include './connection/connect.php';
+>>>>>>> db0b766 (done)
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +35,11 @@ if(isset($_POST['no'])){
 }
 ?>
 <?php
+<<<<<<< HEAD
 
+=======
+include './connection/connect.php';
+>>>>>>> db0b766 (done)
   if(isset($_POST['delete_id'])){
     $department_name=$_POST['department_name'];
     $delete_dept="delete from `DEPARTMENT` where department_name='$department_name'";
@@ -47,7 +55,10 @@ if(isset($_POST['no'])){
 <body class=' text-center w-50 m-auto'>
     <div class="con1 mt-3 ">
     <h1 class='text-center text-primary'>Delete Department</h1>
+<<<<<<< HEAD
     <div class="table-responsive-sm col-lg-10 col-sm-12">
+=======
+>>>>>>> db0b766 (done)
     <table  class='table table-bordered my-4' style="align-items:center">
     <thread class="bg-info">
         <tr >
@@ -74,7 +85,10 @@ if(isset($_POST['no'])){
         
     </table>
     </div>
+<<<<<<< HEAD
     </div>
+=======
+>>>>>>> db0b766 (done)
 <script>
     function confirmdelete(self){
         var department_name=self.getAttribute("data_id");

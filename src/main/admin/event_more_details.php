@@ -22,7 +22,11 @@
 
   <!-- to fetch data -->
     <?php
+<<<<<<< HEAD
     include '../connection/connect.php';
+=======
+    include './connection/connect.php';
+>>>>>>> db0b766 (done)
     if(isset($_GET['event_id'])){
         $event_id=$_GET['event_id'];
         $get_event="select * from `EVENT` where event_id=$event_id ";
@@ -55,7 +59,11 @@ if(isset($_POST['approve_event_id'])){
 ?>
 <!-- event not approved -->
 <?php
+<<<<<<< HEAD
 include '../connection/connect.php';
+=======
+include './connection/connect.php';
+>>>>>>> db0b766 (done)
 if(isset($_POST["reason"])){
   $status_reason=$_POST['status_reason'];
   // if( isset($_GET['event_not_approved_id'])){
@@ -72,10 +80,69 @@ if(isset($_POST["reason"])){
 
 ?>
 <div class='container-fluid mt-5'>
+<<<<<<< HEAD
   <div class="row">
     <div class="col-md-10 col-lg-10 m-auto">
     <?php
                 include '../user/navigation.html';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  <div class="row">
+    <div class="col-md-10 col-lg-10 m-auto">
+    <?php
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                include './navigation.html';
+=======
+                include './navigation.php';
+>>>>>>> 58a66d1 (month report)
+=======
+                include './navigation.html';
+>>>>>>> c75f32a (room occupacy report added)
+=======
+  <div class="row">
+    <div class="col-md-10 col-lg-10 m-auto">
+    <?php
+<<<<<<< HEAD
+                include './navigation.php';
+>>>>>>> dba010a (room occupacy report added)
+=======
+                include './navigation.html';
+>>>>>>> c8b61ed (events detail)
+=======
+                include './navigation.html';
+>>>>>>> ec9b477 (room occupacy report added)
+=======
+  <div class="row">
+    <div class="col-md-10 col-lg-10 m-auto">
+    <?php
+<<<<<<< HEAD
+                include './navigation.php';
+>>>>>>> b5dc987 (room occupacy report added)
+=======
+                include './navigation.html';
+>>>>>>> c42b176 (events detail)
+=======
+=======
+>>>>>>> daf825c (room occupacy report added)
+                include './navigation.html';
+=======
+                include './navigation.php';
+>>>>>>> 4dd1ec8 (month report)
+<<<<<<< HEAD
+>>>>>>> 9123d1a (month report)
+=======
+=======
+                include './navigation.html';
+>>>>>>> 3f0a459 (room occupacy report added)
+>>>>>>> daf825c (room occupacy report added)
+>>>>>>> db0b766 (done)
                 ?>
     <div class="row">
         <div class="col-md-6 col-lg-7">
@@ -112,6 +179,32 @@ if(isset($_POST["reason"])){
                   <td>Number Of Students Paricipating Event</td>
                   <td class="mt-2"><?php echo $students_total_number?></td>
                 </tr>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c75f32a (room occupacy report added)
+=======
+>>>>>>> c8b61ed (events detail)
+=======
+>>>>>>> ec9b477 (room occupacy report added)
+=======
+>>>>>>> c42b176 (events detail)
+=======
+>>>>>>> 9123d1a (month report)
+=======
+=======
+>>>>>>> 3f0a459 (room occupacy report added)
+>>>>>>> daf825c (room occupacy report added)
+>>>>>>> db0b766 (done)
                 <tr>
                   <td>Event Place</td>
                   <td class="mt-2"><?php echo $ar_name?></td>
@@ -120,9 +213,59 @@ if(isset($_POST["reason"])){
                   <td>Event Organizer</td>
                   <td class="mt-2"><?php echo $organization_institute?></td>
                 </tr>
+<<<<<<< HEAD
               </tbody>
             </table>
             </div>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 58a66d1 (month report)
+=======
+>>>>>>> c75f32a (room occupacy report added)
+=======
+>>>>>>> c8b61ed (events detail)
+=======
+>>>>>>> ec9b477 (room occupacy report added)
+=======
+>>>>>>> c42b176 (events detail)
+=======
+=======
+>>>>>>> 4dd1ec8 (month report)
+>>>>>>> 9123d1a (month report)
+=======
+=======
+>>>>>>> 4dd1ec8 (month report)
+=======
+>>>>>>> 3f0a459 (room occupacy report added)
+>>>>>>> daf825c (room occupacy report added)
+              </tbody>
+            </table>
+            </div>
+=======
+    <div class="row">
+        <div class="col-md-6 col-lg-7">
+>>>>>>> 7602cd1 (month report)
+=======
+              </tbody>
+            </table>
+            </div>
+>>>>>>> dba010a (room occupacy report added)
+=======
+    <div class="row">
+        <div class="col-md-6 col-lg-7">
+>>>>>>> 9278f26 (month report)
+=======
+              </tbody>
+            </table>
+            </div>
+>>>>>>> b5dc987 (room occupacy report added)
+>>>>>>> db0b766 (done)
             <form name="approvalForm" action='event_more_details.php' method='POST' >
                 <div class='form-outline w-50 m-auto my-2'>
                     <input type='hidden' name='event_id' readonly class='form-control bg-primary text-light ' value='<?php echo $event_id?>'>

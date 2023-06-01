@@ -3,10 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
+<<<<<<< HEAD
 
     <meta http-equiv='cache-control' content='no-cache'>
     <meta http-equiv='expires' content='0'>
     <meta http-equiv='pragma' content='no-cache'>
+=======
+>>>>>>> db0b766 (done)
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -67,8 +70,12 @@
         //initialView: 'listWeek',
         events: [
             <?php
+<<<<<<< HEAD
             if($venue_name=="Audi 1"){
                 $event_info_query = "SELECT event_name,event_date,event_start_time,event_end_time,organization_institute FROM `EVENT` WHERE ar_name = '$venue_name' AND status_value in ('Approved','Pending') UNION SELECT `description`,datee,start_time,end_time,branch FROM disableDates";
+=======
+            $event_info_query = "SELECT * FROM `EVENT` WHERE ar_name = '$venue_name' AND status_value in ('Approved','Pending') ";
+>>>>>>> db0b766 (done)
             $result_of_event_info_query = mysqli_query($con, $event_info_query);
             if (mysqli_num_rows($result_of_event_info_query)) {
                 while ($row_of_event_info = mysqli_fetch_assoc($result_of_event_info_query)) {
@@ -101,6 +108,7 @@
             <?php
                 }
             }
+<<<<<<< HEAD
             
             }else{
                 $event_info_query = "SELECT * FROM `EVENT` WHERE ar_name = '$venue_name' AND status_value in ('Approved','Pending') ";
@@ -137,6 +145,8 @@
                 }
             }
             }
+=======
+>>>>>>> db0b766 (done)
             ?>
         ],
     });

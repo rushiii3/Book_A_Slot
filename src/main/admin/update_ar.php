@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 include '../connection/connect.php';
+=======
+include './connection/connect.php';
+>>>>>>> db0b766 (done)
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -96,7 +100,11 @@ if(isset($_POST['update_ar'])){
     <form action="update_ar.php" method="POST" id="form_data">
       <div class="modal-body">
       <div class="form-outline w-100 m-auto">
+<<<<<<< HEAD
                     <label for="ar_name" id="ar_name" class="form-label fw-bold">Do Update for Audi/Room Name</label>
+=======
+                    <label for="ar_name" id="ar_name" class="form-label fw-bold">Do Updates for Audi/Room Name</label>
+>>>>>>> db0b766 (done)
                     <input type="text" id="ar_name_original" name="ar_name_original" readonly class="form-control">
                 </div>
                 <div class="form-outline w-100 m-auto">
