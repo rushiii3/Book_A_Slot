@@ -23,6 +23,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
   
   <title>Home</title>
+  <link type="image/png" sizes="16x16" rel="icon" href="../img/logo11.jpeg" />
   
   <style>
     .fs-1 {
@@ -73,6 +74,7 @@
         </div>
       </div>
     </div>
+    
   </main>
 </body>
 </html>

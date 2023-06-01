@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="../css/booking.css">
     <title>Book</title>
-    <link type="image/png" sizes="16x16" rel="icon" href="../" />
+    <link type="image/png" sizes="16x16" rel="icon" href="../img/logo11.jpeg" />
 
 </head>
 
@@ -350,15 +350,7 @@ It is a long established fact that a reader will be distracted by the readable c
             </div>
         <!-- container ending -->
         </div>  
-        <footer class=" text-center text-lg-start">
-  <!-- Copyright -->
-  <div class="text-center p-3">
-    <p>&copy; &nbsp | &nbsp Copyright 2023 - ♾️ All rights reserved &nbsp | &nbsp
-        <a href="#">Terms & Conditions</a> &nbsp | &nbsp
-        <a href="#">Contributors</a> &nbsp | &nbsp
-        </p>  </div>
-  <!-- Copyright -->
-</footer>
+        
     </main>
     <script src="../js/booking.js"></script>
     <script src="../js/bookingDate.js"></script>
