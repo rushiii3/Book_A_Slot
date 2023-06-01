@@ -23,7 +23,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
   
   <title>Home</title>
-  <link type="image/png" sizes="16x16" rel="icon" href="../img/logo11.jpeg" />
+  <link type="image/png" sizes="16x16" rel="icon" href="../../img/logo11.jpeg" />
   
   <style>
     .fs-1 {
@@ -55,8 +55,8 @@
 </head>
 <body>
   <?php
-    require("session.php");
-    require_once("loader.html");
+    require("../config/session.php");
+    require_once("../loader.html");
   ?>
   
   <main id="main">
@@ -70,7 +70,7 @@
           <p class="fs-1 fw-bold p-2">Welcome <br/> <?php echo($user_name); ?></p>
         </div>
         <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-          <img src="../img/s (2).png" alt="Welcome_Img" style="height: 100%; width: 100%;">
+          <img src="../../img/s (2).png" alt="Welcome_Img" style="height: 100%; width: 100%;">
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@
 session_start();
 if(!isset($_SESSION["user_email"]) )
 {
-  echo("<script>window.location='sign_in.php';</script>");
+  echo("<script>window.location='../user/sign_in.php';</script>");
 }
 else{
   $user_email = $_SESSION["user_email"];

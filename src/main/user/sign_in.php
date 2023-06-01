@@ -9,14 +9,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
-    <script src="../js/signin.js"></script>
-    <script src="../js/logout.js"></script>
-    <link type="image/png" sizes="16x16" rel="icon" href="../img/logo11.jpeg" />
+    <script src="../../js/signin.js"></script>
+    <script src="../../js/logout.js"></script>
+    <link type="image/png" sizes="16x16" rel="icon" href="../../img/logo11.jpeg" />
 </head>
 <body class="bg-light">
     <?php
-    require "connection/connect.php";
-    require_once("loader.html");
+    require "../connection/connect.php";
+    require_once("../loader.html");
     ?>
 
     <main id="main">

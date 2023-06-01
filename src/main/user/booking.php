@@ -14,18 +14,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <link rel="stylesheet" href="../css/booking.css">
+    <link rel="stylesheet" href="../../css/booking.css">
     <title>Book</title>
-    <link type="image/png" sizes="16x16" rel="icon" href="../img/logo11.jpeg" />
+    <link type="image/png" sizes="16x16" rel="icon" href="../../img/logo11.jpeg" />
 
 </head>
 
 <body>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <?php
-         include("session.php");
-         require "connection/connect.php";
-         require_once("loader.html"); 
+         include("../config/session.php");
+         require "../connection/connect.php";
+         require_once("../loader.html"); 
      ?>
     <main id="main">
 
@@ -352,8 +352,8 @@ It is a long established fact that a reader will be distracted by the readable c
         </div>  
         
     </main>
-    <script src="../js/booking.js"></script>
-    <script src="../js/bookingDate.js"></script>
+    <script src="../../js/booking.js"></script>
+    <script src="../../js/bookingDate.js"></script>
 </body>
 </html>
 <?php

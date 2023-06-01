@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <title>List</title>
-    <link type="image/png" sizes="16x16" rel="icon" href="../img/logo11.jpeg" />
+    <link type="image/png" sizes="16x16" rel="icon" href="../../img/logo11.jpeg" />
     <style>
         #card:hover {
             transform: translateY(-30px);
@@ -21,9 +21,9 @@
 
 <body>
     <?php
-    include("session.php");
-    require "connection/connect.php";
-    require_once("loader.html");
+    include("../config/session.php");
+    require "../connection/connect.php";
+    require_once("../loader.html");
     ?>
     <main id="main">
         <?php
@@ -47,13 +47,14 @@
                                     <div class="card-body text-center text-black">
                                         <?php
                                         $img_array = Array(
-                                            "https://github.com/rushiii3/Book_A_Slot/blob/main/src/img/14.png?raw=true",
-                                            "https://github.com/rushiii3/Book_A_Slot/blob/main/src/img/15.png?raw=true",
-                                            "https://github.com/rushiii3/Book_A_Slot/blob/main/src/img/16.png?raw=true",
-                                            "https://github.com/rushiii3/Book_A_Slot/blob/main/src/img/17.png?raw=true",
-                                            "https://github.com/rushiii3/Book_A_Slot/blob/main/src/img/18.png?raw=true",
-                                            "https://github.com/rushiii3/Book_A_Slot/blob/main/src/img/19.png?raw=true",
-                                            "https://github.com/rushiii3/Book_A_Slot/blob/main/src/img/20.png?raw=true"
+                                            "../../img/14.png",
+                                            "../../img/15.png",
+                                            "../../img/16.png",
+                                            "../../img/17.png",
+                                            "../../img/18.png",
+                                            "../../img/19.png",
+                                            "../../img/20.png"
+                                            
                                         );
                                         ?>
                                         <img src="<?php echo ($img_array[array_rand($img_array)]) ?>"
