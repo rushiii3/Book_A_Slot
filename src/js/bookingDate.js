@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
       dateFormat: 'Y-m-d',
       minDate: new Date().fp_incr(3),
       disable: [
-        '2023-05-20',
-        '2023-05-25'
+        '2023-06-20',
+        '2023-06-25',
       ]
     });
   });
