@@ -1,9 +1,13 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 include '../connection/connect.php';
 =======
 include './connection/connect.php';
 >>>>>>> db0b766 (done)
+=======
+include '../connection/connect.php';
+>>>>>>> 20ec2bd (seperate folders)
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,9 +55,13 @@ if(isset($_POST['add_dept'])){
     <div class="con1 mt-3 ">
     <h1 class='text-center text-primary'>Add New Department</h1>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div class="table-responsive-sm col-lg-10 col-sm-12">
 =======
 >>>>>>> db0b766 (done)
+=======
+    <div class="table-responsive-sm col-lg-10 col-sm-12">
+>>>>>>> 20ec2bd (seperate folders)
     <table  class='table table-bordered my-4' style="align-items:center">
     <thead class="bg-light">
         <tr >
@@ -77,9 +85,13 @@ if(isset($_POST['add_dept'])){
         </tbody>    
     </table>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>
 =======
 >>>>>>> db0b766 (done)
+=======
+    </div>
+>>>>>>> 20ec2bd (seperate folders)
     <div class="mt-2">
      <a  style='text-decoration:none'  type='button' class='text-light' data-toggle='modal' data-target='#adddept' ><input type="submit" name="add_dept" value="ADD" class="btn btn-primary px-3 mb-3"></a>
      </div>          

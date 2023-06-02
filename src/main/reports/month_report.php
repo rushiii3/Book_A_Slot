@@ -42,7 +42,7 @@ if(isset($_POST['close'])){
 >>>>>>> 677e8c8 (all reports)
 
 if(isset($_POST['close'])){
-    header('location:../report_home.php');
+    header('location:../admin/report_home.php');
 }
 
 <<<<<<< HEAD
@@ -134,6 +134,9 @@ if(isset($_POST['month_report'])){
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 20ec2bd (seperate folders)
                 include '../user/navigation.html';
                 ?>
            <?php

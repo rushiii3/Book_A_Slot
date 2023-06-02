@@ -27,10 +27,14 @@ include '../connection/connect.php';
             <div class="col-md-10 col-lg-10 m-auto">
             <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
                 include '../admin/admin_navbar.html';
 =======
                 include '../navigation.html';
 >>>>>>> 677e8c8 (all reports)
+=======
+                include '../user/navigation.html';
+>>>>>>> 20ec2bd (seperate folders)
                 ?>
                 <button class="btn btn-primary w-50 m-auto d-flex justify-content-center fw-bolder" style="align-items: center;">OVERALL SUMMARY</button>
 

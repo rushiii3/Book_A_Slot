@@ -19,8 +19,12 @@ include '../connection/connect.php';
 =======
 >>>>>>> 9278f26 (month report)
 <?php
+<<<<<<< HEAD
 include './connection/connect.php';
 >>>>>>> db0b766 (done)
+=======
+include '../connection/connect.php';
+>>>>>>> 20ec2bd (seperate folders)
 ?>
 <!doctype html>
 <html lang="en">
@@ -40,20 +44,28 @@ include './connection/connect.php';
   <body class="bg-light">
   <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
         require("../config/session.php");  
 =======
           require("session.php");  
 >>>>>>> db0b766 (done)
+=======
+        require("../config/session.php");  
+>>>>>>> 20ec2bd (seperate folders)
         ?>
     <div class="container-fluid mt-2">
         <div class="row">
             <div class="col-md-10 col-11 mx-auto">
                 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
                 include './admin_navbar.html';
 =======
                 include './navigation.html';
 >>>>>>> db0b766 (done)
+=======
+                include '../user/navigation.html';
+>>>>>>> 20ec2bd (seperate folders)
                 ?>
                 <div class='bg-primary'>
                     <p></p>
@@ -61,6 +73,7 @@ include './connection/connect.php';
                 </div>
                 <div class="row mt-3" >
                     <!-- left side navbar -->
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <div class="col-lg-3 col-md-4 d-md-block bg-primary me-auto text-center my-5 h-75" >
                         <div class='card bg-common card-left' >
@@ -89,6 +102,13 @@ include './connection/connect.php';
                                 <li class="nav-item">
                                 <a class="nav-link  my-2 " href="#" tabindex="-1" aria-disabled="true">CANCEL</a>
                                 </li> -->
+=======
+                    <div class="col-lg-3 col-md-4 d-md-block bg-primary me-auto text-center my-5 h-75" >
+                        <div class='card bg-common card-left' >
+                            <div class="class-body mt-2 bg-light">
+                            <ul class="nav flex-column">
+
+>>>>>>> 20ec2bd (seperate folders)
                                 <li class="nav-item">
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -127,6 +147,7 @@ include './connection/connect.php';
                                 <a class="nav-link  my-2 " href="admin_home.php?delete_dept" tabindex="-1" aria-disabled="true"> DELETE DEPARTMENT</a>
                                 </li>
                                 <li class="nav-item">
+<<<<<<< HEAD
 <<<<<<< HEAD
                                 <a class="nav-link  my-2 " href="./report_home.php" tabindex="-1" aria-disabled="true">REPORTS</a>
                                 </li>
@@ -177,6 +198,13 @@ include './connection/connect.php';
                                 </li>
                                 
 >>>>>>> db0b766 (done)
+=======
+                                <a class="nav-link  my-2 " href="./report_home.php" tabindex="-1" aria-disabled="true">REPORTS</a>
+                                </li>
+                                <!-- <li class="nav-item">
+                                <a class="nav-link  my-2 " href="#" tabindex="-1" aria-disabled="true"> LOGOUT</a>
+                                </li> -->
+>>>>>>> 20ec2bd (seperate folders)
                             </ul>
                             </div>
                         </div>
@@ -206,12 +234,16 @@ include './connection/connect.php';
                                 }
                                 else{
 <<<<<<< HEAD
+<<<<<<< HEAD
                             include '../connection/connect.php';
                             $currentDate = date("Y-m-d");
                             $previousDate = date("Y-m-d", strtotime("-1 day"));
                             $get_event="select * from `EVENT` where status_value='pending' and request_date_time>='$previousDate'";
 =======
                             include './connection/connect.php';
+=======
+                            include '../connection/connect.php';
+>>>>>>> 20ec2bd (seperate folders)
                             $get_event="select * from `EVENT` where status_value='pending'";
 >>>>>>> db0b766 (done)
                             $result=mysqli_query($con,$get_event);

@@ -24,10 +24,14 @@ include '../connection/connect.php';
             <div class="col-md-10 col-lg-10 m-auto">
             <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
                 include '../user/navigation.html';
 =======
                 include '../navigation.html';
 >>>>>>> 677e8c8 (all reports)
+=======
+                include '../user/navigation.html';
+>>>>>>> 20ec2bd (seperate folders)
                 ?>
             </div>
         </div>

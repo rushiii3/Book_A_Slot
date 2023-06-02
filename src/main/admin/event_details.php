@@ -31,12 +31,16 @@
    <tbody class="bg-primary">
     <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
     include '../connection/connect.php';
     $currentDate = date("Y-m-d");
     $previousDate = date("Y-m-d", strtotime("-1 day"));
     $get_event="select * from `EVENT` where status_value='pending' and request_date_time>='$previousDate' order by request_date_time ";
 =======
     include './connection/connect.php';
+=======
+    include '../connection/connect.php';
+>>>>>>> 20ec2bd (seperate folders)
     $get_event="select * from `EVENT` where status_value='pending' order by request_date_time ";
 >>>>>>> db0b766 (done)
     $result=mysqli_query($con,$get_event);

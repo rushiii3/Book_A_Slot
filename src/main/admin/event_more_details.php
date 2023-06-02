@@ -23,10 +23,14 @@
   <!-- to fetch data -->
     <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
     include '../connection/connect.php';
 =======
     include './connection/connect.php';
 >>>>>>> db0b766 (done)
+=======
+    include '../connection/connect.php';
+>>>>>>> 20ec2bd (seperate folders)
     if(isset($_GET['event_id'])){
         $event_id=$_GET['event_id'];
         $get_event="select * from `EVENT` where event_id=$event_id ";
@@ -60,10 +64,14 @@ if(isset($_POST['approve_event_id'])){
 <!-- event not approved -->
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 include '../connection/connect.php';
 =======
 include './connection/connect.php';
 >>>>>>> db0b766 (done)
+=======
+include '../connection/connect.php';
+>>>>>>> 20ec2bd (seperate folders)
 if(isset($_POST["reason"])){
   $status_reason=$_POST['status_reason'];
   // if( isset($_GET['event_not_approved_id'])){
@@ -93,6 +101,7 @@ if(isset($_POST["reason"])){
   <div class="row">
     <div class="col-md-10 col-lg-10 m-auto">
     <?php
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -143,6 +152,9 @@ if(isset($_POST["reason"])){
 >>>>>>> 3f0a459 (room occupacy report added)
 >>>>>>> daf825c (room occupacy report added)
 >>>>>>> db0b766 (done)
+=======
+                include '../user/navigation.html';
+>>>>>>> 20ec2bd (seperate folders)
                 ?>
     <div class="row">
         <div class="col-md-6 col-lg-7">
@@ -180,6 +192,7 @@ if(isset($_POST["reason"])){
                   <td class="mt-2"><?php echo $students_total_number?></td>
                 </tr>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -205,6 +218,8 @@ if(isset($_POST["reason"])){
 >>>>>>> 3f0a459 (room occupacy report added)
 >>>>>>> daf825c (room occupacy report added)
 >>>>>>> db0b766 (done)
+=======
+>>>>>>> 20ec2bd (seperate folders)
                 <tr>
                   <td>Event Place</td>
                   <td class="mt-2"><?php echo $ar_name?></td>
@@ -213,6 +228,7 @@ if(isset($_POST["reason"])){
                   <td>Event Organizer</td>
                   <td class="mt-2"><?php echo $organization_institute?></td>
                 </tr>
+<<<<<<< HEAD
 <<<<<<< HEAD
               </tbody>
             </table>
@@ -244,6 +260,8 @@ if(isset($_POST["reason"])){
 =======
 >>>>>>> 3f0a459 (room occupacy report added)
 >>>>>>> daf825c (room occupacy report added)
+=======
+>>>>>>> 20ec2bd (seperate folders)
               </tbody>
             </table>
             </div>

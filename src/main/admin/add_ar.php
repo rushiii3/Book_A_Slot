@@ -1,9 +1,13 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 include '../connection/connect.php';
 =======
 include '../other/connection/connect.php';
 >>>>>>> db0b766 (done)
+=======
+include '../connection/connect.php';
+>>>>>>> 20ec2bd (seperate folders)
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,10 +30,14 @@ include '../other/connection/connect.php';
 </head>
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
    
 =======
     include('./connection/connect.php');
 >>>>>>> db0b766 (done)
+=======
+   
+>>>>>>> 20ec2bd (seperate folders)
 if(isset($_POST['add_ar'])){
     $ar_name=$_POST['ar_name'];
     $floor=$_POST['floor'];

@@ -1,9 +1,13 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 include '../connection/connect.php';
 =======
 include '../other/connection/connect.php';
 >>>>>>> db0b766 (done)
+=======
+include '../connection/connect.php';
+>>>>>>> 20ec2bd (seperate folders)
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,10 +33,14 @@ include '../other/connection/connect.php';
 </head>
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
   include '../connection/connect.php';
 =======
   include './connection/connect.php';
 >>>>>>> db0b766 (done)
+=======
+  include '../connection/connect.php';
+>>>>>>> 20ec2bd (seperate folders)
 //to delete record
 if(isset($_POST['no'])){
   header('location:./admin_home.php?delete_ar');
@@ -100,10 +108,14 @@ function confirmdelete(self){
       <div class="modal-body">
        <h4>Are you sure you want to delete this?</h4>
 <<<<<<< HEAD
+<<<<<<< HEAD
        <input type="hidden" name="ar_name">
 =======
        <input type="text" name="ar_name">
 >>>>>>> db0b766 (done)
+=======
+       <input type="hidden" name="ar_name">
+>>>>>>> 20ec2bd (seperate folders)
       </div>
       <div class="modal-footer">
       <button type="submit" class="btn btn-secondary" name='no' >No</button>

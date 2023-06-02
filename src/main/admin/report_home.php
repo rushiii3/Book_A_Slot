@@ -14,7 +14,7 @@ include '../connection/connect.php';
 >>>>>>> a34d6f1 (report home)
 =======
 <?php
-include './connection/connect.php';
+include '../connection/connect.php';
 ?>
 >>>>>>> 677e8c8 (all reports)
 >>>>>>> db0b766 (done)
@@ -31,9 +31,13 @@ include './connection/connect.php';
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <style>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> db0b766 (done)
+=======
+
+>>>>>>> 20ec2bd (seperate folders)
     img{
     display: block;
     width: 500px;
@@ -82,6 +86,7 @@ include './connection/connect.php';
             <div class="col-md-10 col-lg-10 m-auto">
             <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
                 include './admin_navbar.html';
                 ?>
                 <button class="btn btn-primary w-50 m-auto d-flex justify-content-center fw-bolder" style="align-items: center;">REPORTS PANEL</button>
@@ -93,9 +98,12 @@ include './connection/connect.php';
                         <button class="btn btn-primary mt-3 m-auto d-flex justify-content-center" data-toggle="modal" data-target="#exampleModalLabel" >Get Month Wise Report</button>
 =======
                 include './navigation.html';
+=======
+                include '../user/navigation.html';
+>>>>>>> 20ec2bd (seperate folders)
                 ?>
                 <button class="btn btn-primary w-50 m-auto d-flex justify-content-center fw-bolder" style="align-items: center;">REPORTS PANEL</button>
-                <a href="./reports/overall_report.php"><strong class="text-center d-flex justify-content-center" >click here to get short summary</strong></a>
+                <a href="../reports/overall_report.php"><strong class="text-center d-flex justify-content-center" >click here to get short summary</strong></a>
                 <div class="row mt-5">
                     <div class="col-md-5 col-lg-5 m-auto">
 <<<<<<< HEAD
@@ -183,19 +191,27 @@ include './connection/connect.php';
                     
 =======
                         <!-- room occupacy report -->
+<<<<<<< HEAD
                         <a href="./reports/room_occupacy.php" class="text-decoration:none" ><button class="btn btn-primary mt-3 m-auto d-flex justify-content-center" >Room Occupacy Report</button></a>
 >>>>>>> 677e8c8 (all reports)
 >>>>>>> db0b766 (done)
+=======
+                        <a href="../reports/room_occupacy.php" class="text-decoration:none" ><button class="btn btn-primary mt-3 m-auto d-flex justify-content-center" >Room Occupacy Report</button></a>
+>>>>>>> 20ec2bd (seperate folders)
                     </div>
                 </div>
                 <div class="row mt-5">
                     <div class="col-md-5 col-lg-5 m-auto">
                     <img src="" alt="" id="cancel" >
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <a class="col-md-5 col-lg-5 m-auto text-decoration:none" href="../reports/cancel_report.php"><button class=" m-auto btn btn-primary mt-3 m-auto d-flex justify-content-center">Cancelled Event Report</button></a>
 =======
                         <a class="col-md-5 col-lg-5 m-auto text-decoration:none" href="./reports/cancel_report.php"><button class=" m-auto btn btn-primary mt-3 m-auto d-flex justify-content-center">Cancelled Event Report</button></a>
 >>>>>>> db0b766 (done)
+=======
+                        <a class="col-md-5 col-lg-5 m-auto text-decoration:none" href="../reports/cancel_report.php"><button class=" m-auto btn btn-primary mt-3 m-auto d-flex justify-content-center">Cancelled Event Report</button></a>
+>>>>>>> 20ec2bd (seperate folders)
                 </div>
                     <div class="col-md-5 col-lg-5 m-auto">
                     <img src="" alt="" id="guest" >
@@ -210,6 +226,7 @@ include './connection/connect.php';
             </div>
         </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <!-- ../js/report_img.js -->
     <!-- <script src="../.././js/report_img.js"></script>    -->
@@ -233,14 +250,38 @@ include './connection/connect.php';
        let cancels=['../.././img/c1.jpg','../.././img/c2.jpg','../.././img/c3.jpg'];
 =======
     <script src="../js/report_img.js"></script>   
+=======
+    <!-- ../js/report_img.js -->
+    <!-- <script src="../.././js/report_img.js"></script>    -->
+
+>>>>>>> 20ec2bd (seperate folders)
     <script>
+      let image=document.getElementById('image');
+        let images=['../.././img/m1.jpg','../.././img/m2.jpg','../.././img/m3.jpg'];
+        setInterval(function(){
+            let random=Math.floor(Math.random()*3);
+            image.src=images[random];
+        },800);
+
+        let room=document.getElementById('room');
+        let rooms=['../.././img/ar1.jpg','../.././img/ar2.jpg','../.././img/ar3.jpg'];
+        setInterval(function(){
+            let random=Math.floor(Math.random()*3);
+            room.src=rooms[random];
+        },800);
+
         let cancel=document.getElementById('cancel');
+<<<<<<< HEAD
        let cancels=['../img/c1.jpg','../img/c2.jpg','../img/c3.jpg'];
 >>>>>>> db0b766 (done)
+=======
+       let cancels=['../.././img/c1.jpg','../.././img/c2.jpg','../.././img/c3.jpg'];
+>>>>>>> 20ec2bd (seperate folders)
        setInterval(function(){
         let random=Math.floor(Math.random()*3);
         cancel.src=cancels[random];
        },800);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
        let guest=document.getElementById('guest');
@@ -249,6 +290,11 @@ include './connection/connect.php';
        let guest=document.getElementById('guest');
        let guests=['../img/rp2.jpg','../img/rp3.jpg','../img/rp4.jpg'];
 >>>>>>> db0b766 (done)
+=======
+
+       let guest=document.getElementById('guest');
+       let guests=['../.././img/rp2.jpg','../.././img/rp3.jpg','../.././img/rp4.jpg'];
+>>>>>>> 20ec2bd (seperate folders)
        setInterval(function(){
         let random=Math.floor(Math.random()*3);
         guest.src=guests[random];
@@ -265,8 +311,12 @@ include './connection/connect.php';
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
+<<<<<<< HEAD
     <form action="./reports/month_report.php" method='post'>
 >>>>>>> db0b766 (done)
+=======
+    <form action="../reports/month_report.php" method='post'>
+>>>>>>> 20ec2bd (seperate folders)
       <div class="modal-body">
       <h1 class="modal-title fs-5" id="exampleModalLabel"> Month Wise Report</h1>
             <div class="form-outline w-100 m-auto mt-3">
@@ -358,10 +408,14 @@ include './connection/connect.php';
   <div class="modal-dialog">
     <div class="modal-content">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <form action="../reports/resource_person.php" method="post">
 =======
     <form action="./reports/resource_person.php" method="post">
 >>>>>>> db0b766 (done)
+=======
+    <form action="../reports/resource_person.php" method="post">
+>>>>>>> 20ec2bd (seperate folders)
       <div class="modal-body">
       <h1 class="modal-title fs-5" id="exampleModalLabel">Resource Person Information</h1>
       <div class="form-outline w-100 m-auto  mt-3">

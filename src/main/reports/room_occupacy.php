@@ -27,6 +27,7 @@ include '../connection/connect.php';
             <?php
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 include '../admin/admin_navbar.html';
 =======
                 include '../navigation.html';
@@ -34,6 +35,9 @@ include '../connection/connect.php';
 =======
                 include '../navigation.html';
 >>>>>>> c75f32a (room occupacy report added)
+=======
+                include '../user/navigation.html';
+>>>>>>> 20ec2bd (seperate folders)
                 ?>
             </div>
         </div>

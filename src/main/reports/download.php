@@ -45,6 +45,7 @@ include '../connection/connect.php';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <th class="text-center">Event Place</th>
 =======
 >>>>>>> 4dd1ec8 (month report)
@@ -54,6 +55,9 @@ include '../connection/connect.php';
 >>>>>>> d4f288e (month report done)
 =======
 >>>>>>> a735689 (month report done)
+=======
+                <th class="text-center">Event Place</th>
+>>>>>>> 20ec2bd (seperate folders)
             </tr>
             </thead>
             <tbody class="bg-primary">
@@ -131,6 +135,7 @@ include '../connection/connect.php';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $ar_name=$row['ar_name'];
 =======
 >>>>>>> 4dd1ec8 (month report)
@@ -140,6 +145,9 @@ include '../connection/connect.php';
 >>>>>>> d4f288e (month report done)
 =======
 >>>>>>> a735689 (month report done)
+=======
+                $ar_name=$row['ar_name'];
+>>>>>>> 20ec2bd (seperate folders)
                 echo"<tr class='text-center text-light'><td> $event_name</td>
                 <td> $event_date</td>
                 <td> $event_description</td>
@@ -151,6 +159,9 @@ include '../connection/connect.php';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 20ec2bd (seperate folders)
                 <td>$ar_name</td>
                 </tr>
                 ";
