@@ -1,5 +1,5 @@
 <?php
-include './connection/connect.php';
+include '../connection/connect.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +31,7 @@ if(isset($_POST['no'])){
 }
 ?>
 <?php
-include './connection/connect.php';
+
   if(isset($_POST['delete_id'])){
     $department_name=$_POST['department_name'];
     $delete_dept="delete from `DEPARTMENT` where department_name='$department_name'";
@@ -47,6 +47,7 @@ include './connection/connect.php';
 <body class=' text-center w-50 m-auto'>
     <div class="con1 mt-3 ">
     <h1 class='text-center text-primary'>Delete Department</h1>
+    <div class="table-responsive-sm col-lg-10 col-sm-12">
     <table  class='table table-bordered my-4' style="align-items:center">
     <thread class="bg-info">
         <tr >
@@ -72,6 +73,7 @@ include './connection/connect.php';
         </tbody>    
         
     </table>
+    </div>
     </div>
 <script>
     function confirmdelete(self){

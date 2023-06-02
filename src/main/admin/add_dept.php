@@ -1,5 +1,5 @@
 <?php
-include './connection/connect.php';
+include '../connection/connect.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,6 +46,7 @@ if(isset($_POST['add_dept'])){
             <div class="col-md-8 col-lg-6 mb-4 "> -->
     <div class="con1 mt-3 ">
     <h1 class='text-center text-primary'>Add New Department</h1>
+    <div class="table-responsive-sm col-lg-10 col-sm-12">
     <table  class='table table-bordered my-4' style="align-items:center">
     <thead class="bg-light">
         <tr >
@@ -68,6 +69,7 @@ if(isset($_POST['add_dept'])){
             ?>
         </tbody>    
     </table>
+    </div>
     <div class="mt-2">
      <a  style='text-decoration:none'  type='button' class='text-light' data-toggle='modal' data-target='#adddept' ><input type="submit" name="add_dept" value="ADD" class="btn btn-primary px-3 mb-3"></a>
      </div>          

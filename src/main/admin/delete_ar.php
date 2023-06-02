@@ -1,5 +1,5 @@
 <?php
-include '../other/connection/connect.php';
+include '../connection/connect.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +24,7 @@ include '../other/connection/connect.php';
         </style>
 </head>
 <?php
-  include './connection/connect.php';
+  include '../connection/connect.php';
 //to delete record
 if(isset($_POST['no'])){
   header('location:./admin_home.php?delete_ar');
@@ -91,7 +91,7 @@ function confirmdelete(self){
      <form action="delete_ar.php" method='post' id='form_data'>
       <div class="modal-body">
        <h4>Are you sure you want to delete this?</h4>
-       <input type="text" name="ar_name">
+       <input type="hidden" name="ar_name">
       </div>
       <div class="modal-footer">
       <button type="submit" class="btn btn-secondary" name='no' >No</button>

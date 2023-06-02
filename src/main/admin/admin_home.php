@@ -1,5 +1,5 @@
 <?php
-include './connection/connect.php';
+include '../connection/connect.php';
 ?>
 <!doctype html>
 <html lang="en">
@@ -18,13 +18,13 @@ include './connection/connect.php';
   </head>
   <body class="bg-light">
   <?php
-          require("session.php");  
+        require("../config/session.php");  
         ?>
     <div class="container-fluid mt-2">
         <div class="row">
             <div class="col-md-10 col-11 mx-auto">
                 <?php
-                include './navigation.html';
+                include '../user/navigation.html';
                 ?>
                 <div class='bg-primary'>
                     <p></p>
@@ -32,22 +32,11 @@ include './connection/connect.php';
                 </div>
                 <div class="row mt-3" >
                     <!-- left side navbar -->
-                    <div class="col-lg-3 col-md-4 d-md-block bg-primary me-auto text-center my-5" >
-                        <div class='card bg-common card-left'>
+                    <div class="col-lg-3 col-md-4 d-md-block bg-primary me-auto text-center my-5 h-75" >
+                        <div class='card bg-common card-left' >
                             <div class="class-body mt-2 bg-light">
                             <ul class="nav flex-column">
-                                <!-- <li class="nav-item">
-                                <a class="nav-link  my-2 " aria-current="page" href="#">BOOK</a>
-                                </li>
-                                <li class="nav-item">
-                                <a class="nav-link  my-2" href="#">CHECK STATUS </a>
-                                </li>
-                                <li class="nav-item">
-                                <a class="nav-link  my-2" href="#">VIEW </a>
-                                </li>
-                                <li class="nav-item">
-                                <a class="nav-link  my-2 " href="#" tabindex="-1" aria-disabled="true">CANCEL</a>
-                                </li> -->
+
                                 <li class="nav-item">
                                 <a class="nav-link  my-2 " href="admin_home.php" tabindex="-1" aria-disabled="true">VIEW REQUESTS</a>
                                 </li> 
@@ -70,9 +59,11 @@ include './connection/connect.php';
                                 <a class="nav-link  my-2 " href="admin_home.php?delete_dept" tabindex="-1" aria-disabled="true"> DELETE DEPARTMENT</a>
                                 </li>
                                 <li class="nav-item">
-                                <a class="nav-link  my-2 " href="report_home.php" tabindex="-1" aria-disabled="true">REPORTS</a>
+                                <a class="nav-link  my-2 " href="./report_home.php" tabindex="-1" aria-disabled="true">REPORTS</a>
                                 </li>
-                                
+                                <!-- <li class="nav-item">
+                                <a class="nav-link  my-2 " href="#" tabindex="-1" aria-disabled="true"> LOGOUT</a>
+                                </li> -->
                             </ul>
                             </div>
                         </div>
@@ -101,7 +92,7 @@ include './connection/connect.php';
                                     include('./update_ar.php');
                                 }
                                 else{
-                            include './connection/connect.php';
+                            include '../connection/connect.php';
                             $get_event="select * from `EVENT` where status_value='pending'";
                             $result=mysqli_query($con,$get_event);
                             $count=0;

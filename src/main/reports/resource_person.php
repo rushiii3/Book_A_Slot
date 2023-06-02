@@ -30,7 +30,7 @@ if(isset($_POST['resource_person'])){
         <div class="row">
             <div class="col-md-10 col-lg-10 m-auto">
             <?php
-                include '../navigation.html';
+                include '../user/navigation.html';
                 ?>
             <?php
             $count=0;

@@ -33,6 +33,7 @@ include '../connection/connect.php';
                 <th class="text-center">Event End Time</th>
                 <th class="text-center">Organization Institute</th>
                 <th class="text-center">Number of participants</th>
+                <th class="text-center">Event Place</th>
             </tr>
             </thead>
             <tbody class="bg-primary">
@@ -54,6 +55,7 @@ include '../connection/connect.php';
                 $event_end_time=$row['event_end_time'];
                 $organization_institute=$row['organization_institute'];
                 $students_total_number=$row['students_total_number'];
+                $ar_name=$row['ar_name'];
                 echo"<tr class='text-center text-light'><td> $event_name</td>
                 <td> $event_date</td>
                 <td> $event_description</td>
@@ -61,6 +63,7 @@ include '../connection/connect.php';
                 <td> $event_end_time</td>
                 <td>$organization_institute</td>
                 <td>$students_total_number</td>
+                <td>$ar_name</td>
                 </tr>
                 ";
             }
