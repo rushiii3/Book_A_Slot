@@ -2,7 +2,7 @@
 include '../connection/connect.php';
 
 if(isset($_POST['close'])){
-    header('location:../report_home.php');
+    header('location:../admin/report_home.php');
 }
 
 if(isset($_POST['month_report'])){
@@ -47,7 +47,7 @@ if(isset($_POST['month_report'])){
         <div class="row">
             <div class="col-md-10 col-lg-10 m-auto">
             <?php
-                include '../navigation.html';
+                include '../user/navigation.html';
                 ?>
            <?php
            $get_event="Select * from `EVENT` where MONTH(event_date)='$month' and YEAR(event_date)='$year' and status_value='approved'";

@@ -1,5 +1,5 @@
 <?php
-include '../other/connection/connect.php';
+include '../connection/connect.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +21,7 @@ include '../other/connection/connect.php';
         </style>
 </head>
 <?php
-    include('./connection/connect.php');
+   
 if(isset($_POST['add_ar'])){
     $ar_name=$_POST['ar_name'];
     $floor=$_POST['floor'];

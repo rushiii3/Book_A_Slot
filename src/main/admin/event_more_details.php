@@ -22,7 +22,7 @@
 
   <!-- to fetch data -->
     <?php
-    include './connection/connect.php';
+    include '../connection/connect.php';
     if(isset($_GET['event_id'])){
         $event_id=$_GET['event_id'];
         $get_event="select * from `EVENT` where event_id=$event_id ";
@@ -55,7 +55,7 @@ if(isset($_POST['approve_event_id'])){
 ?>
 <!-- event not approved -->
 <?php
-include './connection/connect.php';
+include '../connection/connect.php';
 if(isset($_POST["reason"])){
   $status_reason=$_POST['status_reason'];
   // if( isset($_GET['event_not_approved_id'])){
@@ -75,15 +75,7 @@ if(isset($_POST["reason"])){
   <div class="row">
     <div class="col-md-10 col-lg-10 m-auto">
     <?php
-<<<<<<< HEAD
-<<<<<<< HEAD
-                include './navigation.html';
-=======
-                include './navigation.php';
->>>>>>> 4dd1ec8 (month report)
-=======
-                include './navigation.html';
->>>>>>> 3f0a459 (room occupacy report added)
+                include '../user/navigation.html';
                 ?>
     <div class="row">
         <div class="col-md-6 col-lg-7">
@@ -120,10 +112,6 @@ if(isset($_POST["reason"])){
                   <td>Number Of Students Paricipating Event</td>
                   <td class="mt-2"><?php echo $students_total_number?></td>
                 </tr>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 3f0a459 (room occupacy report added)
                 <tr>
                   <td>Event Place</td>
                   <td class="mt-2"><?php echo $ar_name?></td>
@@ -132,11 +120,6 @@ if(isset($_POST["reason"])){
                   <td>Event Organizer</td>
                   <td class="mt-2"><?php echo $organization_institute?></td>
                 </tr>
-<<<<<<< HEAD
-=======
->>>>>>> 4dd1ec8 (month report)
-=======
->>>>>>> 3f0a459 (room occupacy report added)
               </tbody>
             </table>
             </div>

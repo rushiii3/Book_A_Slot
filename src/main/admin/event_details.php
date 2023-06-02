@@ -26,7 +26,7 @@
     </thread>
    <tbody class="bg-primary">
     <?php
-    include './connection/connect.php';
+    include '../connection/connect.php';
     $get_event="select * from `EVENT` where status_value='pending' order by request_date_time ";
     $result=mysqli_query($con,$get_event);
     while($row=mysqli_fetch_assoc($result)){

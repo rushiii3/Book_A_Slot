@@ -23,7 +23,7 @@ include '../connection/connect.php';
         <div class="row">
             <div class="col-md-10 col-lg-10 m-auto">
             <?php
-                include '../navigation.html';
+                include '../user/navigation.html';
                 ?>
             </div>
         </div>

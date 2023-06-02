@@ -1,5 +1,5 @@
 <?php
-include './connection/connect.php';
+include '../connection/connect.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +13,7 @@ include './connection/connect.php';
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <style>
+
     img{
     display: block;
     width: 500px;
@@ -35,10 +36,10 @@ include './connection/connect.php';
         <div class="row">
             <div class="col-md-10 col-lg-10 m-auto">
             <?php
-                include './navigation.html';
+                include '../user/navigation.html';
                 ?>
                 <button class="btn btn-primary w-50 m-auto d-flex justify-content-center fw-bolder" style="align-items: center;">REPORTS PANEL</button>
-                <a href="./reports/overall_report.php"><strong class="text-center d-flex justify-content-center" >click here to get short summary</strong></a>
+                <a href="../reports/overall_report.php"><strong class="text-center d-flex justify-content-center" >click here to get short summary</strong></a>
                 <div class="row mt-5">
                     <div class="col-md-5 col-lg-5 m-auto">
                         <img src="" alt="" id="image" >
@@ -49,13 +50,13 @@ include './connection/connect.php';
                     <div class="col-md-5 col-lg-5 m-auto">
                         <img src="" alt="" id="room">
                         <!-- room occupacy report -->
-                        <a href="./reports/room_occupacy.php" class="text-decoration:none" ><button class="btn btn-primary mt-3 m-auto d-flex justify-content-center" >Room Occupacy Report</button></a>
+                        <a href="../reports/room_occupacy.php" class="text-decoration:none" ><button class="btn btn-primary mt-3 m-auto d-flex justify-content-center" >Room Occupacy Report</button></a>
                     </div>
                 </div>
                 <div class="row mt-5">
                     <div class="col-md-5 col-lg-5 m-auto">
                     <img src="" alt="" id="cancel" >
-                        <a class="col-md-5 col-lg-5 m-auto text-decoration:none" href="./reports/cancel_report.php"><button class=" m-auto btn btn-primary mt-3 m-auto d-flex justify-content-center">Cancelled Event Report</button></a>
+                        <a class="col-md-5 col-lg-5 m-auto text-decoration:none" href="../reports/cancel_report.php"><button class=" m-auto btn btn-primary mt-3 m-auto d-flex justify-content-center">Cancelled Event Report</button></a>
                 </div>
                     <div class="col-md-5 col-lg-5 m-auto">
                     <img src="" alt="" id="guest" >
@@ -66,16 +67,33 @@ include './connection/connect.php';
             </div>
         </div>
     </div>
-    <script src="../js/report_img.js"></script>   
+    <!-- ../js/report_img.js -->
+    <!-- <script src="../.././js/report_img.js"></script>    -->
+
     <script>
+      let image=document.getElementById('image');
+        let images=['../.././img/m1.jpg','../.././img/m2.jpg','../.././img/m3.jpg'];
+        setInterval(function(){
+            let random=Math.floor(Math.random()*3);
+            image.src=images[random];
+        },800);
+
+        let room=document.getElementById('room');
+        let rooms=['../.././img/ar1.jpg','../.././img/ar2.jpg','../.././img/ar3.jpg'];
+        setInterval(function(){
+            let random=Math.floor(Math.random()*3);
+            room.src=rooms[random];
+        },800);
+
         let cancel=document.getElementById('cancel');
-       let cancels=['../img/c1.jpg','../img/c2.jpg','../img/c3.jpg'];
+       let cancels=['../.././img/c1.jpg','../.././img/c2.jpg','../.././img/c3.jpg'];
        setInterval(function(){
         let random=Math.floor(Math.random()*3);
         cancel.src=cancels[random];
        },800);
+
        let guest=document.getElementById('guest');
-       let guests=['../img/rp2.jpg','../img/rp3.jpg','../img/rp4.jpg'];
+       let guests=['../.././img/rp2.jpg','../.././img/rp3.jpg','../.././img/rp4.jpg'];
        setInterval(function(){
         let random=Math.floor(Math.random()*3);
         guest.src=guests[random];
@@ -86,7 +104,7 @@ include './connection/connect.php';
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-    <form action="./reports/month_report.php" method='post'>
+    <form action="../reports/month_report.php" method='post'>
       <div class="modal-body">
       <h1 class="modal-title fs-5" id="exampleModalLabel"> Month Wise Report</h1>
             <div class="form-outline w-100 m-auto mt-3">
@@ -125,7 +143,7 @@ include './connection/connect.php';
 <div class="modal fade" id="resource" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-    <form action="./reports/resource_person.php" method="post">
+    <form action="../reports/resource_person.php" method="post">
       <div class="modal-body">
       <h1 class="modal-title fs-5" id="exampleModalLabel">Resource Person Information</h1>
       <div class="form-outline w-100 m-auto  mt-3">
