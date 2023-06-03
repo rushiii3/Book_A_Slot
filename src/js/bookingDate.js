@@ -1,18 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-    flatpickr("#selectDate", {
-      dateFormat: 'Y-m-d',
-      minDate: new Date().fp_incr(3),
-      disable: [
-        '2023-06-20',
-        '2023-06-25',
-      ]
-    });
-  });
-
- 
-
-
-
 $('#selectDate').on('change',function(){
   $date = $('#selectDate').val();
   console.log($date);
