@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 $('#selectDate').on('focus',function(){
   $date = $('#selectDate').val();
   $Venue_name = $('#Venue_name').val();
@@ -122,6 +123,8 @@ BlockTime($start,$end)
 
 >>>>>>> 3c186e5 (timelocked)
 
+=======
+>>>>>>> bcf6c6f (done disable dates by db)
 $('#selectDate').on('change',function(){
   $date = $('#selectDate').val();
   console.log($date);

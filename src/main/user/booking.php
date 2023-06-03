@@ -557,8 +557,11 @@ It is a long established fact that a reader will be distracted by the readable c
                                         </div>
                         </div>
                         <div id="timeBlock">
+<<<<<<< HEAD
 >>>>>>> db0b766 (done)
 
+=======
+>>>>>>> bcf6c6f (done disable dates by db)
                         </div>
 <!-- new row ending -->
                                     
@@ -608,7 +611,29 @@ It is a long established fact that a reader will be distracted by the readable c
     </main>
     <script src="../../js/booking.js"></script>
     <script src="../../js/bookingDate.js"></script>
+<<<<<<< HEAD
 >>>>>>> db0b766 (done)
+=======
+    <script>
+        flatpickr("#selectDate", {
+      dateFormat: 'Y-m-d',
+      minDate: new Date().fp_incr(3),
+      disable: [       
+        <?php
+            $get_blocked_date_query = "SELECT * FROM disableDates";
+            $result_of_blocked_date_query = mysqli_query($con,$get_blocked_date_query);
+            if(mysqli_num_rows($result_of_blocked_date_query)>0){
+                while($row_of_blocked_date = mysqli_fetch_assoc($result_of_blocked_date_query))
+                {?>
+                    '<?php echo($row_of_blocked_date['datee']); ?>',
+                <?php
+                }
+            }
+        ?>
+      ]
+    });
+    </script>
+>>>>>>> bcf6c6f (done disable dates by db)
 </body>
 </html>
 <?php
