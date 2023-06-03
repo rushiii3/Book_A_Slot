@@ -114,10 +114,15 @@ if (!empty($_POST["user_email"]) &&
     }
 }
 
-if (!empty($_POST['datee'])) {
+if (!empty($_POST['datee']) && !empty($_POST['Venue_name']) ) {
     $datee = date('Y-m-d', strtotime($_POST["datee"]));
+<<<<<<< HEAD
     $get_time_info = "SELECT * FROM `EVENT` WHERE `event_date` = '$datee' AND status_value in ('Approved','Pending')";
 >>>>>>> db0b766 (done)
+=======
+    $Venue_name = mysqli_real_escape_string($con, $_POST["Venue_name"]);
+    $get_time_info = "SELECT * FROM `EVENT` WHERE `event_date` = '$datee' AND ar_name = '$Venue_name' AND status_value in ('Approved','Pending')";
+>>>>>>> 86879d7 (half blocking donee)
     $result_of_time = mysqli_query($con, $get_time_info);
     if (mysqli_num_rows($result_of_time) > 0) {
         ?>

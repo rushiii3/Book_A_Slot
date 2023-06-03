@@ -275,7 +275,81 @@ It is a long established fact that a reader will be distracted by the readable c
                                             <label for="no_of_stu_attending" class="form-label">No of students attending event</label>
                                             <input type="number" class="form-control" id="no_of_stu_attending" placeholder="e.g. ....... ">
                                         </div>
-                                        <div class="col-12 mb-3 input-group">
+                                        <div class="col-12 mb-3">
+                                        <label for="department_namee" class="form-label">Select Department</label>
+                                        <select
+                                            name="department_namee"
+                                            class="form-select"
+                                            id="department_namee"
+                                            required
+                                        >
+                                            <option selected>Select Department</option>
+                                            <?php
+                                                $get_department_name_query = "SELECT * FROM DEPARTMENT";
+                                                $result_of_department_query = mysqli_query($con,$get_department_name_query);
+                                                if(mysqli_num_rows($result_of_department_query)>0) 
+                                                {
+                                                    while($row_of_department_name =
+                                                    mysqli_fetch_assoc($result_of_department_query))
+                                                    { ?>
+                                                    <option
+                                                        value="<?php echo($row_of_department_name['department_name']); ?>"
+                                                    >
+                                                        <?php echo($row_of_department_name['department_name']); ?>
+                                                    </option>
+                                                    <?php
+                                                }
+                                                }
+                                                    ?>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-12 mb-3" id="org_institue_name">
+                                            <label for="Institute/Org_Name" class="form-label">Institute/Organisation Name</label>
+                                            <input type="text" class="form-control" id="Institute_OrgName" placeholder="e.g. ....... ">
+                                    </div>
+                                        
+                                        <div class="col-12 mb-1 mt-5">
+                                            <button type="button" class="btn btn-primary px-4 ms-3" id="nextFirst">Next</button> 
+                                        </div>
+                                        
+                        </div>
+                        <!-- new row ending -->
+
+
+                        <div class="row section2">
+                            <!-- new row -->
+                            
+                                    
+                                    <div class="col-12 mb-3">
+                                        <label for="Venue_name" class="form-label">Select Venue</label>
+                                        <select
+                                            name="Venue_name"
+                                            class="form-select"
+                                            id="Venue_name"
+                                            required
+                                        >
+                                            <option selected>Select Venue</option>
+                                            <?php
+                                                $get_audi_room_query = "SELECT * FROM AUDI_ROOM";
+                                                $result_of_audi_room_query = mysqli_query($con,$get_audi_room_query);
+                                                if(mysqli_num_rows($result_of_audi_room_query)>0) 
+                                                {
+                                                    while($row_of_audi_room_query =
+                                                    mysqli_fetch_assoc($result_of_audi_room_query))
+                                                    { ?>
+                                                    <option
+                                                        value="<?php echo($row_of_audi_room_query['ar_name']); ?>"
+                                                    >
+                                                        <?php echo($row_of_audi_room_query['ar_name']); ?>
+                                                    </option>
+                                                    <?php
+                                                }
+                                                }
+                                                    ?>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 mb-3 input-group">
                                             <label for="selectDate" class="form-label w-100">Date</label><br>
                                             <input type="text" class="form-control rounded-start border-end-0" id="selectDate" placeholder="e.g. ....... ">
 >>>>>>> db0b766 (done)
@@ -371,6 +445,7 @@ It is a long established fact that a reader will be distracted by the readable c
                                             </select>
                                         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                                         <div class="col-12 mb-1 mt-5">
                                             <button type="button" class="btn btn-primary px-4 ms-3" id="nextFirst">Next</button> 
@@ -445,6 +520,8 @@ It is a long established fact that a reader will be distracted by the readable c
                                         </select>
                                     </div>
 >>>>>>> db0b766 (done)
+=======
+>>>>>>> 86879d7 (half blocking donee)
                                     <div class="col-12 mb-1 mt-5">
                                             <button type="button" class="btn btn-secondary px-4 ms-3" id="prevBtnSecond">Previous</button>
                                             <button type="button" class="btn btn-primary px-4 ms-3" id="nextSecond">Next</button> 
@@ -594,7 +671,7 @@ It is a long established fact that a reader will be distracted by the readable c
             if(mysqli_num_rows($result_of_blocked_date_query)>0){
                 while($row_of_blocked_date = mysqli_fetch_assoc($result_of_blocked_date_query))
                 {?>
-                    '<?php echo($row_of_blocked_date['datee']); ?>',
+                    '<?php //echo($row_of_blocked_date['datee']); ?>',
                 <?php
                 }
             }
