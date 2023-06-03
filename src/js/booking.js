@@ -64,55 +64,35 @@ $('#nextFirst').on('click',function()
     $event_name = $('#eventName').val();
     $event_Descr = $('#eventDescription').val();
     $num_of_students = $('#no_of_stu_attending').val();
-    $event_date = $('#selectDate').val();
-    $event_start_time = $('#selectStartTime').val();
-    $event_end_time = $('#selectEndTime').val();
+    $department_namee = $('#department_namee').val();
+    $Institute_OrgName = $('#Institute_OrgName').val();
     if($event_name!="")
     {
       if($event_Descr!=="")
       {
         if($num_of_students!=="")
         {
-          if($event_date!=="")
+          if($department_namee!=="Select Department")
           {
-            if($event_start_time!=="Select the start time")
-            {
-              if($event_end_time!=="Select the end time")
-              {
-                if($event_start_time===$event_end_time)
-                {
-                  alert("Start and Ending time of event cannot be same");
-                }else{
-                    $step.eq(0).removeClass("active");
-                  $step.eq(0).addClass("completed");
-                  $('.section1').hide();
-                  $('.section2').show();
-                  $step.eq(1).addClass("active");
-                  }
-                
-                
-                
-              }else{
-                alert("Please input the event end time");
-              }
+            if($Institute_OrgName!==""){
+              $step.eq(0).removeClass("active");
+              $step.eq(0).addClass("completed");
+              $('.section1').hide();
+              $('.section2').show();
+              $step.eq(1).addClass("active");
+            }else{
+              alert("Please Input your Institute/Organisation Name");
             }
-            else{
-              alert("Please input the event start time");
-            }
-            
           }else{
-            alert("Please input a date");
+            alert("Please select department first");
           }
-          
         }else{
           alert("Please input number of students attending for event");
         }
-        
       }
       else{
         alert("Please input your Event Description");
-      }
-      
+      } 
     }
     else{
       alert("Please input your Event Name");
@@ -122,28 +102,43 @@ $('#nextFirst').on('click',function()
 
 $('#nextSecond').on('click',function()
 {
-    $department_namee = $('#department_namee').val();
-    $Institute_OrgName = $('#Institute_OrgName').val();
+    
     $Venue_name = $('#Venue_name').val();
-    if($department_namee!=="Select Department")
+    $event_date = $('#selectDate').val();
+    $event_start_time = $('#selectStartTime').val();
+    $event_end_time = $('#selectEndTime').val();
+    if($Venue_name!="Select Venue")
     {
-        if($Institute_OrgName!==""){
-            if($Venue_name!=="Select Venue"){
+      if($event_date!="")
+      {
+        if($event_start_time!="Select the start time")
+        {
+          if($event_end_time!="Select the end time")
+          {
+            if($event_start_time===$event_end_time)
+            {
+              alert("Event start time and end time cannot be same");
+            }else{
                 $step.eq(1).removeClass("active");
                 $step.eq(1).addClass("completed");
                 $('.section1').hide();
                 $('.section2').hide();
                 $('.section3').show();
                 $step.eq(2).addClass("active");
-            }else{
-                alert("Please select your venue");
             }
+          }else{
+            alert("Please select the event end time");
+          }
+        }else{
+          alert("Please select the event starting time");
         }
-        else{
-            alert("Please Input your Institute/Organisation Name");
-        }
+
+      }else{
+        alert("Please select Date");
+      }
+
     }else{
-        alert("Please select department first");
+      alert("Please select venue");
     }
 
 })
