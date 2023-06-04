@@ -31,6 +31,7 @@
 <body>
     <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
      include("../config/session.php");
      require "../connection/connect.php";
      require_once("../loader.html");
@@ -39,6 +40,11 @@
     require "connection/connect.php";
     //require_once("loader.html"); 
 >>>>>>> db0b766 (done)
+=======
+     include("../config/session.php");
+     require "../connection/connect.php";
+     require_once("../loader.html");
+>>>>>>> e200968 (doen)
     ?>
     <main id="main">
         <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
