@@ -36,7 +36,7 @@ include '../connection/connect.php';
         <div class="row">
             <div class="col-md-10 col-lg-10 m-auto">
             <?php
-                include '../user/navigation.html';
+                include './admin_navbar.html';
                 ?>
                 <button class="btn btn-primary w-50 m-auto d-flex justify-content-center fw-bolder" style="align-items: center;">REPORTS PANEL</button>
                 <a href="../reports/overall_report.php"><strong class="text-center d-flex justify-content-center" >click here to get short summary</strong></a>
@@ -44,7 +44,7 @@ include '../connection/connect.php';
                     <div class="col-md-5 col-lg-5 m-auto">
                         <img src="" alt="" id="image" >
                         <!-- montwise reports -->
-                        <button class="btn btn-primary mt-3 m-auto d-flex justify-content-center" data-bs-toggle="modal" data-bs-target="#exampleModal" >Get Month Wise Report</button>
+                        <button class="btn btn-primary mt-3 m-auto d-flex justify-content-center" data-toggle="modal" data-target="#exampleModalLabel" >Get Month Wise Report</button>
                         
                     </div>
                     <div class="col-md-5 col-lg-5 m-auto">
@@ -61,7 +61,7 @@ include '../connection/connect.php';
                     <div class="col-md-5 col-lg-5 m-auto">
                     <img src="" alt="" id="guest" >
                     <!-- <div class="col-md-5 col-lg-5 m-auto"> -->
-                        <button class=" btn btn-primary mt-3 m-auto d-flex justify-content-center" data-bs-toggle="modal" data-bs-target="#resource">Resource Person Report</button>
+                        <button class=" btn btn-primary mt-3 m-auto d-flex justify-content-center" data-toggle="modal" data-target="#resource">Resource Person Report</button>
                     </div>
                 </div>
             </div>
@@ -101,7 +101,7 @@ include '../connection/connect.php';
     </script>
 </body>
 <!-- Modal for month report-->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModalLabel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
     <form action="../reports/month_report.php" method='post'>
@@ -165,7 +165,7 @@ include '../connection/connect.php';
                     <input type="text" id="year" name="year" class="form-control" placeholder="eg.2023-2024">
         </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="submit" class="btn btn-primary" name='resource_person'>OK</button>
       </div>
     </div>
