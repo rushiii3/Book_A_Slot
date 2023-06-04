@@ -19,9 +19,9 @@
 
 <body>
     <?php
-    include("session.php");
-    require "connection/connect.php";
-    //require_once("loader.html"); 
+     include("../config/session.php");
+     require "../connection/connect.php";
+     require_once("../loader.html");
     ?>
     <main id="main">
         <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
