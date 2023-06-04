@@ -28,6 +28,7 @@ include '../connection/connect.php';
             <?php
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 include '../admin/admin_navbar.html';
 =======
                 include '../navigation.html';
@@ -35,6 +36,9 @@ include '../connection/connect.php';
 =======
                 include '../user/navigation.html';
 >>>>>>> 20ec2bd (seperate folders)
+=======
+                include '../admin/admin_navbar.html';
+>>>>>>> f06e2d6 (view by list)
                 ?>
                 <button class="btn btn-primary w-50 m-auto d-flex justify-content-center fw-bolder" style="align-items: center;">OVERALL SUMMARY</button>
 

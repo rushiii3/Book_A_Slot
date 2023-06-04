@@ -59,6 +59,7 @@ include '../connection/connect.php';
                 <?php
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 include './admin_navbar.html';
 =======
                 include './navigation.html';
@@ -66,6 +67,9 @@ include '../connection/connect.php';
 =======
                 include '../user/navigation.html';
 >>>>>>> 20ec2bd (seperate folders)
+=======
+                include './admin_navbar.html';
+>>>>>>> f06e2d6 (view by list)
                 ?>
                 <div class='bg-primary'>
                     <p></p>

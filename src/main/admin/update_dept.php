@@ -1,9 +1,13 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 include '../connection/connect.php';
 =======
 include './connection/connect.php';
 >>>>>>> db0b766 (done)
+=======
+include '../connection/connect.php';
+>>>>>>> f06e2d6 (view by list)
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,9 +37,13 @@ if(isset($_POST['no'])){
     <div class="con1 mt-3 ">
     <h1 class='text-center text-primary'>Update Department</h1>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div class="table-responsive-sm col-lg-10 col-sm-12">
 =======
 >>>>>>> db0b766 (done)
+=======
+    <div class="table-responsive-sm col-lg-10 col-sm-12">
+>>>>>>> f06e2d6 (view by list)
     <table  class='table table-bordered my-4' style="align-items:center">
     <thread class="bg-light">
         <tr >
@@ -64,9 +72,13 @@ if(isset($_POST['no'])){
     </table>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>
 =======
 >>>>>>> db0b766 (done)
+=======
+    </div>
+>>>>>>> f06e2d6 (view by list)
     <?php
     // to update data
     if(isset($_POST['update_dept'])){
