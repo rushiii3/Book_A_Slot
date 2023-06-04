@@ -1,5 +1,5 @@
 <?php
-include './connection/connect.php';
+include '../connection/connect.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,6 +28,7 @@ if(isset($_POST['no'])){
 <body class=' text-center w-50 m-auto'>
     <div class="con1 mt-3 ">
     <h1 class='text-center text-primary'>Update Department</h1>
+    <div class="table-responsive-sm col-lg-10 col-sm-12">
     <table  class='table table-bordered my-4' style="align-items:center">
     <thread class="bg-light">
         <tr >
@@ -54,6 +55,7 @@ if(isset($_POST['no'])){
             ?>
         </tbody>    
     </table>
+    </div>
     </div>
     <?php
     // to update data
