@@ -135,6 +135,7 @@ $('#selectDate').on('change',function(){
       url: 'ajax.php',
       data: {datee:$date,Venue_name:$Venue_name},
       success: function(data){
+        console.log(data);
         $('#timeBlock').html(" ");
         $('#timeBlock').append(data);
           
