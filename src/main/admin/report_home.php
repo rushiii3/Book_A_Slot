@@ -87,6 +87,9 @@ include '../connection/connect.php';
             <?php
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5d1afc3 (report)
                 include './admin_navbar.html';
                 ?>
                 <button class="btn btn-primary w-50 m-auto d-flex justify-content-center fw-bolder" style="align-items: center;">REPORTS PANEL</button>
@@ -96,6 +99,7 @@ include '../connection/connect.php';
                         <img src="" alt="" id="image" >
                         <!-- montwise reports -->
                         <button class="btn btn-primary mt-3 m-auto d-flex justify-content-center" data-toggle="modal" data-target="#exampleModalLabel" >Get Month Wise Report</button>
+<<<<<<< HEAD
 =======
                 include './navigation.html';
 =======
@@ -131,6 +135,8 @@ include '../connection/connect.php';
                         <!-- montwise reports -->
                         <button class="btn btn-primary mt-3 m-auto d-flex justify-content-center" data-bs-toggle="modal" data-bs-target="#exampleModal" >Get Month Wise Report</button>
 >>>>>>> db0b766 (done)
+=======
+>>>>>>> 5d1afc3 (report)
                         
                     </div>
                     <div class="col-md-5 col-lg-5 m-auto">
@@ -217,10 +223,14 @@ include '../connection/connect.php';
                     <img src="" alt="" id="guest" >
                     <!-- <div class="col-md-5 col-lg-5 m-auto"> -->
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <button class=" btn btn-primary mt-3 m-auto d-flex justify-content-center" data-toggle="modal" data-target="#resource">Resource Person Report</button>
 =======
                         <button class=" btn btn-primary mt-3 m-auto d-flex justify-content-center" data-bs-toggle="modal" data-bs-target="#resource">Resource Person Report</button>
 >>>>>>> db0b766 (done)
+=======
+                        <button class=" btn btn-primary mt-3 m-auto d-flex justify-content-center" data-toggle="modal" data-target="#resource">Resource Person Report</button>
+>>>>>>> 5d1afc3 (report)
                     </div>
                 </div>
             </div>
@@ -303,6 +313,9 @@ include '../connection/connect.php';
 </body>
 <!-- Modal for month report-->
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5d1afc3 (report)
 <div class="modal fade" id="exampleModalLabel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -438,10 +451,14 @@ include '../connection/connect.php';
         </div>
       <div class="modal-footer">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 =======
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
 >>>>>>> db0b766 (done)
+=======
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+>>>>>>> 5d1afc3 (report)
         <button type="submit" class="btn btn-primary" name='resource_person'>OK</button>
       </div>
     </div>

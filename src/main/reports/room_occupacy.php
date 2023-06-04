@@ -28,6 +28,7 @@ include '../connection/connect.php';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 include '../admin/admin_navbar.html';
 =======
                 include '../navigation.html';
@@ -38,6 +39,9 @@ include '../connection/connect.php';
 =======
                 include '../user/navigation.html';
 >>>>>>> 20ec2bd (seperate folders)
+=======
+                include '../admin/admin_navbar.html';
+>>>>>>> 5d1afc3 (report)
                 ?>
             </div>
         </div>
@@ -139,6 +143,7 @@ $yLabel='No. of event';//y-axis label
 //code showing most dense audi's organizer
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 $max_events_occured="select ar_name as first_ar,count(ar_name) as occurance from `EVENT` where status_value='approved' group by ar_name order by occurance desc LIMIT 1";
 =======
 $max_events_occured="SELECT max(ar_name)  as first_ar from `EVENT`";
@@ -146,6 +151,9 @@ $max_events_occured="SELECT max(ar_name)  as first_ar from `EVENT`";
 =======
 $max_events_occured="SELECT max(ar_name)  as first_ar from `EVENT`";
 >>>>>>> c75f32a (room occupacy report added)
+=======
+$max_events_occured="select ar_name as first_ar,count(ar_name) as occurance from `EVENT` where status_value='approved' group by ar_name order by occurance desc LIMIT 1";
+>>>>>>> 5d1afc3 (report)
 $result=mysqli_query($con,$max_events_occured);
 $row=mysqli_fetch_assoc($result);
 $first_ar=$row['first_ar'];
@@ -172,12 +180,16 @@ $second_max_events_occured="SELECT COUNT(ar_name),ar_name as second_ar from `eve
 }
 ?>
 <?php
+<<<<<<< HEAD
 //code showing second most dense audi's organizer
 $second_max_events_occured="SELECT max(ar_name) as second_ar from `EVENT` where ar_name not in (SELECT max(ar_name) from `EVENT`) and status_value='approved'";
 <<<<<<< HEAD
 >>>>>>> 3f0a459 (room occupacy report added)
 =======
 >>>>>>> c75f32a (room occupacy report added)
+=======
+$second_max_events_occured="SELECT COUNT(ar_name),ar_name as second_ar from `event` where ar_name<>'$first_ar' and status_value='approved' GROUP BY ar_name ORDER by count(ar_name) desc LIMIT 1";
+>>>>>>> 5d1afc3 (report)
 $result=mysqli_query($con,$second_max_events_occured);
 $row=mysqli_fetch_assoc($result);
 $second_ar=$row['second_ar'];
@@ -186,6 +198,7 @@ $result1=mysqli_query($con,$get_organizers);
 ?>
 <div class="container-fluid mt-3">
         <div class="row">
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div class="col-md-10 col-lg-10 m-auto">
                 <div class="row mt-5">
@@ -205,11 +218,18 @@ $result1=mysqli_query($con,$get_organizers);
                         <h3 class="text-center">Chart showing events organized in <strong>most</strong> oaccupied audi/room</h3>
                         <div id="piechart" ></div>
 >>>>>>> 677e8c8 (all reports)
+=======
+            <div class="col-md-10 col-lg-10 m-auto">
+                <div class="row mt-5">
+                    <div class="col-md-5 col-lg-5 m-auto">
+                        <h3 class="text-center">Chart showing events organized in <strong>most</strong> oaccupied audi/room</h3>
+                        <div id="piechart" style="width: 500px; height: 400px;"></div>
+>>>>>>> 5d1afc3 (report)
                         <!-- one piechart -->
-            </div>
-        </div>
-</div>
+                    </div>
+                    <div class="col-md-5 col-lg-5 m-auto">
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -223,10 +243,13 @@ $result1=mysqli_query($con,$get_organizers);
 =======
                      <!-- <h3 class="text-center">Chart showing events organized in <strong>second</strong> most oaccupied audi/room</h3>
 >>>>>>> 677e8c8 (all reports)
+=======
+                     <h3 class="text-center">Chart showing events organized in <strong>second</strong> most oaccupied audi/room</h3>
+>>>>>>> 5d1afc3 (report)
                         <div id="pie" style="width: 500px; height: 400px;"></div>
 
-                     one piechart 
-                    </div> -->
+                    <!-- one piechart -->
+                    </div>
 </body>
 <!-- piechart  for maximum audi occurance-->
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -249,8 +272,8 @@ $result1=mysqli_query($con,$get_organizers);
 
         var options = {
           title: 'Events organized in <?php echo $first_ar;?>',
-          width:1450,
-          height:1000,
+          width:700,
+          height:600,
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
