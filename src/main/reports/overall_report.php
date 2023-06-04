@@ -26,7 +26,7 @@ include '../connection/connect.php';
         <div class="row">
             <div class="col-md-10 col-lg-10 m-auto">
             <?php
-                include '../user/navigation.html';
+                include '../admin/admin_navbar.html';
                 ?>
                 <button class="btn btn-primary w-50 m-auto d-flex justify-content-center fw-bolder" style="align-items: center;">OVERALL SUMMARY</button>
 

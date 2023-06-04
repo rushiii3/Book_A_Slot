@@ -24,7 +24,7 @@ include '../connection/connect.php';
         <div class="row">
             <div class="col-md-10 col-11 mx-auto">
                 <?php
-                include '../user/navigation.html';
+                include './admin_navbar.html';
                 ?>
                 <div class='bg-primary'>
                     <p></p>
