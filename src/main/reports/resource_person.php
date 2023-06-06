@@ -1,11 +1,17 @@
 <?php
 include '../connection/connect.php';
 <<<<<<< HEAD
+<<<<<<< HEAD
 if(isset($_POST['close'])){
     header('location:../admin/report_home.php');
 }
 =======
 >>>>>>> 677e8c8 (all reports)
+=======
+if(isset($_POST['close'])){
+    header('location:../admin/report_home.php');
+}
+>>>>>>> 1896fe1 (changes done)
 if(isset($_POST['resource_person'])){
     $academic_year=$_POST['year'];
     $organizer=$_POST['organizer'];
@@ -16,10 +22,14 @@ if(isset($_POST['resource_person'])){
     if($academic_year==''){
         echo "<script>alert('Please Enter a academic year')</script>";
 <<<<<<< HEAD
+<<<<<<< HEAD
         echo("<script>window.location='../admin/report_home.php';</script>");
 =======
         echo("<script>window.location='../report_home.php';</script>");
 >>>>>>> 677e8c8 (all reports)
+=======
+        echo("<script>window.location='../admin/report_home.php';</script>");
+>>>>>>> 1896fe1 (changes done)
     }
 }
 ?>
@@ -42,6 +52,7 @@ if(isset($_POST['resource_person'])){
             <?php
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 include '../admin/admin_navbar.html';
 =======
                 include '../navigation.html';
@@ -49,6 +60,9 @@ if(isset($_POST['resource_person'])){
 =======
                 include '../user/navigation.html';
 >>>>>>> 20ec2bd (seperate folders)
+=======
+                include '../admin/admin_navbar.html';
+>>>>>>> 1896fe1 (changes done)
                 ?>
             <?php
             $count=0;
@@ -71,10 +85,14 @@ if(isset($_POST['resource_person'])){
                 <th class='text-center'>Resource Person Experience</th>
                 <th class='text-center'>Event Name</th>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 
 =======
                 <th class='text-center'>Organization Institute</th>
 >>>>>>> 677e8c8 (all reports)
+=======
+                
+>>>>>>> 1896fe1 (changes done)
             </tr>
             </thead>
             <tbody class='bg-primary'>";
@@ -110,10 +128,14 @@ if(isset($_POST['resource_person'])){
                         <td>$experience</td>
                         <td>$event_name</td>
 <<<<<<< HEAD
+<<<<<<< HEAD
                         
 =======
                         <td>$organization_institute</td>
 >>>>>>> 677e8c8 (all reports)
+=======
+                        
+>>>>>>> 1896fe1 (changes done)
                         </tr>";
                     }
                 }

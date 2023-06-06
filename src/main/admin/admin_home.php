@@ -111,8 +111,20 @@ include '../connection/connect.php';
                         <div class='card bg-common card-left' >
                             <div class="class-body mt-2 bg-light">
                             <ul class="nav flex-column">
+<<<<<<< HEAD
 
 >>>>>>> 20ec2bd (seperate folders)
+=======
+                                <!-- <li class="nav-item">
+                                <a class="nav-link  my-2 " aria-current="page" href="#">BOOK</a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link  my-2" href="#">CHECK STATUS </a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link  my-2" href="#">VIEW </a>
+                                </li>-->
+>>>>>>> 1896fe1 (changes done)
                                 <li class="nav-item">
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -243,6 +255,7 @@ include '../connection/connect.php';
                             $currentDate = date("Y-m-d");
                             $previousDate = date("Y-m-d", strtotime("-1 day"));
                             $get_event="select * from `EVENT` where status_value='pending' and request_date_time>='$previousDate'";
+<<<<<<< HEAD
 =======
                             include './connection/connect.php';
 =======
@@ -250,6 +263,8 @@ include '../connection/connect.php';
 >>>>>>> 20ec2bd (seperate folders)
                             $get_event="select * from `EVENT` where status_value='pending'";
 >>>>>>> db0b766 (done)
+=======
+>>>>>>> 1896fe1 (changes done)
                             $result=mysqli_query($con,$get_event);
                             $count=0;
                             while($row=mysqli_fetch_assoc($result)){

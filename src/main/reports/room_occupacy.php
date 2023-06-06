@@ -50,6 +50,7 @@ include '../connection/connect.php';
 // code to count in which audi how many events occur
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 $get_ar="select ar_name,count(ar_name) as occurance  from `EVENT` where status_value='approved' group by ar_name order by occurance desc";
 =======
 $get_ar="select ar_name,count(ar_name) as occurance  from `EVENT` where status_value='approved' group by ar_name";
@@ -57,6 +58,9 @@ $get_ar="select ar_name,count(ar_name) as occurance  from `EVENT` where status_v
 =======
 $get_ar="select ar_name,count(ar_name) as occurance  from `EVENT` where status_value='approved' group by ar_name";
 >>>>>>> c75f32a (room occupacy report added)
+=======
+$get_ar="select ar_name,count(ar_name) as occurance  from `EVENT` where status_value='approved' group by ar_name order by occurance desc";
+>>>>>>> 1896fe1 (changes done)
 $result=mysqli_query($con,$get_ar);
 $ar_name=array();
 $count_occurance=array();
@@ -163,6 +167,9 @@ while($row=mysqli_fetch_assoc($result1)){
     //echo $row['organization_institute'],$row['total'];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1896fe1 (changes done)
 //     $organizer=$row['organization_institute'];
 //     $total=$row['total'];
 //     echo "<tr class='test-center'>
@@ -222,13 +229,14 @@ $result1=mysqli_query($con,$get_organizers);
             <div class="col-md-10 col-lg-10 m-auto">
                 <div class="row mt-5">
                     <div class="col-md-5 col-lg-5 m-auto">
-                        <h3 class="text-center">Chart showing events organized in <strong>most</strong> oaccupied audi/room</h3>
+                        <h3 class="text-center">Chart showing events organized in <strong>most</strong> occupied audi/room</h3>
                         <div id="piechart" style="width: 500px; height: 400px;"></div>
 >>>>>>> 5d1afc3 (report)
                         <!-- one piechart -->
                     </div>
                     <div class="col-md-5 col-lg-5 m-auto">
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -246,6 +254,9 @@ $result1=mysqli_query($con,$get_organizers);
 =======
                      <h3 class="text-center">Chart showing events organized in <strong>second</strong> most oaccupied audi/room</h3>
 >>>>>>> 5d1afc3 (report)
+=======
+                     <h3 class="text-center">Chart showing events organized in <strong>second</strong> most occupied audi/room</h3>
+>>>>>>> 1896fe1 (changes done)
                         <div id="pie" style="width: 500px; height: 400px;"></div>
 
                     <!-- one piechart -->

@@ -5,9 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 =======
 >>>>>>> db0b766 (done)
+=======
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+>>>>>>> 1896fe1 (changes done)
     <title>Event Detailsa</title>
     <style>
         .con1{
@@ -36,6 +40,7 @@
     $currentDate = date("Y-m-d");
     $previousDate = date("Y-m-d", strtotime("-1 day"));
     $get_event="select * from `EVENT` where status_value='pending' and request_date_time>='$previousDate' order by request_date_time ";
+<<<<<<< HEAD
 =======
     include './connection/connect.php';
 =======
@@ -43,6 +48,8 @@
 >>>>>>> 20ec2bd (seperate folders)
     $get_event="select * from `EVENT` where status_value='pending' order by request_date_time ";
 >>>>>>> db0b766 (done)
+=======
+>>>>>>> 1896fe1 (changes done)
     $result=mysqli_query($con,$get_event);
     while($row=mysqli_fetch_assoc($result)){
         $event_id=$row['event_id'];
