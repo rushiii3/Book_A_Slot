@@ -1,5 +1,8 @@
 <?php
 include '../connection/connect.php';
+if(isset($_POST['close'])){
+    header('location:../admin/report_home.php');
+}
 if(isset($_POST['resource_person'])){
     $academic_year=$_POST['year'];
     $organizer=$_POST['organizer'];
@@ -9,7 +12,7 @@ if(isset($_POST['resource_person'])){
     $end_year=intval($years[1]);
     if($academic_year==''){
         echo "<script>alert('Please Enter a academic year')</script>";
-        echo("<script>window.location='../report_home.php';</script>");
+        echo("<script>window.location='../admin/report_home.php';</script>");
     }
 }
 ?>
@@ -30,7 +33,7 @@ if(isset($_POST['resource_person'])){
         <div class="row">
             <div class="col-md-10 col-lg-10 m-auto">
             <?php
-                include '../user/navigation.html';
+                include '../admin/admin_navbar.html';
                 ?>
             <?php
             $count=0;
@@ -52,7 +55,7 @@ if(isset($_POST['resource_person'])){
                 <th class='text-center'>Resource Person Designation</th>
                 <th class='text-center'>Resource Person Experience</th>
                 <th class='text-center'>Event Name</th>
-                <th class='text-center'>Organization Institute</th>
+                
             </tr>
             </thead>
             <tbody class='bg-primary'>";
@@ -87,7 +90,7 @@ if(isset($_POST['resource_person'])){
                         <td>$designation</td>
                         <td>$experience</td>
                         <td>$event_name</td>
-                        <td>$organization_institute</td>
+                        
                         </tr>";
                     }
                 }
