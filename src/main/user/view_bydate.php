@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <link type="image/png" sizes="16x16" rel="icon" href="../img/logo11.jpeg" />
+    <link type="image/png" sizes="16x16" rel="icon" href="../../img/logo11.jpeg" />
     <title>Select View</title>
 </head>
 
@@ -85,7 +85,7 @@
         </div>
        
     </main>
-    <script src="../js/view_date.js"></script>
+    <script src="../../js/view_date.js"></script>
 </body>
 
 </html>
