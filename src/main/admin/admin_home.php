@@ -36,7 +36,15 @@ include '../connection/connect.php';
                         <div class='card bg-common card-left' >
                             <div class="class-body mt-2 bg-light">
                             <ul class="nav flex-column">
-
+                                <!-- <li class="nav-item">
+                                <a class="nav-link  my-2 " aria-current="page" href="#">BOOK</a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link  my-2" href="#">CHECK STATUS </a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link  my-2" href="#">VIEW </a>
+                                </li>-->
                                 <li class="nav-item">
                                 <a class="nav-link  my-2 " href="admin_home.php" tabindex="-1" aria-disabled="true">VIEW REQUESTS</a>
                                 </li> 
@@ -93,7 +101,9 @@ include '../connection/connect.php';
                                 }
                                 else{
                             include '../connection/connect.php';
-                            $get_event="select * from `EVENT` where status_value='pending'";
+                            $currentDate = date("Y-m-d");
+                            $previousDate = date("Y-m-d", strtotime("-1 day"));
+                            $get_event="select * from `EVENT` where status_value='pending' and request_date_time>='$previousDate'";
                             $result=mysqli_query($con,$get_event);
                             $count=0;
                             while($row=mysqli_fetch_assoc($result)){

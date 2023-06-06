@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Event Detailsa</title>
     <style>
         .con1{
@@ -27,7 +28,9 @@
    <tbody class="bg-primary">
     <?php
     include '../connection/connect.php';
-    $get_event="select * from `EVENT` where status_value='pending' order by request_date_time ";
+    $currentDate = date("Y-m-d");
+    $previousDate = date("Y-m-d", strtotime("-1 day"));
+    $get_event="select * from `EVENT` where status_value='pending' and request_date_time>='$previousDate' order by request_date_time ";
     $result=mysqli_query($con,$get_event);
     while($row=mysqli_fetch_assoc($result)){
         $event_id=$row['event_id'];
