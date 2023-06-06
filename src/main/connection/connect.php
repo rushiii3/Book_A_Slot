@@ -12,6 +12,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 636b497 (admin work)
@@ -75,14 +76,18 @@ else{
     die(mysqli_error($con));
 =======
 /*
+=======
+
+>>>>>>> 2fe4c77 (done index)
 $con = mysqli_connect("localhost","anushka","!RqkW_eW-td3y3km","Book_A_Slot");
 if(mysqli_connect_errno()){
     echo("not connected");
-}*/
+}/*
 
 $con = mysqli_connect("localhost","id20741171_bookaslot","!RqkW_eW-td3y3km","id20741171_bookaslot");
 if(mysqli_connect_errno()){
     echo("not connected");
+<<<<<<< HEAD
 >>>>>>> e200968 (doen)
 }
 ?>
@@ -139,3 +144,7 @@ if(mysqli_connect_errno()){
 =======
 ?>
 >>>>>>> 636b497 (admin work)
+=======
+}*/
+?>
+>>>>>>> 2fe4c77 (done index)

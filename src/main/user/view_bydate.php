@@ -21,10 +21,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <link type="image/png" sizes="16x16" rel="icon" href="../../img/logo11.jpeg" />
 =======
     <link type="image/png" sizes="16x16" rel="icon" href="../img/logo11.jpeg" />
 >>>>>>> db0b766 (done)
+=======
+    <link type="image/png" sizes="16x16" rel="icon" href="../../img/logo11.jpeg" />
+>>>>>>> 2fe4c77 (done index)
     <title>Select View</title>
 </head>
 
@@ -109,10 +113,14 @@
        
     </main>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <script src="../../js/view_date.js"></script>
 =======
     <script src="../js/view_date.js"></script>
 >>>>>>> db0b766 (done)
+=======
+    <script src="../../js/view_date.js"></script>
+>>>>>>> 2fe4c77 (done index)
 </body>
 
 </html>
