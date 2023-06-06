@@ -131,12 +131,18 @@ It is a long established fact that a reader will be distracted by the readable c
                         <div class="stepper-item ">
                             <div class="step-counter">3</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 531ad26 (email)
                             <div class="step-name text-center">Requriement<br> </div>
                         </div>
                         <div class="stepper-item ">
                             <div class="step-counter">4</div>
+<<<<<<< HEAD
 =======
 >>>>>>> db0b766 (done)
+=======
+>>>>>>> 531ad26 (email)
                             <div class="step-name text-center">Resourse <br> Person info</div>
                         </div>
                         </div>
@@ -529,6 +535,7 @@ It is a long established fact that a reader will be distracted by the readable c
                                 
                         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <div class="row section3">
                             <!-- new row -->
                                         <div class="col-12 mb-3">
@@ -592,7 +599,43 @@ It is a long established fact that a reader will be distracted by the readable c
 =======
                         <!-- new row ending -->
 
+=======
+>>>>>>> 531ad26 (email)
                         <div class="row section3">
+                            <!-- new row -->
+                                        <div class="col-12 mb-3">
+                                            <label for="rp_name" class="form-label">Select your requriements</label>
+                                        </div>
+                                        <div class="col-12 mb-4 form-check .mic">
+                                                <input class="form-check-input" id=""  type="checkbox" value="">
+                                                <label class="form-check-label" for="terms_condition">
+                                                    Mic
+                                                </label>
+                                        </div>
+                                        <div class="col-12 mb-4 form-check .projector">
+                                                <input class="form-check-input" id=""  type="checkbox" value="">
+                                                <label class="form-check-label" for="terms_condition">
+                                                    Projector
+                                                </label>
+                                        </div>
+                                        <div class="col-12 mb-4 form-check .pointer">
+                                                <input class="form-check-input" id=""  type="checkbox" value="">
+                                                <label class="form-check-label" for="terms_condition">
+                                                    Pointer
+                                                </label>
+                                        </div>
+                                        <!-- <div class="col-12 mb-4 form-check ">
+                                                <input class="form-check-input" id=""  type="checkbox" value="">
+                                                <label class="form-check-label" for="terms_condition">
+                                                    Projector
+                                                </label>
+                                        </div> -->
+                                        
+                        </div>
+
+                        <!-- new row ending -->
+                        
+                        <div class="row section4">
                             <!-- new row -->
                                         <div class="col-12 mb-3">
                                             <label for="rp_name" class="form-label">Resourse Person Full Name</label>

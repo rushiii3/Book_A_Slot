@@ -571,7 +571,6 @@ $('.second_page').on('click',function()
 
 $('#nextSecond').on('click',function()
 {
-    
     $Venue_name = $('#Venue_name').val();
     $event_date = $('#selectDate').val();
     $event_start_time = $('#selectStartTime').val();
@@ -601,20 +600,22 @@ $('#nextSecond').on('click',function()
         }else{
           alert("Please select the event starting time");
         }
-
       }else{
         alert("Please select Date");
       }
-
     }else{
       alert("Please select venue");
     }
-
 })
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d9e0c02 (comit bro)
 =======
 
+=======
+$('.section3').show();
+$('.section4').hide();
+>>>>>>> 531ad26 (email)
 $('#nextThird').on('click',function(e){
     $rp_name = $('#rp_name').val();
     $companyName = $('#companyName').val();
@@ -721,4 +722,9 @@ $('#bookAgain').on('click',function(){
 >>>>>>> 5ee6f79 (done)
 =======
 
+<<<<<<< HEAD
 >>>>>>> 33591c5 (donee)
+=======
+
+
+>>>>>>> 531ad26 (email)
