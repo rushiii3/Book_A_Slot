@@ -301,6 +301,7 @@ if(!empty($_POST['user_email'])
             if(sizeof($rp_names)==$count)
             {
                 echo("1");
+                
             }else{
                 echo("2");
                 echo ("Error description: " . mysqli_error($con));

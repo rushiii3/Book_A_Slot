@@ -55,7 +55,19 @@ $('#FinalSubmit').on('click',function(e)
                 console.log(data);
                 if(data==1)
                 {
-                  $('#success').modal('show');
+                    $.ajax({
+                        type: 'POST',
+                        url: 'emailajax.php',
+                        data: {event_name:$event_name, event_Descr:$event_Descr, num_of_students:$num_of_students ,  Venue_name:$Venue_name, event_date:$event_date, event_start_time:$event_start_time, event_end_time:$event_end_time, Institute_OrgName:$Institute_OrgName, Institute_OrgName_email:$Institute_OrgName_email, Institute_OrgName_phone_no:$Institute_OrgName_phone_no, Institute_OrgName_transaction_id:$Institute_OrgName_transaction_id,},
+                        success: function(data){
+                            console.log(data);
+                            $('#emailtemp').append(data);
+                            $('#success').modal('show');
+                        },
+                        error: function() {
+                            console.log(response.status);
+                        },
+                    })
                 }
                 else
                 {

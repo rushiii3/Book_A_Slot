@@ -18,6 +18,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="../../css/booking.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <title>Book</title>
     <link type="image/png" sizes="16x16" rel="icon" href="../../img/logo11.jpeg" />
     
@@ -30,6 +31,7 @@
          include("../config/session.php");
          require "../connection/connect.php";
          require_once("../loader.html"); 
+         
      ?>
     <main id="main">
 
@@ -402,6 +404,9 @@ It is a long established fact that a reader will be distracted by the readable c
                         </div>
                         <div id="timeBlock">
                         </div>
+                        <div id="emailtemp">
+
+                        </div>
 <!-- new row ending -->
                                     
                                     
@@ -416,68 +421,12 @@ It is a long established fact that a reader will be distracted by the readable c
         <!-- container ending -->
         </div>  
 </form>
-<?php
-if(isset($_POST['FinalSubmit']))
-{
-echo($user_email);
-$eventName = mysqli_real_escape_string($con, $_POST['eventName']);
-$eventDescription = mysqli_real_escape_string($con, $_POST['eventDescription']);
-$no_of_stu_attending = mysqli_real_escape_string($con, $_POST['no_of_stu_attending']);
-$department_namee = mysqli_real_escape_string($con, $_POST['department_namee']);
-$Institute_Org_Name = mysqli_real_escape_string($con, $_POST['Institute_Org_Name']);
-$Institute_OrgName_email = mysqli_real_escape_string($con, $_POST['Institute_OrgName_email']);
-$Institute_OrgName_phone_no = mysqli_real_escape_string($con, $_POST['Institute_OrgName_phone_no']);
-$Institute_OrgName_transaction_id = mysqli_real_escape_string($con, $_POST['Institute_OrgName_transaction_id']);
-$Venue_name = mysqli_real_escape_string($con, $_POST['Venue_name']);
-$selectDate = mysqli_real_escape_string($con, $_POST['selectDate']);
-$selectStartTime = mysqli_real_escape_string($con, $_POST['selectStartTime']);
-$selectEndTime = mysqli_real_escape_string($con, $_POST['selectEndTime']);
-$checkArr = $_POST['checkArr'];
-$chked="";
-foreach($checkArr as $chk1)  
-   {  
-      $chked .= $chk1.", ";  
-   } 
-$requriement = mysqli_real_escape_string($con,$chked);
-$no_of_rp = mysqli_real_escape_string($con, $_POST['no_of_rp']);
-$rp_name = [];
 
-if($no_of_rp=="No")
-{
-    $rp_name = mysqli_real_escape_string($con, $_POST['rp_name']);
-
-}else{
-
-}
-/*
-echo($eventName);
-echo("<br>");
-echo($eventDescription);
-echo("<br>");
-echo($no_of_stu_attending);
-echo("<br>");
-echo($department_namee);
-echo("<br>");
-echo($Institute_Org_Name);
-echo("<br>");
-echo($Institute_OrgName_email);
-echo("<br>");
-echo($Institute_OrgName_phone_no);
-echo("<br>");
-echo($Venue_name);
-echo("<br>");
-echo($Institute_OrgName_transaction_id);
-echo("<br>");
-echo($selectDate);
-echo("<br>");
-*/
-}
-
-?>
     </main>
     <script src="../../js/booking.js"></script>
     <script src="../../js/booking2.js"></script>
     <script src="../../js/bookingDate.js"></script>
+    <script src="../../js/principalemail.js"></script>
     <script>
         flatpickr("#selectDate", {
       dateFormat: 'Y-m-d',
