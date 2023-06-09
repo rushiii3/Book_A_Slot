@@ -22,7 +22,7 @@ if (isset($_GET['api_key'])) {
         // Define GET endpoint to retrieve all records
         if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             // Query the database
-            $sql = "SELECT * FROM `EVENT`";
+            $sql = "SELECT * FROM `EVENT` WHERE status_value = 'Approved'";
             $result = mysqli_query($con,$sql);
             // Check if any records were found
             if (mysqli_num_rows($result) > 0) {

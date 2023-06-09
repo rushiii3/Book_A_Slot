@@ -9,10 +9,11 @@
 </head>
 <body>
     <button id="testapi">Get Api Details</button>
-
+    <script async src="https://imgbb.com/upload.js" data-palette="clear" data-auto-insert="html-embed-medium"></script>
     <?php
+    /*
 // API endpoint URL
-$apiUrl = "http://localhost/Book_A_Slot/Book_A_Slot/src/main/user/api.php?api_key=11223";
+$apiUrl = "https://bookaslot.000webhostapp.com/src/main/user/api.php?api_key=11223";
 
 // Make API request
 $response = file_get_contents($apiUrl);
@@ -29,10 +30,13 @@ if ($response !== false) {
 } else {
     // Handle API request failure
     echo "Error: API request failed.";
-}
+}*/
 ?>
 
+<form action="welcome.php" method="post">
 
+
+</form>
 </body>
 <script>
 $('#testapi').on('click',function(){

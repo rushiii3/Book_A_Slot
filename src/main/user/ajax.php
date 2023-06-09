@@ -47,49 +47,6 @@ if (!empty($_POST['email_login']) &&
         echo ("no");
     }
 }
-if (!empty($_POST["user_email"]) &&
-    !empty($_POST["eventname"]) &&
-    !empty($_POST["event_desc"]) &&
-    !empty($_POST["no_of_students"]) &&
-    !empty($_POST["event_date"]) &&
-    !empty($_POST["event_start_time"]) &&
-    !empty($_POST["event_end_time"]) &&
-    !empty($_POST["Institute_OrgName"]) &&
-    !empty($_POST["Venue_name"]) &&
-    !empty($_POST["rp_name"]) &&
-    !empty($_POST["companyName"]) &&
-    !empty($_POST["designation"]) &&
-    !empty($_POST["experience"])
-) {
-    $FourDigitRandomNumber = mt_rand(1111, 9999);
-    $user_email = mysqli_real_escape_string($con, $_POST["user_email"]);
-    $event_name = mysqli_real_escape_string($con, $_POST["eventname"]);
-    $event_Descr = mysqli_real_escape_string($con, $_POST["event_desc"]);
-    $num_of_students = mysqli_real_escape_string($con, $_POST["no_of_students"]);
-    $event_date = date('Y-m-d', strtotime($_POST["event_date"]));
-    $event_start_time = $_POST["event_start_time"];
-    $event_end_time = $_POST["event_end_time"];
-    $Institute_OrgName = mysqli_real_escape_string($con, $_POST["Institute_OrgName"]);
-    $Venue_name = mysqli_real_escape_string($con, $_POST["Venue_name"]);
-    $rp_name = mysqli_real_escape_string($con, $_POST["rp_name"]);
-    $companyName = mysqli_real_escape_string($con, $_POST["companyName"]);
-    $designation = mysqli_real_escape_string($con, $_POST["designation"]);
-    $experience = mysqli_real_escape_string($con, $_POST["experience"]);
-    date_default_timezone_set("Asia/Calcutta");
-    $timestamp = date("Y-m-d H:i:s");
-    $event_info_query = " INSERT INTO `EVENT` (`event_id`,`event_name`,`event_date`,`event_start_time`,`event_end_time`,`event_description`,`students_total_number`,`organization_institute`,`request_date_time`,`user_name`,`ar_name`,`status_value`) VALUES ('$FourDigitRandomNumber','$event_name','$event_date','$event_start_time','$event_end_time','$event_Descr','$num_of_students','$Institute_OrgName','$timestamp','$user_email','$Venue_name','Pending') ";
-    if (mysqli_query($con, $event_info_query)) {
-        $resource_person_info = "INSERT INTO `RESOURCE_PERSON` (`full_name`,`company_name`,`designation`,`experience`,`event_id`) VALUES ('$rp_name','$companyName','$designation','$experience','$FourDigitRandomNumber')";
-        if (mysqli_query($con, $resource_person_info)) {
-            echo ("1");
-        } else {
-            echo ("2");
-        }
-    } else {
-        echo ("2");
-    }
-}
-
 if (!empty($_POST['datee']) && !empty($_POST['Venue_name']) ) {
     $datee = date('Y-m-d', strtotime($_POST["datee"]));
     $Venue_name = mysqli_real_escape_string($con, $_POST["Venue_name"]);
@@ -123,6 +80,18 @@ if (!empty($_POST['datee']) && !empty($_POST['Venue_name']) ) {
                 ?>
             }
         </script>
+        <?php
+    }else{
+        ?>
+        <script>
+            $start_time = $('.start-time');
+            $end_time = $('.end-time');
+            var i, x = $('.start-time');
+            for (i = 0; i < x.length; i++) {
+                $start_time.eq(i).prop('disabled', false);
+                $end_time.eq(i).prop('disabled', false);
+            }
+            </script>
         <?php
     }
 }
@@ -179,5 +148,172 @@ if (!empty($_POST['selectdatee']) && !empty($_POST['venue_name'])) {
     }
 }
 
+if(!empty($_POST['user_email']) 
+            &&
+    !empty($_POST['event_name'])
+            &&
+    !empty($_POST['event_Descr'])
+            &&
+    !empty($_POST['num_of_students'])
+            &&
+    !empty($_POST['department_namee'])
+            &&
+    !empty($_POST['Venue_name'])
+            &&
+    !empty($_POST['event_date'])
+            &&
+    !empty($_POST['event_start_time'])
+            &&
+    !empty($_POST['event_end_time'])
+            &&
+    !empty($_POST['requriment'])
+            &&
+    !empty($_POST['rp_names'])
+            &&
+    !empty($_POST['company_names'])
+            &&
+    !empty($_POST['designations'])
+            &&
+    !empty($_POST['experience'])
+            &&
+    !empty($_POST['insider '])
+        
+
+)
+{
+    date_default_timezone_set("Asia/Calcutta");
+    $FourDigitRandomNumber = mt_rand(11111, 99999);
+    $timestamp = date("Y-m-d H:i:s");
+    $user_email = mysqli_real_escape_string($con, $_POST['user_email']);
+    $event_name = mysqli_real_escape_string($con, $_POST['event_name']);
+    $event_Descr = mysqli_real_escape_string($con, $_POST['event_Descr']);
+    $num_of_students = mysqli_real_escape_string($con, $_POST['num_of_students']);
+    $department_namee = mysqli_real_escape_string($con, $_POST['department_namee']);
+    $Venue_name = mysqli_real_escape_string($con, $_POST['Venue_name']);
+    $event_date = date('Y-m-d', strtotime($_POST["event_date"]));
+    $event_start_time = $_POST["event_start_time"];
+    $event_end_time = $_POST["event_end_time"];
+    $requriment = mysqli_real_escape_string($con, $_POST['requriment']);
+    $rp_names = $_POST['rp_names'];
+    $company_names = $_POST['company_names'];
+    $designations = $_POST['designations'];
+    $experience = $_POST['experience'];
+    $query_insert_event_for_insider = "INSERT INTO `EVENT` (`event_id`, `event_name`, `event_date`, `event_start_time`, `event_end_time`, `event_description`, `students_total_number`, `status_value`, `organization_institute`, `request_date_time`, `user_name`, `ar_name`, `event_requriement`) VALUES ('$FourDigitRandomNumber','$event_name','$event_date','$event_start_time','$event_end_time','$event_Descr','$num_of_students','Pending','$department_namee','$timestamp','$user_email','$Venue_name','$requriment')";
+    if(mysqli_query($con,$query_insert_event_for_insider))
+    {
+        $count = 0;
+        for($i=0;$i<=sizeof($rp_names) && $i<sizeof($company_names) && $i<sizeof($designations) && $i<sizeof($experience);$i++ )
+        {
+            $resource_person_info = "INSERT INTO `RESOURCE_PERSON` (`full_name`,`company_name`,`designation`,`experience`,`event_id`) VALUES ('$rp_names[$i]','$company_names[$i]','$designations[$i]','$experience[$i]','$FourDigitRandomNumber')";
+            if (mysqli_query($con, $resource_person_info)) {
+                $count = $count + 1;   
+            }
+        }
+        if(sizeof($rp_names)==$count)
+        {
+            echo("1");
+        }else{
+            echo("2");
+        }
+    }else{
+        echo("2");
+        echo ("Error description: " . mysqli_error($con));
+    } 
+}
+
+
+if(!empty($_POST['user_email']) 
+            &&
+    !empty($_POST['event_name'])
+            &&
+    !empty($_POST['event_Descr'])
+            &&
+    !empty($_POST['num_of_students'])
+            &&
+    !empty($_POST['department_namee'])
+            &&
+    !empty($_POST['Venue_name'])
+            &&
+    !empty($_POST['event_date'])
+            &&
+    !empty($_POST['event_start_time'])
+            &&
+    !empty($_POST['event_end_time'])
+            &&
+    !empty($_POST['requriment'])
+            &&
+    !empty($_POST['rp_names'])
+            &&
+    !empty($_POST['company_names'])
+            &&
+    !empty($_POST['designations'])
+            &&
+    !empty($_POST['experience'])
+            &&
+    !empty($_POST['Institute_OrgName'])
+            &&
+    !empty($_POST['Institute_OrgName_email'])
+            &&
+    !empty($_POST['Institute_OrgName_phone_no'])
+            &&
+    !empty($_POST['Institute_OrgName_transaction_id'])
+            &&
+    !empty($_POST['others'])
+)
+{
+    date_default_timezone_set("Asia/Calcutta");
+    $FourDigitRandomNumber = mt_rand(11111, 99999);
+    $timestamp = date("Y-m-d H:i:s");
+    $user_email = mysqli_real_escape_string($con, $_POST['user_email']);
+    $event_name = mysqli_real_escape_string($con, $_POST['event_name']);
+    $event_Descr = mysqli_real_escape_string($con, $_POST['event_Descr']);
+    $num_of_students = mysqli_real_escape_string($con, $_POST['num_of_students']);
+    $department_namee = mysqli_real_escape_string($con, $_POST['department_namee']);
+    $Venue_name = mysqli_real_escape_string($con, $_POST['Venue_name']);
+    $event_date = date('Y-m-d', strtotime($_POST["event_date"]));
+    $event_start_time = $_POST["event_start_time"];
+    $event_end_time = $_POST["event_end_time"];
+    $requriment = mysqli_real_escape_string($con, $_POST['requriment']);
+    $rp_names = $_POST['rp_names'];
+    $company_names = $_POST['company_names'];
+    $designations = $_POST['designations'];
+    $experience = $_POST['experience'];
+    $Institute_OrgName = mysqli_real_escape_string($con, $_POST['Institute_OrgName']);
+    $Institute_OrgName_email = mysqli_real_escape_string($con, $_POST['Institute_OrgName_email']);
+    $Institute_OrgName_phone_no = mysqli_real_escape_string($con, $_POST['Institute_OrgName_phone_no']);
+    $Institute_OrgName_transaction_id = mysqli_real_escape_string($con, $_POST['Institute_OrgName_transaction_id']);
+
+    $query_insert_event_for_outsider = "INSERT INTO `EVENT` (`event_id`, `event_name`, `event_date`, `event_start_time`, `event_end_time`, `event_description`, `students_total_number`, `status_value`, `organization_institute`, `request_date_time`, `user_name`, `ar_name`, `event_requriement`) VALUES ('$FourDigitRandomNumber','$event_name','$event_date','$event_start_time','$event_end_time','$event_Descr','$num_of_students','Pending','$department_namee','$timestamp','$user_email','$Venue_name','$requriment')";
+    $query_to_insert_outsider_info = "INSERT INTO `OUTSIDER_INFO` (`outsider_name`, `outsider_email`, `outsider_phone`, `outsider_transaction_id`, `outsider_payment_date`, `event_id`) VALUES ('$Institute_OrgName', '$Institute_OrgName_email', '$Institute_OrgName_phone_no', '$Institute_OrgName_transaction_id', '2023-06-15', '$FourDigitRandomNumber')";
+    if(mysqli_query($con,$query_insert_event_for_outsider))
+    {
+        if(mysqli_query($con,$query_to_insert_outsider_info))
+        {
+            $count = 0;
+            for($i=0;$i<=sizeof($rp_names) && $i<sizeof($company_names) && $i<sizeof($designations) && $i<sizeof($experience);$i++ )
+            {
+                $resource_person_info = "INSERT INTO `RESOURCE_PERSON` (`full_name`,`company_name`,`designation`,`experience`,`event_id`) VALUES ('$rp_names[$i]','$company_names[$i]','$designations[$i]','$experience[$i]','$FourDigitRandomNumber')";
+                if (mysqli_query($con, $resource_person_info)) {
+                    $count = $count + 1;   
+                }
+            }
+    
+            if(sizeof($rp_names)==$count)
+            {
+                echo("1");
+            }else{
+                echo("2");
+                echo ("Error description: " . mysqli_error($con));
+            }
+        }else{
+            echo("2");
+            echo ("Error description: " . mysqli_error($con));
+        }
+        
+    }else{
+        echo("2");
+        echo ("Error description: " . mysqli_error($con));
+    } 
+}
 mysqli_close($con);
 ?>
