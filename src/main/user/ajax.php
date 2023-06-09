@@ -66,6 +66,7 @@ if (!empty($_POST['email_login']) &&
     }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 if (!empty($_POST['datee']) && !empty($_POST['Venue_name']) ) {
     $datee = date('Y-m-d', strtotime($_POST["datee"]));
     $Venue_name = mysqli_real_escape_string($con, $_POST["Venue_name"]);
@@ -114,6 +115,8 @@ if (!empty($_POST["user_email"]) &&
     }
 }
 
+=======
+>>>>>>> 4c514c7 (donee)
 if (!empty($_POST['datee']) && !empty($_POST['Venue_name']) ) {
     $datee = date('Y-m-d', strtotime($_POST["datee"]));
 <<<<<<< HEAD
@@ -154,6 +157,9 @@ if (!empty($_POST['datee']) && !empty($_POST['Venue_name']) ) {
         </script>
         <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4c514c7 (donee)
     }else{
         ?>
         <script>
@@ -166,8 +172,11 @@ if (!empty($_POST['datee']) && !empty($_POST['Venue_name']) ) {
             }
             </script>
         <?php
+<<<<<<< HEAD
 =======
 >>>>>>> db0b766 (done)
+=======
+>>>>>>> 4c514c7 (donee)
     }
 }
 if (!empty($_POST['eventid']) && !empty($_POST['reason'])) {
@@ -224,6 +233,9 @@ if (!empty($_POST['selectdatee']) && !empty($_POST['venue_name'])) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4c514c7 (donee)
 if(!empty($_POST['user_email']) 
             &&
     !empty($_POST['event_name'])
@@ -252,7 +264,11 @@ if(!empty($_POST['user_email'])
             &&
     !empty($_POST['experience'])
             &&
+<<<<<<< HEAD
     !empty($_POST['insider'])
+=======
+    !empty($_POST['insider '])
+>>>>>>> 4c514c7 (donee)
         
 
 )
@@ -377,7 +393,10 @@ if(!empty($_POST['user_email'])
             if(sizeof($rp_names)==$count)
             {
                 echo("1");
+<<<<<<< HEAD
                 
+=======
+>>>>>>> 4c514c7 (donee)
             }else{
                 echo("2");
                 echo ("Error description: " . mysqli_error($con));
@@ -392,6 +411,7 @@ if(!empty($_POST['user_email'])
         echo ("Error description: " . mysqli_error($con));
     } 
 }
+<<<<<<< HEAD
 
 if(!empty($_POST['user_email_forgot']) && !empty($_POST['password']))
 {
@@ -413,5 +433,7 @@ if(!empty($_POST['event_id_change']) && !empty($_POST['imglink']))
 }
 =======
 >>>>>>> db0b766 (done)
+=======
+>>>>>>> 4c514c7 (donee)
 mysqli_close($con);
 ?>

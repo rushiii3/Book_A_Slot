@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4c514c7 (donee)
 $('#FinalSubmit').on('click',function(e)
 {
     $user_email = $('#user_email').val();
@@ -56,6 +59,7 @@ $('#FinalSubmit').on('click',function(e)
                 console.log(data);
                 if(data==1)
                 {
+<<<<<<< HEAD
                     $.ajax({
                         type: 'POST',
                         url: 'emailajax.php',
@@ -69,6 +73,9 @@ $('#FinalSubmit').on('click',function(e)
                             console.log(response.status);
                         },
                     })
+=======
+                  $('#success').modal('show');
+>>>>>>> 4c514c7 (donee)
                 }
                 else
                 {
@@ -85,7 +92,11 @@ $('#FinalSubmit').on('click',function(e)
         $.ajax({
             type: 'POST',
             url: 'ajax.php',
+<<<<<<< HEAD
             data: {user_email:$user_email, event_name:$event_name, event_Descr:$event_Descr, num_of_students:$num_of_students , department_namee:$department_namee, Venue_name:$Venue_name, event_date:$event_date, event_start_time:$event_start_time, event_end_time:$event_end_time, requriment:$requriment, rp_names:rp_names, company_names:company_names, designations:designations, experience:experience, insider:insider},
+=======
+            data: {user_email:$user_email, event_name:$event_name, event_Descr:$event_Descr, num_of_students:$num_of_students , department_namee:$department_namee, Venue_name:$Venue_name, event_date:$event_date, event_start_time:$event_start_time, event_end_time:$event_end_time, requriment:$requriment, rp_names:rp_names, company_names:company_names, designations:designations, experience:experience, insider:insider  },
+>>>>>>> 4c514c7 (donee)
             success: function(data){
                 console.log(data);
                 if(data==1)
@@ -104,6 +115,7 @@ $('#FinalSubmit').on('click',function(e)
     }
 
     e.preventDefault();
+<<<<<<< HEAD
 })
 =======
 $('.section2').hide();
@@ -231,3 +243,6 @@ $('#nextThird').on('click',function(){
 
 
 >>>>>>> d9e0c02 (comit bro)
+=======
+})
+>>>>>>> 4c514c7 (donee)
