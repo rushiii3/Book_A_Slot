@@ -60,6 +60,9 @@ $('#FinalSubmit').on('click',function(e)
                 if(data==1)
                 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b01df11 (done principal email)
                     $.ajax({
                         type: 'POST',
                         url: 'emailajax.php',
@@ -73,9 +76,12 @@ $('#FinalSubmit').on('click',function(e)
                             console.log(response.status);
                         },
                     })
+<<<<<<< HEAD
 =======
                   $('#success').modal('show');
 >>>>>>> 4c514c7 (donee)
+=======
+>>>>>>> b01df11 (done principal email)
                 }
                 else
                 {

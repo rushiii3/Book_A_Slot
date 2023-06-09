@@ -394,9 +394,13 @@ if(!empty($_POST['user_email'])
             {
                 echo("1");
 <<<<<<< HEAD
+<<<<<<< HEAD
                 
 =======
 >>>>>>> 4c514c7 (donee)
+=======
+                
+>>>>>>> b01df11 (done principal email)
             }else{
                 echo("2");
                 echo ("Error description: " . mysqli_error($con));

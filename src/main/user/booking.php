@@ -28,6 +28,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="../../css/booking.css">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b01df11 (done principal email)
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <title>Book</title>
     <link type="image/png" sizes="16x16" rel="icon" href="../../img/logo11.jpeg" />
@@ -49,9 +52,13 @@
          require "../connection/connect.php";
          require_once("../loader.html"); 
 <<<<<<< HEAD
+<<<<<<< HEAD
          
 =======
 >>>>>>> db0b766 (done)
+=======
+         
+>>>>>>> b01df11 (done principal email)
      ?>
     <main id="main">
 
@@ -741,6 +748,7 @@ It is a long established fact that a reader will be distracted by the readable c
                         <div id="timeBlock">
                         </div>
                         <div id="emailtemp">
+<<<<<<< HEAD
 =======
                                             <button type="button" class="btn btn-secondary px-4 ms-3" id="prevBtnThird">Previous</button>
                                             <button type="button" class="btn btn-primary px-4 ms-3" id="nextThird">Submit</button> 
@@ -757,6 +765,9 @@ It is a long established fact that a reader will be distracted by the readable c
 
 =======
 >>>>>>> bcf6c6f (done disable dates by db)
+=======
+
+>>>>>>> b01df11 (done principal email)
                         </div>
 <!-- new row ending -->
                                     
@@ -776,6 +787,7 @@ It is a long established fact that a reader will be distracted by the readable c
         <!-- container ending -->
         </div>  
 </form>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -838,10 +850,14 @@ echo("<br>");
 
 ?>
 >>>>>>> 4c514c7 (donee)
+=======
+
+>>>>>>> b01df11 (done principal email)
     </main>
     <script src="../../js/booking.js"></script>
     <script src="../../js/booking2.js"></script>
     <script src="../../js/bookingDate.js"></script>
+    <script src="../../js/principalemail.js"></script>
     <script>
         flatpickr("#selectDate", {
       dateFormat: 'Y-m-d',
