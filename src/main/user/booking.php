@@ -426,7 +426,6 @@ It is a long established fact that a reader will be distracted by the readable c
     <script src="../../js/booking.js"></script>
     <script src="../../js/booking2.js"></script>
     <script src="../../js/bookingDate.js"></script>
-    <script src="../../js/principalemail.js"></script>
     <script>
         flatpickr("#selectDate", {
       dateFormat: 'Y-m-d',
