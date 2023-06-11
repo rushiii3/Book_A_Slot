@@ -5,7 +5,7 @@ $(document).ready(function(){
      
     // client id of the project
 
-    var clientId = "870692323734-f7q95dgfjj8ej4uedonip48ggrrcfmd0.apps.googleusercontent.com";
+    var clientId = "";
 
     // redirect_uri of the project
 

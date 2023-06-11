@@ -4,10 +4,10 @@ $(document).ready(function(){
     const urlParams = new URLSearchParams(window.location.search);
     const code = urlParams.get('code');
     const redirect_uri = "http://localhost/Book_A_Slot/Book_A_Slot/src/main/user/upload.php"; // replace with your redirect_uri;
-    const client_secret = "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"; // replace with your client secret
+    const client_secret = ""; // replace with your client secret
     const scope = "https://www.googleapis.com/auth/drive";
     var access_token= "";
-    var client_id = "870692323734-f7q95dgfjj8ej4uedonip48ggrrcfmd0.apps.googleusercontent.com";// replace it with your client id;
+    var client_id = "";// replace it with your client id;
     
 
     $.ajax({
