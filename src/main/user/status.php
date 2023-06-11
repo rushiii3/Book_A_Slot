@@ -37,10 +37,13 @@
                 <?php
                 date_default_timezone_set("Asia/Calcutta");
                 $today_date = date("Y-m-d");
-                $get_events_pending_approved = "SELECT * FROM `EVENT` WHERE user_name = '$user_email' AND status_value in ('Approved','Not Approved','Pending')  AND event_date > '$today_date' ORDER BY event_date";
+                $get_events_pending_approved = "SELECT * FROM `EVENT` WHERE user_name = '$user_email' AND status_value in ('Approved','Not Approved','Pending') ORDER BY event_date";
                 $result_of_events_pending_approved = mysqli_query($con, $get_events_pending_approved);
                 if (mysqli_num_rows($result_of_events_pending_approved) > 0) {
                     while ($row_of_query = mysqli_fetch_assoc($result_of_events_pending_approved)) {
+                        $event_status = $row_of_query['event_status'];
+                        if($event_status=="Open" || $event_status=="")
+                        {
                 ?>
                         <div class="col-lg-4 col-md-6 mb-5">
                             <div class="card shadow p-1" style="width: auto;border-radius: 20px;">
@@ -73,16 +76,25 @@
                                         <p class="card-text bg-secondary text-white w-100 rounded p-2"> <span class="fw-bold">Reason: </span> <?php echo ($row_of_query['status_reason']); ?> </p>
                                     <?php
                                     } else {
-                                    ?>
-                                        <a href="cancel.php">What to cancel the event?</a>
-                                    <?php
+                                        if($event_status=="Open")
+                                        {
+                                            ?>
+                                            <button type="button" class="btn btn-primary btn-primary w-100 my-1" >Close Event</button>
+
+                                            <?php
+                                        }else{
+                                            ?>
+                                                <a href="cancel.php">What to cancel the event?</a>
+                                            <?php
+                                        }
+                                    
                                     }
                                     ?>
                                 </div>
                             </div>
                         </div>
                 <?php
-                    }
+                    }}
                 } else {
                 ?>
                     <div class="col-lg-12 col-md-12 mb-5">

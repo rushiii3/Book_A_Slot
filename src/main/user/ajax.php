@@ -329,5 +329,11 @@ if(!empty($_POST['user_email_forgot']) && !empty($_POST['password']))
         echo("2");
     }
 }
+
+
+if(!empty($_POST['event_id_change']) && !empty($_POST['imglink']))
+{
+    echo($_POST['imglink']);
+}
 mysqli_close($con);
 ?>

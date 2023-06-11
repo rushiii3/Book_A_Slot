@@ -61,6 +61,9 @@
                             </div>
                             <div id="pass_verify" class="form-text"></div>
                         </div>
+                        <div class="mb-3 text-end">
+                                <a href="forgot.php" class="link-dark">Forgot password?</a>
+                        </div>
                         <button type="submit" name="submit" id="submit" class="btn btn-primary px-5 py-2 ms-5 mt-3">
                             Submit
                         </button>
