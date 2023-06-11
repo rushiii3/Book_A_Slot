@@ -5,7 +5,11 @@ $(document).ready(function(){
      
     // client id of the project
 
+<<<<<<< HEAD
     var clientId = "";
+=======
+    var clientId = "870692323734-f7q95dgfjj8ej4uedonip48ggrrcfmd0.apps.googleusercontent.com";
+>>>>>>> 3711305 (google drive api done)
 
     // redirect_uri of the project
 

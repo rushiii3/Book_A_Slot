@@ -437,17 +437,23 @@ if(!empty($_POST['user_email_forgot']) && !empty($_POST['password']))
     }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3711305 (google drive api done)
 
 
 if(!empty($_POST['event_id_change']) && !empty($_POST['imglink']))
 {
     echo($_POST['imglink']);
 }
+<<<<<<< HEAD
 =======
 >>>>>>> db0b766 (done)
 =======
 >>>>>>> 4c514c7 (donee)
 =======
 >>>>>>> 3065924 (forgotpass done)
+=======
+>>>>>>> 3711305 (google drive api done)
 mysqli_close($con);
 ?>
