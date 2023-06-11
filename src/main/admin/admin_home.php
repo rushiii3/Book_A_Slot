@@ -36,13 +36,19 @@ include '../connection/connect.php';
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Admin Panel</title>
+<<<<<<< HEAD
     <link type="image/png" sizes="16x16" rel="icon" href="../../img/logo11.jpeg" />
 
+=======
+>>>>>>> 4f687d3 (Add files)
     <link rel='stylesheet' type='text/css' href='css/style.css'>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4f687d3 (Add files)
   </head>
   <body class="bg-light">
   <?php
@@ -64,6 +70,7 @@ include '../connection/connect.php';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 include './admin_navbar.html';
 =======
                 include './navigation.html';
@@ -77,6 +84,12 @@ include '../connection/connect.php';
 =======
                 include '../admin/admin_navbar.html';
 >>>>>>> bef689f (changes done)
+=======
+                include '../admin/admin_navbar.html';
+=======
+                include './admin_navbar.html';
+>>>>>>> 4f687d3 (Add files)
+>>>>>>> c4ed1f1 (Add files)
                 ?>
                 <div class='bg-primary'>
                     <p></p>
@@ -108,6 +121,7 @@ include '../connection/connect.php';
                                 <a class="nav-link  my-2 " href="admin_home.php" tabindex="-1" aria-disabled="true">VIEW REQUESTS</a>
                                 </li> 
                                 <li class="nav-item">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                                 </li>
@@ -158,6 +172,13 @@ include '../connection/connect.php';
                                 </li> 
                                 <li class="nav-item">
 >>>>>>> bef689f (changes done)
+=======
+                                <a class="nav-link  my-2 " href="admin_home.php?open_event" tabindex="-1" aria-disabled="true">VIEW OPEN EVENTS</a>
+                                </li> 
+                                <li class="nav-item">
+=======
+>>>>>>> 4f687d3 (Add files)
+>>>>>>> c4ed1f1 (Add files)
                                 <a class="nav-link  my-2 " href="admin_home.php?add_ar" tabindex="-1" aria-disabled="true">ADD ROOM/AUDI</a>
                                 </li>
                                 <li class="nav-item">
@@ -179,10 +200,17 @@ include '../connection/connect.php';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 <a class="nav-link  my-2 " href="./report_home.php" tabindex="-1" aria-disabled="true">REPORTS</a>
 =======
                                 <a class="nav-link  my-2 " href="../reports/report_home.php" tabindex="-1" aria-disabled="true">REPORTS</a>
 >>>>>>> bef689f (changes done)
+=======
+                                <a class="nav-link  my-2 " href="../reports/report_home.php" tabindex="-1" aria-disabled="true">REPORTS</a>
+=======
+                                <a class="nav-link  my-2 " href="./report_home.php" tabindex="-1" aria-disabled="true">REPORTS</a>
+>>>>>>> 4f687d3 (Add files)
+>>>>>>> c4ed1f1 (Add files)
                                 </li>
                                 <!-- <li class="nav-item">
                                 <a class="nav-link  my-2 " href="#" tabindex="-1" aria-disabled="true"> LOGOUT</a>
@@ -265,9 +293,12 @@ include '../connection/connect.php';
                                 else if(isset($_GET['update_ar'])){
                                     include('./update_ar.php');
                                 }
+<<<<<<< HEAD
                                 else if(isset($_GET['open_event'])){
                                     include('./open_event_remainder.php');
                                 }
+=======
+>>>>>>> 4f687d3 (Add files)
                                 else{
 <<<<<<< HEAD
 <<<<<<< HEAD
