@@ -316,5 +316,18 @@ if(!empty($_POST['user_email'])
         echo ("Error description: " . mysqli_error($con));
     } 
 }
+
+if(!empty($_POST['user_email_forgot']) && !empty($_POST['password']))
+{
+    $user_email = mysqli_real_escape_string($con, $_POST['user_email_forgot']);
+    $password = mysqli_real_escape_string($con, $_POST['password']);
+    $change_user_password = "UPDATE `USER` SET `pwd` = '$password' WHERE `USER`.`user_name` = '$user_email' ";
+    if(mysqli_query($con,$change_user_password))
+    {
+        echo("1");
+    }else{
+        echo("2");
+    }
+}
 mysqli_close($con);
 ?>
