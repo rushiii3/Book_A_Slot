@@ -5,6 +5,7 @@ $(document).ready(function(){
     const code = urlParams.get('code');
     const redirect_uri = "http://localhost/Book_A_Slot/Book_A_Slot/src/main/user/upload.php"; // replace with your redirect_uri;
 <<<<<<< HEAD
+<<<<<<< HEAD
     const client_secret = ""; // replace with your client secret
     const scope = "https://www.googleapis.com/auth/drive";
     var access_token= "";
@@ -15,6 +16,12 @@ $(document).ready(function(){
     var access_token= "";
     var client_id = "870692323734-f7q95dgfjj8ej4uedonip48ggrrcfmd0.apps.googleusercontent.com";// replace it with your client id;
 >>>>>>> 3711305 (google drive api done)
+=======
+    const client_secret = ""; // replace with your client secret
+    const scope = "https://www.googleapis.com/auth/drive";
+    var access_token= "";
+    var client_id = "";// replace it with your client id;
+>>>>>>> cd15b85 (done adding drive api)
     
 
     $.ajax({
