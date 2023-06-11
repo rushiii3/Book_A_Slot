@@ -2,11 +2,17 @@
 <html lang="en">
 <head>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <meta http-equiv='cache-control' content='no-cache'>
     <meta http-equiv='expires' content='0'>
     <meta http-equiv='pragma' content='no-cache'>
 =======
 >>>>>>> 5a990c7 (donee)
+=======
+<meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+>>>>>>> 3065924 (forgotpass done)
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -22,10 +28,15 @@
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
 =======
 >>>>>>> 5a990c7 (donee)
+=======
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+>>>>>>> 3065924 (forgotpass done)
   <script src="https://smtpjs.com/v3/smtp.js"></script>
     <title>Document</title>
     <style>
@@ -72,10 +83,14 @@
                         <div class="mb-3 pt-5 col-lg-12">
                             <label for="email" class="form-label">Email address</label>
 <<<<<<< HEAD
+<<<<<<< HEAD
                             <input type="email" name="email" class="form-control" id="email" autocomplete="username" aria-describedby="emailVerify" placeholder="e.g. abc@vazecollege.net" required />
 =======
                             <input type="email" name="email" class="form-control" id="email" aria-describedby="emailVerify" placeholder="e.g. abc@vazecollege.net" required />
 >>>>>>> 5a990c7 (donee)
+=======
+                            <input type="email" name="email" class="form-control" id="email" autocomplete="username" aria-describedby="emailVerify" placeholder="e.g. abc@vazecollege.net" required />
+>>>>>>> 3065924 (forgotpass done)
                             <div id="emailVerify" class="form-text"></div>
                         </div>
                         
@@ -87,10 +102,14 @@
                         </p>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <div id="section2">
 =======
                         <div id="section2">
 >>>>>>> 5a990c7 (donee)
+=======
+                    <div id="section2">
+>>>>>>> 3065924 (forgotpass done)
                         <div class="col-lg-12 mt-5">
                             <p class="h1">Password Reset</p>
                         </div>
@@ -104,16 +123,21 @@
                                 <input pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" name="fourth" class="m-2 text-center form-control rounded" type="text" id="fourth"> 
                             </div> 
 <<<<<<< HEAD
+<<<<<<< HEAD
                             <div id="invalidOtp" class="form-text"></div>
 =======
                         
 >>>>>>> 5a990c7 (donee)
+=======
+                            <div id="invalidOtp" class="form-text"></div>
+>>>>>>> 3065924 (forgotpass done)
                         <button type="button" name="submit" id="verifyOtp" class="btn btn-primary px-5 py-2 mt-5 w-100">
                             Continue
                         </button>
                         <p style="font-size:0.8rem;" class="text-center mt-3 fw-bold" id="goBack">
                             Wrong email? Go back
                         </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
                     </div>
                     <div id="section3">
@@ -124,6 +148,10 @@
                         </div>
                         <div id="section3">
 >>>>>>> 5a990c7 (donee)
+=======
+                    </div>
+                    <div id="section3">
+>>>>>>> 3065924 (forgotpass done)
                         <div class="col-lg-12 mt-5">
                             <p class="h1">Set new password</p>
                         </div>
@@ -134,10 +162,14 @@
                             <label for="password" class="form-label">Password</label>
                             <div class="input-group">
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 <input type="password" name="password" class="form-control" id="password" autocomplete="new-password" aria-describedby="pass_verify" placeholder="Password">
 =======
                                 <input type="password" name="password" class="form-control" id="password" aria-describedby="pass_verify" placeholder="Password">
 >>>>>>> 5a990c7 (donee)
+=======
+                                <input type="password" name="password" class="form-control" id="password" autocomplete="new-password" aria-describedby="pass_verify" placeholder="Password">
+>>>>>>> 3065924 (forgotpass done)
                                 <span class="input-group-text pass_icon" id="basic-addon1">
                                     <i class="bi bi-eye-fill pass_open_eye"></i>
                                     <i class="bi bi-eye-slash-fill pass_close_eye"></i>
@@ -146,6 +178,7 @@
                             <div id="pass_verify" class="form-text"></div>
                         </div> 
                         <div class="mb-3">
+<<<<<<< HEAD
 <<<<<<< HEAD
                             <label for="confirm_password" class="form-label">Confirm Password</label>
                             <div class="input-group">
@@ -176,20 +209,39 @@
                         </div>
 =======
                             <label for="confirm_password" class="form-label">Password</label>
+=======
+                            <label for="confirm_password" class="form-label">Confirm Password</label>
+>>>>>>> 3065924 (forgotpass done)
                             <div class="input-group">
-                                <input type="password" name="confirm_password" class="form-control" id="confirm_password" aria-describedby="cpass_verify" placeholder="Password" >
-                                <span class="input-group-text pass_icon" id="basic-addon1">
-                                    <i class="bi bi-eye-fill pass_open_eye"></i>
-                                    <i class="bi bi-eye-slash-fill pass_close_eye"></i>
+                                <input type="password" name="confirm_password" class="form-control" id="confirm_password" autocomplete="current-password" aria-describedby="cpass_verify" placeholder="Password" >
+                                <span class="input-group-text cpass_icon" id="basic-addon1">
+                                    <i class="bi bi-eye-fill cpass_open_eye"></i>
+                                    <i class="bi bi-eye-slash-fill cpass_close_eye"></i>
                                 </span>
                             </div>
-                            <div id="cpass_verify" class="form-text"></div>
+                            <div id="confirm_password_verify" class="form-text"></div>
                         </div> 
-                        <button  name="submit" id="resetPassword" class="btn btn-primary px-5 py-2 mt-5 w-100">
+                        <button type="button" name="resetPassword" id="resetPassword" class="btn btn-primary px-5 py-2 mt-5 w-100">
                             Reset password
                         </button>
                         </div>
+<<<<<<< HEAD
 >>>>>>> 5a990c7 (donee)
+=======
+                        <div id="section4">
+                            <div class="text-center mt-5">
+                            <img src="https://www.pngmart.com/files/20/Success-Transparent-Background.png" class="img-fluid w-50 ">
+                                <p class="p-1 mt-5">
+                                    Your password has been changed successfully
+                                </p>
+                                <p class="p-1 mt-5">
+                                    You can login now with your new password
+                                    <a href="sign_in.php">click to login</a>
+                                </p>
+
+                            </div>
+                        </div>
+>>>>>>> 3065924 (forgotpass done)
                     </form>
                 </div>
                 <div class="p-4 col-lg-6 mt-1">
@@ -197,6 +249,7 @@
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div id="emailTemp" style="display:none;">
 
@@ -310,5 +363,12 @@
         
         </script>
 >>>>>>> 5a990c7 (donee)
+=======
+        <div id="emailTemp" style="display:none;">
+
+        </div>
+    </main>
+    <script src="../../js/forgot.js"></script>
+>>>>>>> 3065924 (forgotpass done)
 </body>
 </html>

@@ -420,6 +420,9 @@ if(!empty($_POST['user_email'])
     } 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3065924 (forgotpass done)
 
 if(!empty($_POST['user_email_forgot']) && !empty($_POST['password']))
 {
@@ -433,6 +436,7 @@ if(!empty($_POST['user_email_forgot']) && !empty($_POST['password']))
         echo("2");
     }
 }
+<<<<<<< HEAD
 
 
 if(!empty($_POST['event_id_change']) && !empty($_POST['imglink']))
@@ -443,5 +447,7 @@ if(!empty($_POST['event_id_change']) && !empty($_POST['imglink']))
 >>>>>>> db0b766 (done)
 =======
 >>>>>>> 4c514c7 (donee)
+=======
+>>>>>>> 3065924 (forgotpass done)
 mysqli_close($con);
 ?>
