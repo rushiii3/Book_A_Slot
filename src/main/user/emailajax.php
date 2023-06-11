@@ -67,6 +67,9 @@ if(!empty($_POST['event_name'])
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5a990c7 (donee)
 
 if(!empty($_POST['email']) && !empty($_POST['otp']))
 {
@@ -111,6 +114,9 @@ if(!empty($_POST['email']) && !empty($_POST['otp']))
   </script>
   <?php
 }
+<<<<<<< HEAD
 =======
 >>>>>>> b01df11 (done principal email)
+=======
+>>>>>>> 5a990c7 (donee)
 ?>

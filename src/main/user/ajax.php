@@ -265,10 +265,14 @@ if(!empty($_POST['user_email'])
     !empty($_POST['experience'])
             &&
 <<<<<<< HEAD
+<<<<<<< HEAD
     !empty($_POST['insider'])
 =======
     !empty($_POST['insider '])
 >>>>>>> 4c514c7 (donee)
+=======
+    !empty($_POST['insider'])
+>>>>>>> 5a990c7 (donee)
         
 
 )
