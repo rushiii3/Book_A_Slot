@@ -45,13 +45,13 @@ if(!empty($_POST['event_name'])
   { 
     Email.send({ 
         SecureToken: '81b5fc89-513e-421c-ab1a-f690f117c594',
-        To: '<?php echo($_POST['Institute_OrgName_email']) ?>',
+        To: 'hrushiop@gmail.com',
         From: 'audibooking55@gmail.com',
         Subject: 'Request for Venue',
         Body: document.getElementById('emailContent').innerHTML,
         }).then(message => console.log(message));
     } 
-    send()
+    
         </script>
 
     <?php
