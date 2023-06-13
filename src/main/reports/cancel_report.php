@@ -8,6 +8,8 @@ include '../connection/connect.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events Cancelled</title>
+    <link type="image/png" sizes="16x16" rel="icon" href="../../img/logo11.jpeg" />
+
     <style>
         .chartBox{
           width:700px 
@@ -25,6 +27,7 @@ include '../connection/connect.php';
             <?php
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 include '../user/navigation.html';
 =======
                 include '../navigation.html';
@@ -32,6 +35,9 @@ include '../connection/connect.php';
 =======
                 include '../user/navigation.html';
 >>>>>>> 20ec2bd (seperate folders)
+=======
+                include '../admin/admin_navbar.html';
+>>>>>>> bef689f (changes done)
                 ?>
             </div>
         </div>
@@ -152,7 +158,7 @@ $result1=mysqli_query($con,$get_reason);
                     </div>
                     <div class="col-md-5 col-lg-5 m-auto">
 
-                     <h3 class="text-center"><strong>Second Primary</strong>  reason for events getting cancelled</h3>
+                     <h3 class="text-center"><strong>Second </strong>  reason for events getting cancelled</h3>
                         <div id="pie" style="width: 500px; height: 400px;"></div>
 
                     <!-- one piechart -->
@@ -189,9 +195,7 @@ $result1=mysqli_query($con,$get_reason);
 <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
-
       function drawChart() {
-
         var data = google.visualization.arrayToDataTable([
             ['organizations_institute', 'count'],
           <?php
@@ -200,8 +204,7 @@ $result1=mysqli_query($con,$get_reason);
             while($row=mysqli_fetch_assoc($result1)){
                 echo "['".$row['organization_institute']."',".$row['total']."],";
             }
-          ?>
-         
+          ?>         
         ]);
 
         var options = {
@@ -209,9 +212,7 @@ $result1=mysqli_query($con,$get_reason);
           width:700,
           height:600,
         };
-
         var chart = new google.visualization.PieChart(document.getElementById('pie'));
-
         chart.draw(data, options);
       }
     </script>

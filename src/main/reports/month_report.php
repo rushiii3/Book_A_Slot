@@ -18,7 +18,7 @@ include '../connection/connect.php';
 <<<<<<< HEAD
 
 if(isset($_POST['close'])){
-    header('location:../admin/report_home.php');
+    header('location:../reports/report_home.php');
 }
 
 =======
@@ -92,7 +92,7 @@ if(isset($_POST['month_report'])){
     $year=$_POST['year'];
     if($year==''){
         echo "<script>alert('Please Enter a year')</script>";
-        echo("<script>window.location='../report_home.php';</script>");
+        echo("<script>window.location='../admin/report_home.php';</script>");
     }
     // else{
         
@@ -118,6 +118,8 @@ if(isset($_POST['month_report'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Month wise Report</title>
+    <link type="image/png" sizes="16x16" rel="icon" href="../../img/logo11.jpeg" />
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js" integrity="sha512-5SUkiwmm+0AiJEaCiS5nu/ZKPodeuInbQ7CiSrSnUHe11dJpQ8o4J1DU/rw4gxk/O+WBpGYAZbb8e17CDEoESw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -135,9 +137,13 @@ if(isset($_POST['month_report'])){
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 20ec2bd (seperate folders)
                 include '../user/navigation.html';
+=======
+                include '../admin/admin_navbar.html';
+>>>>>>> bef689f (changes done)
                 ?>
            <?php
            $get_event="Select * from `EVENT` where MONTH(event_date)='$month' and YEAR(event_date)='$year' and status_value='approved'";

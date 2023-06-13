@@ -24,6 +24,8 @@ include '../connection/connect.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="image/png" sizes="16x16" rel="icon" href="../../img/logo11.jpeg" />
+
     <link rel='stylesheet' type='text/css' href='../css/images.css'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js" integrity="sha512-5SUkiwmm+0AiJEaCiS5nu/ZKPodeuInbQ7CiSrSnUHe11dJpQ8o4J1DU/rw4gxk/O+WBpGYAZbb8e17CDEoESw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -85,12 +87,16 @@ include '../connection/connect.php';
         <div class="row">
             <div class="col-md-10 col-lg-10 m-auto">
             <?php
+<<<<<<< HEAD:src/main/admin/report_home.php
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 5d1afc3 (report)
                 include './admin_navbar.html';
+=======
+                include '../admin/admin_navbar.html';
+>>>>>>> bef689f (changes done):src/main/reports/report_home.php
                 ?>
                 <button class="btn btn-primary w-50 m-auto d-flex justify-content-center fw-bolder" style="align-items: center;">REPORTS PANEL</button>
                 <a href="../reports/overall_report.php"><strong class="text-center d-flex justify-content-center" >click here to get short summary</strong></a>
@@ -233,6 +239,19 @@ include '../connection/connect.php';
 >>>>>>> 5d1afc3 (report)
                     </div>
                 </div>
+                <div class="row mt-5">
+                    <div class="col-md-5 col-lg-5 m-auto">
+                    <img src="" alt="" id="attendance" >
+                    <button class=" btn btn-primary mt-3 m-auto d-flex justify-content-center" data-toggle="modal" data-target="#present">Attendance Report</button>
+
+                        <!-- <a class="col-md-5 col-lg-5 m-auto text-decoration:none" href="../reports/attendance.php"><button class=" m-auto btn btn-primary mt-3 m-auto d-flex justify-content-center">Attendance Report</button></a> -->
+                </div>
+                    <div class="col-md-5 col-lg-5 m-auto">
+                    <img src="" alt="" id="outsider" >
+                    <button class=" btn btn-primary mt-3 m-auto d-flex justify-content-center" data-toggle="modal" data-target="#out">Outsider Report</button>
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -308,6 +327,20 @@ include '../connection/connect.php';
        setInterval(function(){
         let random=Math.floor(Math.random()*3);
         guest.src=guests[random];
+       },800);
+
+       let attendance=document.getElementById('attendance');
+       let attendances=['../.././img/att1.jpg','../.././img/att2.jpg','../.././img/att3.jpg'];
+       setInterval(function(){
+        let random=Math.floor(Math.random()*3);
+        attendance.src=attendances[random];
+       },800);
+
+       let outsider=document.getElementById('outsider');
+       let outsiders=['../.././img/out1.jpg','../.././img/out2.jpg','../.././img/out3.jpg'];
+       setInterval(function(){
+        let random=Math.floor(Math.random()*3);
+        outsider.src=outsiders[random];
        },800);
     </script>
 </body>
@@ -416,6 +449,46 @@ include '../connection/connect.php';
   </div>
 </div>
 
+<!-- modal for outsider report -->
+<div class="modal fade" id="out" tabindex="-1" aria-labelledby="out" aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+    <form action="../reports/outsider_report.php" method="post">
+      <div class="modal-body">
+      <h1 class="modal-title fs-5 text-center" id="out">Outsider Information</h1>
+        <div class="form-outline w-100 m-auto  mt-3">
+                    <label for="year" class="form-label fw-bold">Enter a Academic year </label>
+                    <input type="text" id="year" name="year" class="form-control" placeholder="eg.2023-2024">
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary" name='outsider_report'>OK</button>
+      </div>
+    </div>
+    </form>
+  </div>
+</div>
+</div>
+<!-- modal for attendance report -->
+<div class="modal fade" id="present" tabindex="-1" aria-labelledby="present" aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+    <form action="../reports/attendance.php" method="post">
+      <div class="modal-body">
+      <h1 class="modal-title fs-5 text-center" id="out">Department Wise attendance</h1>
+        <div class="form-outline w-100 m-auto  mt-3">
+                    <label for="year" class="form-label fw-bold">Enter a Academic year </label>
+                    <input type="text" id="year" name="year" class="form-control" placeholder="eg.2023-2024">
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary" name='outsider_report'>OK</button>
+      </div>
+    </div>
+    </form>
+  </div>
+</div>
+</div>
 <!-- Modal for resource person report-->
 <div class="modal fade" id="resource" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -465,6 +538,11 @@ include '../connection/connect.php';
     </form>
   </div>
 </div>
+<!--  -->
+
+<!--  -->
+
+
 </html>
 <<<<<<< HEAD
 
