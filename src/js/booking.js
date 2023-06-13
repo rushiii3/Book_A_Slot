@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 $('#org_institue_name').hide();
-<<<<<<< HEAD
 $('#org_institue_email').hide();
 $('#org_institue_phone').hide();
 $('#org_institue_transaction_id').hide();
