@@ -21,6 +21,34 @@ include '../connection/connect.php';
         </style>
 </head>
 <?php
+if(isset($_POST['update_dept'])){
+  $department_name=$_POST['department_name_original'];
+    $dept=$_POST['department_name_new'];
+    if($dept==''){
+      $sql="UPDATE `DEPARTMENT` set department_name='$department_name' where department_name='$department_name' ";
+      $result=mysqli_query($con,$sql);
+      if($result){
+        //echo "<p class='text-aign'>Data updated Successfully ";
+        header("location:./admin_home.php?update_dept");
+      }
+      else{
+        echo "<p class='text-aign'>Data Is Not updated Successfully ";
+        header("location:./admin_home.php?update_dept");
+      }
+
+    }
+    else{
+    $sql="UPDATE `DEPARTMENT` set department_name='$dept' where department_name='$department_name' ";
+      $result=mysqli_query($con,$sql);
+      if($result){
+        //echo "<p class='text-aign'>Data updated Successfully ";
+        header("location:./admin_home.php?update_dept");
+      }
+      else{
+        echo "<p class='text-aign'>Data Is Not updated Successfully ";
+        header("location:./admin_home.php?update_dept");
+      }}
+}
 if(isset($_POST['no'])){
     header('location:./admin_home.php?update_dept');
 }
@@ -59,34 +87,7 @@ if(isset($_POST['no'])){
     </div>
     <?php
     // to update data
-    if(isset($_POST['update_dept'])){
-  $department_name=$_POST['department_name_original'];
-    $dept=$_POST['department_name_new'];
-    if($dept==''){
-      $sql="UPDATE `DEPARTMENT` set department_name='$department_name' where department_name='$department_name' ";
-      $result=mysqli_query($con,$sql);
-      if($result){
-        //echo "<p class='text-aign'>Data updated Successfully ";
-        header("location:./admin_home.php?update_dept");
-      }
-      else{
-        echo "<p class='text-aign'>Data Is Not updated Successfully ";
-        header("location:./admin_home.php?update_dept");
-      }
-
-    }
-    else{
-    $sql="UPDATE `DEPARTMENT` set department_name='$dept' where department_name='$department_name' ";
-      $result=mysqli_query($con,$sql);
-      if($result){
-        //echo "<p class='text-aign'>Data updated Successfully ";
-        header("location:./admin_home.php?update_dept");
-      }
-      else{
-        echo "<p class='text-aign'>Data Is Not updated Successfully ";
-        header("location:./admin_home.php?update_dept");
-      }}
-}
+    
 ?>
 <script>
   function confirmupdate(self){
